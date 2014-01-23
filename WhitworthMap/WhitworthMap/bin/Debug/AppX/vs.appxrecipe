@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>ALEC</Machine>
-    <WindowsUser>alecmoore</WindowsUser>
+    <Machine>ELIAS-PC</Machine>
+    <WindowsUser>Elias</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>96855EB2F42DA03BB920B4E46A29F801157B68913E6C47385F9CEEC5B1594D0F</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>EC43B6E5DCDC9898EFF5861955BBD5B8A313AF7EFDBAD8845BA6F92DC070A388</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>2a744dea-b9c1-4873-9707-92975cb06b71_1.0.0.0_neutral__adcmmgpz453ww</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>2a744dea-b9c1-4873-9707-92975cb06b71_adcmmgpz453ww!App</RegisteredUserModeAppID>
     <RegisteredPackageID>2a744dea-b9c1-4873-9707-92975cb06b71</RegisteredPackageID>
@@ -13,64 +13,64 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-01-22T23:35:22.212</Modified>
+      <Modified>2014-01-23T19:10:12.430</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.exe">
+    <AppxPackagedFile Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.exe">
       <PackagePath>WhitworthMap.exe</PackagePath>
-      <Modified>2014-01-23T00:45:56.716</Modified>
+      <Modified>2014-01-23T19:10:12.256</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.pdb">
+    <AppxPackagedFile Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.pdb">
       <PackagePath>WhitworthMap.pdb</PackagePath>
-      <Modified>2014-01-23T00:45:56.702</Modified>
+      <Modified>2014-01-23T19:10:12.243</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\Assets\Dixon.jpg">
+    <AppxPackagedFile Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\Assets\Dixon.jpg">
       <PackagePath>Assets\Dixon.jpg</PackagePath>
-      <Modified>2014-01-18T01:32:04.237</Modified>
+      <Modified>2014-01-23T18:33:47.799</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\Assets\whitmap.jpg">
+    <AppxPackagedFile Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\Assets\whitmap.jpg">
       <PackagePath>Assets\whitmap.jpg</PackagePath>
-      <Modified>2014-01-22T22:31:46.685</Modified>
+      <Modified>2014-01-23T18:33:47.873</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\Assets\Logo.png">
+    <AppxPackagedFile Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-03-16T04:42:52.000</Modified>
+      <Modified>2014-01-23T18:33:47.860</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\Assets\SmallLogo.png">
+    <AppxPackagedFile Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-03-16T04:42:52.000</Modified>
+      <Modified>2014-01-23T18:33:47.862</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\Assets\SplashScreen.png">
+    <AppxPackagedFile Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-03-16T04:42:52.000</Modified>
+      <Modified>2014-01-23T18:33:47.864</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-03-16T04:42:52.000</Modified>
+      <Modified>2014-01-23T18:33:47.866</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\bin\Debug\App.xaml">
+    <AppxPackagedFile Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
-      <Modified>2014-01-18T01:15:54.286</Modified>
+      <Modified>2014-01-23T18:33:47.796</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\bin\Debug\Common\StandardStyles.xaml">
+    <AppxPackagedFile Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
-      <Modified>2012-06-27T00:19:20.000</Modified>
+      <Modified>2014-01-23T18:33:47.876</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\bin\Debug\MainPage.xaml">
+    <AppxPackagedFile Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2014-01-23T00:45:55.906</Modified>
+      <Modified>2014-01-23T18:33:47.877</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-01-22T23:02:31.260</Modified>
+      <Modified>2014-01-23T18:43:58.451</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
