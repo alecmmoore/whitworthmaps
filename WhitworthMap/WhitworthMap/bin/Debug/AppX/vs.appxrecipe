@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.exe">
       <PackagePath>WhitworthMap.exe</PackagePath>
-      <Modified>2014-01-23T19:10:12.256</Modified>
+      <Modified>2014-01-23T22:41:54.857</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.pdb">
       <PackagePath>WhitworthMap.pdb</PackagePath>
-      <Modified>2014-01-23T19:10:12.243</Modified>
+      <Modified>2014-01-23T22:41:54.844</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\Assets\Dixon.jpg">
       <PackagePath>Assets\Dixon.jpg</PackagePath>
@@ -66,7 +66,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2014-01-23T18:33:47.877</Modified>
+      <Modified>2014-01-23T22:41:53.930</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
