@@ -1,1 +1,1 @@
-C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\WhitworthMap.csproj;neutral
+C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\WhitworthMap.csproj;neutral

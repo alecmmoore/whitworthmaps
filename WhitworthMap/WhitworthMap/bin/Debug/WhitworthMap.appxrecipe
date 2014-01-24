@@ -7,50 +7,50 @@
     <PackageArchitecture>neutral</PackageArchitecture>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.exe">
+    <AppxPackagedFile Include="C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.exe">
       <PackagePath>WhitworthMap.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.pdb">
+    <AppxPackagedFile Include="C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.pdb">
       <PackagePath>WhitworthMap.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\Assets\Dixon.jpg">
+    <AppxPackagedFile Include="C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\Assets\Dixon.jpg">
       <PackagePath>Assets\Dixon.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\Assets\whitmap.jpg">
+    <AppxPackagedFile Include="C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\Assets\whitmap.jpg">
       <PackagePath>Assets\whitmap.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\Assets\Logo.png">
+    <AppxPackagedFile Include="C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\Assets\SmallLogo.png">
+    <AppxPackagedFile Include="C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\Assets\SplashScreen.png">
+    <AppxPackagedFile Include="C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\bin\Debug\App.xaml">
+    <AppxPackagedFile Include="C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\bin\Debug\Common\StandardStyles.xaml">
+    <AppxPackagedFile Include="C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\bin\Debug\MainPage.xaml">
+    <AppxPackagedFile Include="C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

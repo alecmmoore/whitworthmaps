@@ -82,14 +82,14 @@
     <Grid x:Name="MainContainer" Background="White">
 
         <Grid x:Name="ListContainer" Background="#222222" Width="350" HorizontalAlignment="Left">
-            <Grid x:Name="EventHeader" HorizontalAlignment="Left" VerticalAlignment="Top" Height="128" Canvas.ZIndex="2">
+            <Grid x:Name="EventHeader" HorizontalAlignment="Left" VerticalAlignment="Top" Height="128" Canvas.ZIndex="2" Margin="0,50,0,0">
                 <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Background="Gray" Margin="10">
                     <Image Source="Assets/Dixon.jpg" Stretch="UniformToFill"></Image>
                 </Grid>
                 <TextBlock Text="Title" Margin="125,10,0,80" FontSize="35"></TextBlock>
             </Grid>
         
-            <ListBox x:Name="EventList" HorizontalAlignment="Left" Canvas.ZIndex="1" BorderThickness="0" Margin="0,133,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{StaticResource EventListStyle}">
+            <ListBox x:Name="EventList" HorizontalAlignment="Left" Canvas.ZIndex="1" BorderThickness="0" Margin="0,178,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{StaticResource EventListStyle}">
                 <ListBoxItem>
                     <Grid>
                         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Background="Gray" Margin="5">
@@ -103,10 +103,13 @@
                 </ListBoxItem>
             </ListBox>
         </Grid>
-        <Viewbox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="350,0,0,0" Grid.RowSpan="2" Stretch="UniformToFill">
-        	<ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Top">
-        		<Image Margin="0" Source="Assets/whitmap.jpg" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill"/>
-        	</ScrollViewer>
+        <Viewbox x:Name="MapContainer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="350,0,0,0" Grid.RowSpan="2" Stretch="Fill">
+            <ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Top">
+            	<Grid x:Name="ScrollContainer">
+            		<Grid x:Name="ButtonLayer" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            		<Grid x:Name="RoadLayer" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            	</Grid>
+            </ScrollViewer>
         </Viewbox>
     </Grid>
 </Page>

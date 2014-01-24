@@ -103,10 +103,10 @@
                 </ListBoxItem>
             </ListBox>
         </Grid>
-        <Viewbox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="350,0,0,0" Grid.RowSpan="2" Stretch="UniformToFill">
-        	<ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Top">
-        		<Image Margin="0" Source="Assets/whitmap.jpg" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill"/>
-        	</ScrollViewer>
+        <Viewbox x:Name="MapContainer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="350,0,0,0" Grid.RowSpan="2" Stretch="UniformToFill">
+            <ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Image Margin="0" Source="Assets/whitmap.jpg" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill"/>
+            </ScrollViewer>
         </Viewbox>
     </Grid>
 </Page>
