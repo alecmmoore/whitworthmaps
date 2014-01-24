@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\WhitworthMap.csproj;neutral
-=======
-C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\WhitworthMap.csproj;neutral
->>>>>>> 0d1836050f4dcf86a3127d5244c0f7e3ce0b0acf
