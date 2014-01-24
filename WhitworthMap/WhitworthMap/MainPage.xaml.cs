@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.Devices.Geolocation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -23,7 +24,18 @@ namespace WhitworthMap
         {
             this.InitializeComponent();
         }
-
+        
+        public async void Get_Coord() 
+        { 
+            //creates object of geolocator type
+            Geolocator geolocator = new Geolocator();
+           //creates geopostion object, makes requests every 10 seconds for f minutes
+            Geoposition geopostion = await geolocator.GetGeopositionAsync(maximumAge: TimeSpan.FromMinutes(5), timeout: TimeSpan.FromSeconds(10));
+            double LatIt = geopostion.Coordinate.Latitude;
+            double LongIt = geopostion.Coordinate.Longitude;
+        
+        }
+        
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
 

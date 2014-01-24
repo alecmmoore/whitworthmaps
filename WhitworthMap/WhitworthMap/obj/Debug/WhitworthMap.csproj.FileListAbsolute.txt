@@ -25,6 +25,7 @@ c:\users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthM
 c:\users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\obj\Debug\layout.resfiles.intermediate
 c:\users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\obj\Debug\resources.resfiles.intermediate
 c:\users\alecmoore\documents\visual studio 2012\Projects\WhitworthMap\WhitworthMap\obj\Debug\pri.resfiles.intermediate
+<<<<<<< HEAD
 C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.exe
 C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.pdb
 C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\resources.pri
@@ -52,3 +53,51 @@ C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\
 C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\pri.resfiles
 C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\LanguageQualifiers.txt
 C:\Users\alecmoore\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\ProjectArchitectures.txt
+=======
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.exe
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.pdb
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\resources.pri
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\AppxManifest.xml
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.build.appxrecipe
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\App.g.i.cs
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\App.g.cs
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\Common\StandardStyles.g.i.cs
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\Common\StandardStyles.g.cs
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\MainPage.g.i.cs
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\MainPage.g.cs
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\App.xaml
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\Common\StandardStyles.xaml
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\MainPage.xaml
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\WhitworthMap.exe
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\WhitworthMap.pdb
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\priconfig.xml
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\layout.resfiles
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\resources.resfiles
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\pri.resfiles
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\LanguageQualifiers.txt
+C:\Users\Elias\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\ProjectArchitectures.txt
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.exe
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.pdb
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\resources.pri
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\AppxManifest.xml
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\bin\Debug\WhitworthMap.build.appxrecipe
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\App.g.i.cs
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\App.g.cs
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\Common\StandardStyles.g.i.cs
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\Common\StandardStyles.g.cs
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\MainPage.g.i.cs
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\MainPage.g.cs
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\App.xaml
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\Common\StandardStyles.xaml
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\MainPage.xaml
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\WhitworthMap.exe
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\WhitworthMap.pdb
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\priconfig.xml
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\layout.resfiles
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\resources.resfiles
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\pri.resfiles
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\LanguageQualifiers.txt
+C:\Users\JPerry\Documents\GitHub\whitworthmaps\WhitworthMap\WhitworthMap\obj\Debug\ProjectArchitectures.txt
+>>>>>>> 0d1836050f4dcf86a3127d5244c0f7e3ce0b0acf
