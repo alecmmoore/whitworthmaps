@@ -87,7 +87,7 @@
                 <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Background="Gray" Margin="10">
                     <Image Source="Assets/Dixon.jpg" Stretch="UniformToFill"/>
                 </Grid>
-                <TextBlock Text="Title" Margin="125,10,0,80" FontSize="35"/>
+                <TextBlock Text="Your Mom" Margin="125,10,0,80" FontSize="35"/>
             </Grid>
         
             <ListBox x:Name="EventList" HorizontalAlignment="Left" Canvas.ZIndex="1" BorderThickness="0" Margin="0,178,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{StaticResource EventListStyle}">
