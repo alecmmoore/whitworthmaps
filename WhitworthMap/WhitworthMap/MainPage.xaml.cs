@@ -45,12 +45,19 @@ namespace WhitworthMap
         
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-
+			
         }
 
-        private void BackButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void BackButton_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
         	// TODO: Add event handler implementation here.
+            ViewBuildings.Begin();
+        }
+
+        private void Title_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+            ViewEvents.Begin();
         }
     }
 }

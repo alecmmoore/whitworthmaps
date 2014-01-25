@@ -76,35 +76,248 @@
 				</Setter.Value>
 			</Setter>
 		</Style>
+		<Storyboard x:Name="ViewEvents">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="BuildingEventsContainer">
+				<EasingDoubleKeyFrame KeyTime="0" Value="350">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ExponentialEase EasingMode="EaseInOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ExponentialEase EasingMode="EaseInOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="BuildingListContainer">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ExponentialEase EasingMode="EaseInOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-350">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ExponentialEase EasingMode="EaseInOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Name="ViewBuildings">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="BuildingEventsContainer">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ExponentialEase EasingMode="EaseInOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="350">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ExponentialEase EasingMode="EaseInOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="BuildingListContainer">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-350">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ExponentialEase EasingMode="EaseInOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ExponentialEase EasingMode="EaseInOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+		<!--<Style x:Key="EventListItemStyle" TargetType="ListBoxItem">
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="TabNavigation" Value="Local"/>
+			<Setter Property="Padding" Value="8,10"/>
+			<Setter Property="HorizontalContentAlignment" Value="Left"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="ListBoxItem">
+						<Border x:Name="LayoutRoot" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="Normal"/>
+									<VisualState x:Name="PointerOver">
+										<Storyboard>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="LayoutRoot">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ListBoxItemPointerOverBackgroundThemeBrush}"/>
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonBorderThemeBrush}"/>
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="FocusVisualBlack">
+												<DiscreteObjectKeyFrame KeyTime="0">
+													<DiscreteObjectKeyFrame.Value>
+														<SolidColorBrush Color="Black"/>
+													</DiscreteObjectKeyFrame.Value>
+												</DiscreteObjectKeyFrame>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Disabled">
+										<Storyboard>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="LayoutRoot">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="Transparent"/>
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ListBoxItemDisabledForegroundThemeBrush}"/>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Pressed">
+										<Storyboard>
+											<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="PressedBackground"/>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ListBoxItemPressedForegroundThemeBrush}"/>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="SelectionStates">
+									<VisualState x:Name="Unselected">
+										<Storyboard>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="PressedBackground">
+												<DiscreteObjectKeyFrame KeyTime="0">
+													<DiscreteObjectKeyFrame.Value>
+														<SolidColorBrush Color="LightGray"/>
+													</DiscreteObjectKeyFrame.Value>
+												</DiscreteObjectKeyFrame>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Selected">
+										<Storyboard>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="InnerGrid">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource}"/>
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ListBoxItemSelectedForegroundThemeBrush}"/>
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="PressedBackground">
+												<DiscreteObjectKeyFrame KeyTime="0">
+													<DiscreteObjectKeyFrame.Value>
+														<SolidColorBrush Color="LightGray"/>
+													</DiscreteObjectKeyFrame.Value>
+												</DiscreteObjectKeyFrame>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="SelectedUnfocused">
+										<Storyboard>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="InnerGrid">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource}"/>
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ListBoxItemSelectedForegroundThemeBrush}"/>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="SelectedDisabled">
+										<Storyboard>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="InnerGrid">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ListBoxItemSelectedDisabledBackgroundThemeBrush}"/>
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ListBoxItemSelectedDisabledForegroundThemeBrush}"/>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="SelectedPointerOver">
+										<Storyboard>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="InnerGrid">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource}"/>
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ListBoxItemSelectedForegroundThemeBrush}"/>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="SelectedPressed">
+										<Storyboard>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="InnerGrid">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource}"/>
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ListBoxItemSelectedForegroundThemeBrush}"/>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="FocusStates">
+									<VisualState x:Name="Focused">
+										<Storyboard>
+											<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualWhite"/>
+											<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualBlack"/>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Unfocused"/>
+									<VisualState x:Name="PointerFocused"/>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<Grid x:Name="InnerGrid" Background="Transparent">
+								<Rectangle x:Name="PressedBackground" Fill="{StaticResource ListBoxItemPressedBackgroundThemeBrush}" Opacity="0"/>
+								<ContentPresenter x:Name="ContentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" ContentTransitions="{TemplateBinding ContentTransitions}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+								<Rectangle x:Name="FocusVisualWhite" Opacity="0" StrokeDashOffset=".5" StrokeEndLineCap="Square" Stroke="{StaticResource FocusVisualWhiteStrokeThemeBrush}" StrokeDashArray="1,1"/>
+								<Rectangle x:Name="FocusVisualBlack" Opacity="0" StrokeDashOffset="1.5" StrokeEndLineCap="Square" Stroke="{StaticResource FocusVisualBlackStrokeThemeBrush}" StrokeDashArray="1,1"/>
+							</Grid>
+						</Border>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>-->
         
 	</Page.Resources>
 
     <Grid x:Name="MainContainer" >
 
-        <Grid x:Name="ListContainer" Background="#222222" Width="350" HorizontalAlignment="Left">
-            <Grid x:Name="BuildingListContainer" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
-            <Grid x:Name="BuildingEventsContainer" HorizontalAlignment="Left" VerticalAlignment="Top">
-            	<Button x:Name="BackButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="52" Margin="10,4,0,0" Width="48" Style="{StaticResource BackButtonStyle}" Click="BackButton_Click"/>
-            	<Grid x:Name="EventHeader" HorizontalAlignment="Left" VerticalAlignment="Top" Height="128" Canvas.ZIndex="2" Margin="0,50,-91,-78">
+        <Grid x:Name="ListContainer" Width="350" HorizontalAlignment="Left" Background="#FFC71921">
+            <Grid x:Name="BuildingListContainer" RenderTransformOrigin="0.5,0.5">
+            	<Grid.ColumnDefinitions>
+            		<ColumnDefinition Width="79*"/>
+            		<ColumnDefinition Width="271*"/>
+            	</Grid.ColumnDefinitions>
+            	<Grid.RenderTransform>
+            		<CompositeTransform TranslateX="-350"/>
+            	</Grid.RenderTransform>
+            	<TextBlock x:Name="Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Buildings" VerticalAlignment="Top" FontSize="35" Margin="10,10,0,0" Tapped="Title_Tapped" Grid.ColumnSpan="2"/>
+            	<StackPanel x:Name="BuildingsList" Grid.ColumnSpan="2" Margin="10,60,0,0">
+            		<TextBox x:Name="Search" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,0,10,10" InputScope="Search" Padding="9,3,10,5" Text="Search"/>
+            		<Grid x:Name="Grid" Height="50" Margin="0,0,10,5">
+            			<Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+            		</Grid>
+            	</StackPanel>
+            </Grid>
+            <Grid x:Name="BuildingEventsContainer" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+            	<Grid.RenderTransform>
+            		<CompositeTransform/>
+            	</Grid.RenderTransform>
+                <Button x:Name="BackButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="52" Margin="10,4,0,0" Width="48" Style="{StaticResource BackButtonStyle}" Tapped="BackButton_Tapped"/>
+            	<Grid x:Name="EventHeader" HorizontalAlignment="Left" VerticalAlignment="Top" Height="128" Canvas.ZIndex="2" Margin="0,50,0,0">
             		<Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Background="Gray" Margin="10">
             			<Image Source="Assets/Dixon.jpg" Stretch="UniformToFill"/>
             		</Grid>
                 <TextBlock Text="Your Mom" Margin="125,10,0,80" FontSize="35"/>
             	</Grid>
-        
-            	<ListBox x:Name="EventList" HorizontalAlignment="Left" Canvas.ZIndex="1" BorderThickness="0" Margin="0,178,-250,-671" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{StaticResource EventListStyle}">
-            		<ListBoxItem>
-            			<Grid>
-            				<Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Background="Gray" Margin="5">
-            					<Image Source="Assets/Dixon.jpg" Stretch="UniformToFill" NineGrid="56,0,0,0"/>
+            	<ScrollViewer Margin="0,183,0,0" Background="{x:Null}">
+            		<ListBox x:Name="EventList" HorizontalAlignment="Left" Canvas.ZIndex="1" BorderThickness="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{StaticResource EventListStyle}" Width="350">
+                        <ListBoxItem Height="195">
+                            <!--="{StaticResource EventListItemStyle}"-->
+            				<Grid Height="198">
+            					<Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Background="Gray" Margin="5">
+            						<Image Source="Assets/Dixon.jpg" Stretch="UniformToFill" NineGrid="56,0,0,0"/>
+            					</Grid>
+            					<TextBlock Text="Title" Margin="60,1,82,179" FontSize="14"/>
+            					<TextBlock Text="08/02/1994" Margin="60,21,82,159" FontSize="14"/>
+            					<TextBlock Text="7pm to 10pm" Margin="60,40,82,140" FontSize="14"/>
+            					<TextBlock Text="The two professionals that act as lead portfolio managers, Port Folio (CIO) and Adam Analyst, are insightful and appear to be effective leaders of the process and investment team. They promote rigorous analysis and debate across the group and provide meaningful analytical support. " Margin="5,58,5,20" FontSize="14" TextWrapping="Wrap"/>
             				</Grid>
-            				<TextBlock Text="Title" Margin="60,1,82,179" FontSize="14"/>
-            				<TextBlock Text="08/02/1994" Margin="60,21,82,159" FontSize="14"/>
-            				<TextBlock Text="7pm to 10pm" Margin="60,40,82,140" FontSize="14"/>
-            				<TextBlock Text="The two professionals that act as lead portfolio managers, Port Folio (CIO) and Adam Analyst, are insightful and appear to be effective leaders of the process and investment team. They promote rigorous analysis and debate across the group and provide meaningful analytical support. " Margin="5,58,5,20" FontSize="14" TextWrapping="Wrap"/>
-            			</Grid>
-            		</ListBoxItem>
-            	</ListBox>
+            			</ListBoxItem>
+            		</ListBox>
+            	</ScrollViewer>
             </Grid>
         </Grid>
         <Viewbox x:Name="MapContainer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="350,0,0,0" Grid.RowSpan="2" Stretch="Fill">
@@ -138,12 +351,12 @@
             			<Path x:Name="AuldHouse" Data="M551.833,661.167 L551.333,646.667 L569.5,646.5 L569.333,661 z" Fill="#FF780B10" HorizontalAlignment="Left" Height="17.667" Margin="515.833,714.333,0,0" Stretch="Fill" Stroke="Black" StrokeThickness="3" UseLayoutRounding="False" VerticalAlignment="Top" Width="25.167"/>
             			<Path x:Name="WarrenHall" Data="M564.833,522.333 L557,530.166 L568.584,541.75 L543.667,566.667 L553.833,576.833 L591.666,539 L606.583,553.917 L619.167,541.333 L591.75,513.916 L585,520.666 L562.917,498.583 L550.75,510.75 z" Fill="#FF780B10" HorizontalAlignment="Left" Height="81.25" Margin="542.167,497.083,0,0" Stretch="Fill" Stroke="Black" StrokeThickness="3" UseLayoutRounding="False" VerticalAlignment="Top" Width="78.5"/>
             			<Path x:Name="MusicBuilding" Data="M550,674.375 L550,671.625 L557.875,671.625 L557.875,663.25 L563.208,663.25 L563.208,650.125 L564.583,650.125 L564.583,644.375 L545.458,644.375 L545.458,653.875 L546.666,653.875 L546.666,657.875 L545.833,657.875 L545.833,674.625 z" Fill="#FF780B10" HorizontalAlignment="Left" Height="33.25" Margin="534.875,642.875,0,0" Stretch="Fill" Stroke="Black" StrokeThickness="3" UseLayoutRounding="False" VerticalAlignment="Top" Width="60.375"/>
-            			<Rectangle x:Name="GravesGym" Fill="#FF780B10" HorizontalAlignment="Left" Height="36" Margin="387.583,365.25,0,0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-            				<Rectangle.RenderTransform>
-            					<CompositeTransform Rotation="-56.816"/>
-            				</Rectangle.RenderTransform>
-            			</Rectangle>
-            			<Path x:Name="CowlesAuditorium" Data="M709.625,609.125 L747.375,572.75 L741.375,568.625 L745,564.5 L722.375,548.875 L718.625,553 L711.375,547.125 L673.25,582.875 L680.875,589.25 L678,592.375 L699.25,608.625 L703.125,604.5 z" Fill="#FF780B10" HorizontalAlignment="Left" Height="58.5" Margin="623,610.625,0,0" Stretch="Fill" Stroke="Black" StrokeThickness="3" UseLayoutRounding="False" VerticalAlignment="Top" Width="70.375" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle x:Name="GravesGym" Fill="#FF780B10" HorizontalAlignment="Left" Height="36" Margin="387.583,365.25,0,0" Stroke="Black" StrokeThickness="3" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                            <Rectangle.RenderTransform>
+                                <CompositeTransform Rotation="-56.816"/>
+                            </Rectangle.RenderTransform>
+                        </Rectangle>
+                        <Path x:Name="CowlesAuditorium" Data="M709.625,609.125 L747.375,572.75 L741.375,568.625 L745,564.5 L722.375,548.875 L718.625,553 L711.375,547.125 L673.25,582.875 L680.875,589.25 L678,592.375 L699.25,608.625 L703.125,604.5 z" Fill="#FF780B10" HorizontalAlignment="Left" Height="58.5" Margin="623,610.625,0,0" Stretch="Fill" Stroke="Black" StrokeThickness="3" UseLayoutRounding="False" VerticalAlignment="Top" Width="70.375" RenderTransformOrigin="0.5,0.5">
             				<Path.RenderTransform>
             					<CompositeTransform Rotation="-6.349"/>
             				</Path.RenderTransform>
@@ -215,8 +428,7 @@
             		<Canvas x:Name="LocationLayer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1366" Height="768">
             			<RadioButton x:Name="locationPing" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Visibility="Collapsed"/>
             		</Canvas>
-    	
-				</Grid>
+            		</Grid>
             </ScrollViewer>
         </Viewbox>
     </Grid>
