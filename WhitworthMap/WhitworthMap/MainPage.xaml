@@ -82,27 +82,30 @@
     <Grid x:Name="MainContainer" Background="White">
 
         <Grid x:Name="ListContainer" Background="#222222" Width="350" HorizontalAlignment="Left">
-            <Button x:Name="BackButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="52" Margin="10,4,0,0" Width="48" Style="{StaticResource BackButtonStyle}"/>
-            <Grid x:Name="EventHeader" HorizontalAlignment="Left" VerticalAlignment="Top" Height="128" Canvas.ZIndex="2" Margin="0,50,0,0">
-                <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Background="Gray" Margin="10">
-                    <Image Source="Assets/Dixon.jpg" Stretch="UniformToFill"/>
-                </Grid>
-                <TextBlock Text="Title" Margin="125,10,0,80" FontSize="35"/>
-            </Grid>
+            <Grid x:Name="BuildingListContainer" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+            <Grid x:Name="BuildingEventsContainer" HorizontalAlignment="Left" VerticalAlignment="Top">
+            	<Button x:Name="BackButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="52" Margin="10,4,0,0" Width="48" Style="{StaticResource BackButtonStyle}" Click="BackButton_Click"/>
+            	<Grid x:Name="EventHeader" HorizontalAlignment="Left" VerticalAlignment="Top" Height="128" Canvas.ZIndex="2" Margin="0,50,-91,-78">
+            		<Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Background="Gray" Margin="10">
+            			<Image Source="Assets/Dixon.jpg" Stretch="UniformToFill"/>
+            		</Grid>
+            		<TextBlock Text="Title" Margin="125,10,0,80" FontSize="35"/>
+            	</Grid>
         
-            <ListBox x:Name="EventList" HorizontalAlignment="Left" Canvas.ZIndex="1" BorderThickness="0" Margin="0,178,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{StaticResource EventListStyle}">
-                <ListBoxItem>
-                    <Grid>
-                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Background="Gray" Margin="5">
-                            <Image Source="Assets/Dixon.jpg" Stretch="UniformToFill" NineGrid="56,0,0,0"/>
-                        </Grid>
-                        <TextBlock Text="Title" Margin="60,1,82,179" FontSize="14"/>
-                        <TextBlock Text="08/02/1994" Margin="60,21,82,159" FontSize="14"/>
-                        <TextBlock Text="7pm to 10pm" Margin="60,40,82,140" FontSize="14"/>
-                        <TextBlock Text="The two professionals that act as lead portfolio managers, Port Folio (CIO) and Adam Analyst, are insightful and appear to be effective leaders of the process and investment team. They promote rigorous analysis and debate across the group and provide meaningful analytical support. " Margin="5,58,5,20" FontSize="14" TextWrapping="Wrap"/>
-                    </Grid>
-                </ListBoxItem>
-            </ListBox>
+            	<ListBox x:Name="EventList" HorizontalAlignment="Left" Canvas.ZIndex="1" BorderThickness="0" Margin="0,178,-250,-671" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{StaticResource EventListStyle}">
+            		<ListBoxItem>
+            			<Grid>
+            				<Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Background="Gray" Margin="5">
+            					<Image Source="Assets/Dixon.jpg" Stretch="UniformToFill" NineGrid="56,0,0,0"/>
+            				</Grid>
+            				<TextBlock Text="Title" Margin="60,1,82,179" FontSize="14"/>
+            				<TextBlock Text="08/02/1994" Margin="60,21,82,159" FontSize="14"/>
+            				<TextBlock Text="7pm to 10pm" Margin="60,40,82,140" FontSize="14"/>
+            				<TextBlock Text="The two professionals that act as lead portfolio managers, Port Folio (CIO) and Adam Analyst, are insightful and appear to be effective leaders of the process and investment team. They promote rigorous analysis and debate across the group and provide meaningful analytical support. " Margin="5,58,5,20" FontSize="14" TextWrapping="Wrap"/>
+            			</Grid>
+            		</ListBoxItem>
+            	</ListBox>
+            </Grid>
         </Grid>
         <Viewbox x:Name="MapContainer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="350,0,0,0" Grid.RowSpan="2" Stretch="Fill">
             <ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Top">
