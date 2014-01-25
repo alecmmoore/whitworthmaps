@@ -23,6 +23,7 @@ namespace WhitworthMap
         public MainPage()
         {
             this.InitializeComponent();
+            Get_Coord();
         }
         
         public async void Get_Coord() 
@@ -33,7 +34,13 @@ namespace WhitworthMap
             Geoposition geopostion = await geolocator.GetGeopositionAsync(maximumAge: TimeSpan.FromMinutes(5), timeout: TimeSpan.FromSeconds(10));
             double LatIt = geopostion.Coordinate.Latitude;
             double LongIt = geopostion.Coordinate.Longitude;
-        
+            locationPing.Visibility = Visibility.Visible;
+            double calc1 = (47.757025 - LatIt) * (111545.9883);
+            double calc2 = (117.426186 + LongIt) * (83612.52731);
+            int Calc1 = Convert.ToInt32(Math.Round(calc1));
+            int Calc2 = Convert.ToInt32(Math.Round(calc2));
+            Canvas.SetLeft(locationPing, Calc2 - 15);
+            Canvas.SetTop(locationPing, Calc1 - 15);
         }
         
         protected override void OnNavigatedTo(NavigationEventArgs e)

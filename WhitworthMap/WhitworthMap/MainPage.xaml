@@ -212,6 +212,9 @@
             			<Path x:Name="LiedCenterForTheVisualArts" Data="M585.5,228.375 L585.5,199.625 C587.128,196.337 589.097,194.753 591.333,194.5 L591.333,197.625 C592.55,195.585 593.981,194.6 595.541,194.25 L595.541,197.375 C597.3,195.227 599.268,194.248 601.457,194.5 L601.457,207.625 C602.628,207.367 603.852,209.645 605.123,214.125 L605.123,215.75 L606.789,221.125 L606.289,223 L607.685,227.188 L604.415,237 L602.644,231.687 L599.748,231.687 L599.748,229.625 L598.749,229.625 L598.749,231.875 L587.167,231.875 L587.167,228.5 z" Fill="#FF780B10" HorizontalAlignment="Left" Height="45.75" Margin="584,192.75,0,0" Stretch="Fill" Stroke="Black" StrokeThickness="3" UseLayoutRounding="False" VerticalAlignment="Top" Width="69.562" Opacity="0.995"/>
             			<Path x:Name="OmacheField" Data="M143.333,535 L142.667,606 L303.996,606 L303.663,534.667 z" Fill="#FF780B10" HorizontalAlignment="Left" Height="65" Margin="152.027,601.333,0,0" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" VerticalAlignment="Top" Width="155.162" StrokeThickness="3"/>
             		</Grid>
+            		<Canvas x:Name="LocationLayer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1366" Height="768">
+            			<RadioButton x:Name="locationPing" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Visibility="Collapsed"/>
+            		</Canvas>
     	
 				</Grid>
             </ScrollViewer>
