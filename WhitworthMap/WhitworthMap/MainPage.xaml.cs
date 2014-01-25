@@ -40,5 +40,10 @@ namespace WhitworthMap
         {
 
         }
+
+        private void BackButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
     }
 }
