@@ -1915,160 +1915,159 @@
                 <Grid Grid.ColumnSpan="2" Margin="0,103,0,0">
                     <ScrollViewer Margin="0">
                         <StackPanel x:Name="BuildingsList">
-                            <Grid x:Name="Weyerhauser" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Aquatic_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Aquatic Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Arend_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Arend Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy1" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Auld_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Auld House" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy2" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="BaldwinJenkins_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Baldwin Jenkins Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy3" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Ballard_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Ballard Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy4" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Boppell_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Boppell Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy6" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Cornerstone_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Cornerstone Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy7" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Auditorium_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Cowles Auditorium" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy8" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Dixon_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Dixon Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy9" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Duvall_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Duvall Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy10" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="East_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="East Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy11" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Johnston_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Johnston Center" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Eric Johnston Science Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-
-                            <Grid x:Name="Grid_Copy12" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Facilities_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Facilities Services" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy13" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Fieldhouse_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Fieldhouse" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy14" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Graves_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Graves Gym" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy15" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Library_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="H.C. Cowles Library" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy16" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Hawthorne_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Hawthorne Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy17" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Hardwick_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Hardwick House" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy18" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Hendrick_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Hendrick Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy19" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Hill_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Hill House" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy20" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="HUB_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="The HUB" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy21" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Lied_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Lied Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy22" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Lindaman_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Lindaman Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy23" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="McEachran_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="McEachran Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy24" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="MacKay_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="MacKay Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy25" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="McMillan_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="McMillan Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy26" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Music_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Music Building" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy27" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Cove_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Pirates Cove" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy28" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="President_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="President's House" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy29" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Robinson_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Robinson Science Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy30" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Schumacher_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Schumacher Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy31" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Conditioning_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Scotford Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy32" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Seeley_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Seeley Chapel" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy33" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Stewart_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Stewart Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy34" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Village_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="The Village" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy35" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Warren_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Warren Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy36" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Westminister_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Westminster Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy37" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Weyerhaeuser_ListButton" Height="50" Margin="0,0,10,5"  Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy38" Height="50" Margin="0,0,10,5">
+                            <Grid x:Name="Quall_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Whitworth Pres." Height="25" Margin="75,15,0,0"/>
                             </Grid>                  
@@ -2088,18 +2087,23 @@
                     <TextBlock Text="Your Mom" Margin="125,10,0,80" FontSize="35"/>
                 </Grid>
                 <ScrollViewer Margin="0,183,0,0" Background="{x:Null}">
-                    <ListBox x:Name="EventList" HorizontalAlignment="Left" Canvas.ZIndex="1" BorderThickness="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{StaticResource EventListStyle}" Width="350">
-                        <ListBoxItem Height="195">
-                            <Grid Height="198">
-                                <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Background="Gray" Margin="5">
-                                    <Image Source="Assets/Dixon.jpg" Stretch="UniformToFill" NineGrid="56,0,0,0"/>
-                                </Grid>
-                                <TextBlock Text="Title" Margin="60,1,82,179" FontSize="14"/>
-                                <TextBlock Text="08/02/1994" Margin="60,21,82,159" FontSize="14"/>
-                                <TextBlock Text="7pm to 10pm" Margin="60,40,82,140" FontSize="14"/>
-                                <TextBlock Text="The two professionals that act as lead portfolio managers, Port Folio (CIO) and Adam Analyst, are insightful and appear to be effective leaders of the process and investment team. They promote rigorous analysis and debate across the group and provide meaningful analytical support. " Margin="5,58,5,20" FontSize="14" TextWrapping="Wrap"/>
-                            </Grid>
+                    <ListBox x:Name="EventList" ItemsSource="{Binding}" HorizontalAlignment="Left" Canvas.ZIndex="1" BorderThickness="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{StaticResource EventListStyle}" Width="350">
+                        <ListBoxItem x:Name="NoEvents" Visibility="Collapsed">
+                            <TextBlock Text="There are no events for this location"></TextBlock>
                         </ListBoxItem>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Background="Gray" Margin="5">
+                                        <Image Source="Assets/Dixon.jpg" Stretch="UniformToFill" NineGrid="56,0,0,0"/>
+                                    </Grid>
+                                    <TextBlock Text="{Binding Title}" Margin="60,0,82,179" FontSize="14"/>
+                                    <TextBlock Text="{Binding Date}" Margin="60,20,82,159" FontSize="14"/>
+                                    <TextBlock Text="{Binding Time}" Margin="60,40,82,140" FontSize="14"/>
+                                    <TextBlock Text="{Binding Description}" Margin="5,58,5,20" FontSize="14" TextWrapping="Wrap"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
                     </ListBox>
                 </ScrollViewer>
             </Grid>
@@ -2143,7 +2147,7 @@
                         <Button x:Name="Baldwin_JenkinsHall" Content="" HorizontalAlignment="Left" Height="42.937" Margin="900,246,-872,-189" Style="{StaticResource BS22}" VerticalAlignment="Top" Width="72.423"/>
                         <Button x:Name="McMillanHall" Content="" HorizontalAlignment="Left" Height="50.937" Margin="481,333,-427,-284" Style="{StaticResource BS34}" VerticalAlignment="Top" Width="46.437"/>
                         <Button x:Name="Village" Content="" HorizontalAlignment="Left" Height="55.124" Margin="997,284,-962,-239" Style="{StaticResource BS19}" VerticalAlignment="Top" Width="64.625"/>
-                        <Button x:Name="PiratesCoveShelter" Content="" HorizontalAlignment="Left" Height="27.279" Margin="1082,168,-1006,-95" Style="{StaticResource BS21}" VerticalAlignment="Top" Width="24.441"/>
+                        <Button x:Name="PiratesCoveShelte" Content="" HorizontalAlignment="Left" Height="27.279" Margin="1082,168,-1006,-95" Style="{StaticResource BS21}" VerticalAlignment="Top" Width="24.441"/>
                         <Button x:Name="EastHall" Content="" HorizontalAlignment="Left" Height="68.125" Margin="1081,257,-1057,-225" Style="{StaticResource BS18}" VerticalAlignment="Top" Width="76.25"/>
                         <Button x:Name="WhitworthPresbyterianChurch" Content="" HorizontalAlignment="Left" Height="84" Margin="849,594,-831,-578" Style="{StaticResource BS16}" VerticalAlignment="Top" Width="81.834"/>
                         <Button x:Name="StewartHall" Content="" HorizontalAlignment="Left" Height="20.93" Margin="943,326,-904,-247" Style="{StaticResource BS20}" VerticalAlignment="Top" Width="61.237"/>
