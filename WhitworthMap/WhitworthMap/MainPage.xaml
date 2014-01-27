@@ -1939,34 +1939,31 @@
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Boppell Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="Grid_Copy5" Height="50" Margin="0,0,10,5">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Scotford Condition Center" Height="25" Margin="75,15,0,0"/>
-                            </Grid>
                             <Grid x:Name="Grid_Copy6" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Cornerstone Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy7" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Pirates Cove" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Cowles Auditorium" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy8" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Cowles Auditorium" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Dixon Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy9" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Dixon Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Duvall Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy10" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Duvall Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="East Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy11" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="East Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Johnston Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
+
                             <Grid x:Name="Grid_Copy12" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Facilities Services" Height="25" Margin="75,15,0,0"/>
@@ -1981,91 +1978,91 @@
                             </Grid>
                             <Grid x:Name="Grid_Copy15" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="H.C. Cowles Library" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy16" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Hawthorne Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy17" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Hardwick House" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy18" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Hendrick Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy19" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Hill House" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy20" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="The HUB" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy21" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Lied Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy22" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Lindaman Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy23" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="McEachran Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy24" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="MacKay Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy25" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="McMillan Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy26" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Music Building" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy27" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Pirates Cove" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy28" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="President's House" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy29" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Robinson Science Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy30" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Schumacher Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy31" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Scotford Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy32" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Seeley Chapel" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy33" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Stewart Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy34" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="The Village" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy35" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Warren Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy36" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Westminster Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Grid_Copy37" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
@@ -2073,24 +2070,8 @@
                             </Grid>
                             <Grid x:Name="Grid_Copy38" Height="50" Margin="0,0,10,5">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
-                            </Grid>
-                            <Grid x:Name="Grid_Copy39" Height="50" Margin="0,0,10,5">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
-                            </Grid>
-                            <Grid x:Name="Grid_Copy40" Height="50" Margin="0,0,10,5">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
-                            </Grid>
-                            <Grid x:Name="Grid_Copy41" Height="50" Margin="0,0,10,5">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
-                            </Grid>
-                            <Grid x:Name="Grid_Copy42" Height="50" Margin="0,0,10,5">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
-                            </Grid>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Whitworth Pres." Height="25" Margin="75,15,0,0"/>
+                            </Grid>                  
                         </StackPanel>
                     </ScrollViewer>
                 </Grid>
