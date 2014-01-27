@@ -17,7 +17,7 @@ using Windows.Devices.Geolocation;
 
 namespace WhitworthMap
 {
-    
+
     public sealed partial class MainPage : Page
     {
         public MainPage()
@@ -25,38 +25,41 @@ namespace WhitworthMap
             this.InitializeComponent();
             Get_Coord();
         }
-        
-        public async void Get_Coord() 
-        { 
+
+        public async void Get_Coord()
+        {
             //creates object of geolocator type
             Geolocator geolocator = new Geolocator();
-           //creates geopostion object, makes requests every 10 seconds for f minutes
+            //creates geopostion object, makes requests every 10 seconds for f minutes
             Geoposition geopostion = await geolocator.GetGeopositionAsync(maximumAge: TimeSpan.FromMinutes(5), timeout: TimeSpan.FromSeconds(10));
             double LatIt = geopostion.Coordinate.Latitude;
             double LongIt = geopostion.Coordinate.Longitude;
             locationPing.Visibility = Visibility.Visible;
+            locationPingShadow.Visibility = Visibility.Visible;
             double calc1 = (47.757025 - LatIt) * (111545.9883);
             double calc2 = (117.426186 + LongIt) * (83612.52731);
             int Calc1 = Convert.ToInt32(Math.Round(calc1));
             int Calc2 = Convert.ToInt32(Math.Round(calc2));
             Canvas.SetLeft(locationPing, Calc2 - 15);
-            Canvas.SetTop(locationPing, Calc1 - 15);
+            Canvas.SetTop(locationPing, Calc1 - 30);
+            Canvas.SetLeft(locationPingShadow, Calc2 - 24);
+            Canvas.SetTop(locationPingShadow, Calc1 - 14);
         }
-        
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-			
+
         }
 
         private void BackButton_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
+            // TODO: Add event handler implementation here.
             ViewBuildings.Begin();
         }
 
         private void Title_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
+            // TODO: Add event handler implementation here.
             ViewEvents.Begin();
         }
     }
