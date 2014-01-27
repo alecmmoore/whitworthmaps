@@ -18,7 +18,7 @@ using Microsoft.WindowsAzure.MobileServices;
 
 namespace WhitworthMap
 {
-    
+
     public sealed partial class MainPage : Page
     {
 
@@ -32,7 +32,7 @@ namespace WhitworthMap
         }
 
         public async void GetCoord() 
-        { 
+        {
             //creates object of geolocator type
             Geolocator geolocator = new Geolocator();
             //creates geopostion object, makes requests every 10 seconds for f minutes
@@ -40,13 +40,18 @@ namespace WhitworthMap
             double LatIt = geopostion.Coordinate.Latitude;
             double LongIt = geopostion.Coordinate.Longitude;
             locationPing.Visibility = Visibility.Visible;
+            locationPingShadow.Visibility = Visibility.Visible;
             double calc1 = (47.757025 - LatIt) * (111545.9883);
             double calc2 = (117.426186 + LongIt) * (83612.52731);
             int Calc1 = Convert.ToInt32(Math.Round(calc1));
             int Calc2 = Convert.ToInt32(Math.Round(calc2));
             Canvas.SetLeft(locationPing, Calc2 - 15);
-            Canvas.SetTop(locationPing, Calc1 - 15);
+            Canvas.SetTop(locationPing, Calc1 - 30);
+            Canvas.SetLeft(locationPingShadow, Calc2 - 24);
+            Canvas.SetTop(locationPingShadow, Calc1 - 14);
         }
+        
+			
 
         private void BackButton_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
