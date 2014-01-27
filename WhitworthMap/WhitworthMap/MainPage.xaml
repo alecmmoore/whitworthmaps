@@ -2082,9 +2082,9 @@
                 <Button x:Name="BackButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="52" Margin="10,4,0,0" Width="48" Style="{StaticResource BackButtonStyle}" Tapped="BackButton_Tapped"/>
                 <Grid x:Name="EventHeader" HorizontalAlignment="Left" VerticalAlignment="Top" Height="128" Canvas.ZIndex="2" Margin="0,50,0,0">
                     <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Background="Gray" Margin="10">
-                        <Image Source="Assets/Dixon.jpg" Stretch="UniformToFill"/>
+                        
                     </Grid>
-                    <TextBlock Text="Your Mom" Margin="125,10,0,80" FontSize="35"/>
+                    <TextBlock x:Name="BuildingTitle" Text="Eric Johnston Science Center" Margin="125,6,0,4" FontSize="35" TextWrapping="Wrap"/>
                 </Grid>
                 <ScrollViewer Margin="0,183,0,0" Background="{x:Null}">
                     <ListBox x:Name="EventList" ItemsSource="{Binding}" HorizontalAlignment="Left" Canvas.ZIndex="1" BorderThickness="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{StaticResource EventListStyle}" Width="350">
@@ -2093,15 +2093,13 @@
                         </ListBoxItem>
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <Grid>
-                                    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Background="Gray" Margin="5">
-                                        <Image Source="Assets/Dixon.jpg" Stretch="UniformToFill" NineGrid="56,0,0,0"/>
-                                    </Grid>
-                                    <TextBlock Text="{Binding Title}" Margin="60,0,82,179" FontSize="14"/>
-                                    <TextBlock Text="{Binding Date}" Margin="60,20,82,159" FontSize="14"/>
-                                    <TextBlock Text="{Binding Time}" Margin="60,40,82,140" FontSize="14"/>
-                                    <TextBlock Text="{Binding Description}" Margin="5,58,5,20" FontSize="14" TextWrapping="Wrap"/>
-                                </Grid>
+								<Grid>
+									<Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Background="Gray" Margin="5"></Grid>
+									<TextBlock Text="{Binding Title}" Margin="60,0,82,57" FontSize="14"/>
+									<TextBlock Text="{Binding Date}" Margin="60,20,82,37" FontSize="14"/>
+									<TextBlock Text="{Binding Time}" Margin="60,40,82,19" FontSize="14"/>
+									<TextBlock Text="{Binding Description}" Margin="5,58,5,0" FontSize="14" TextWrapping="Wrap"/>
+								</Grid>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>

@@ -60,12 +60,17 @@ namespace WhitworthMap
 
         private async void Building_Tapped(object sender, RoutedEventArgs e)
         {
-            var key = Regex.Match((sender as FrameworkElement).Name, @"^.*?(?=_)").ToString();
+            FrameworkElement Building = (sender as FrameworkElement);
+            TextBlock BuildingText = (VisualTreeHelper.GetChild(Building, 1) as TextBlock);
+
+            var key = Regex.Match(Building.Name, @"^.*?(?=_)").ToString();
 
             var query = await eventsTable
                 .Where(o => o.Locations.Contains(key))
                 .Select(o => o)
                 .ToCollectionAsync();
+
+            BuildingTitle.Text = BuildingText.Text;
 
             if (query.Count() > 0)
             {
