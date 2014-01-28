@@ -18,6 +18,7 @@ using System.Text.RegularExpressions;
 using Microsoft.WindowsAzure.MobileServices;
 using System.Threading.Tasks;
 using Windows.Graphics.Display;
+using System.Globalization;
 
 namespace WhitworthMap
 {
@@ -125,7 +126,7 @@ namespace WhitworthMap
                     FrameworkElement ListItem = (VisualTreeHelper.GetChild(this.BuildingsList, i) as FrameworkElement);
                     string ListItemTitle = (VisualTreeHelper.GetChild(ListItem, 1) as TextBlock).Text;
 
-                    if (ListItemTitle.Contains(SearchBox.Text))
+                    if (ListItemTitle.IndexOf(SearchBox.Text, StringComparison.OrdinalIgnoreCase) >= 0)
                     {
                         ListItem.Visibility = Visibility.Visible;
                     }
