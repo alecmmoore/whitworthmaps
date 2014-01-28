@@ -2022,7 +2022,7 @@
                                 </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Auld House" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="BaldwinJenkins_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+                            <Grid x:Name="BJ_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
@@ -2484,7 +2484,7 @@
                                 </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="McEachran Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="MerkelField_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+                            <Grid x:Name="Merkel_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
@@ -2727,7 +2727,7 @@
                                 </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Seeley Chapel" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="TennisCourts_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+                            <Grid x:Name="Courts_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
@@ -2749,7 +2749,7 @@
                                 </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Tennis Courts" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="ScotfordTennisCenter_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+                            <Grid x:Name="Center_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
@@ -2769,9 +2769,9 @@
                                         </Grid>
                                     </Viewbox>
                                 </Grid>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Scotford Tennis Center" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Scotford Tennis Center / Cutter Courts / Beeksma Tennis Bubble" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="SoccerField_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+                            <Grid x:Name="Soccer_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
@@ -2837,7 +2837,7 @@
                                 </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Marks Field" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-                            <Grid x:Name="PineBowl_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+                            <Grid x:Name="Pine_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
@@ -2968,7 +2968,7 @@
                                         </Grid>
                                     </Viewbox>
                                 </Grid>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhaeuser Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Quall_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
@@ -3054,17 +3054,17 @@
             			<Button x:Name="Fieldhouse_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="108.585" Margin="240,166,-259,-175" Style="{StaticResource BS8}" VerticalAlignment="Top" Width="118.728"/>
             			<Button x:Name="Conditioning_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="61" Margin="334,181,-294,-142" Style="{StaticResource BS9}" VerticalAlignment="Top" Width="59.834"/>
             			<Button x:Name="Aquatic_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="56.313" Margin="363,166,-328,-122" Style="{StaticResource BS10}" VerticalAlignment="Top" Width="64.75"/>
-            			<Button x:Name="Complex_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="35.593" Margin="369,114,-387,-50" Style="{StaticResource BS7}" VerticalAlignment="Top" Width="117.89"/>
+            			<Button x:Name="Center_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="35.593" Margin="369,114,-387,-50" Style="{StaticResource BS7}" VerticalAlignment="Top" Width="117.89"/>
             			<Button x:Name="Ballard_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="35.75" Margin="470,406,-410,-342" Style="{StaticResource BS33}" VerticalAlignment="Top" Width="39.5"/>
             			<Button x:Name="Seeley_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="51.901" Margin="509,424,-466,-376" Style="{StaticResource BS32}" VerticalAlignment="Top" Width="57.493"/>
-            			<Button x:Name="Tennis_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="45.415" Margin="342,341,-301,-286" Style="{StaticResource BS11}" VerticalAlignment="Top" Width="58.799"/>
+            			<Button x:Name="Courts_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="45.415" Margin="342,341,-301,-286" Style="{StaticResource BS11}" VerticalAlignment="Top" Width="58.799"/>
             			<Button x:Name="Arend_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="29.593" Margin="854,415,-845,-345" Style="{StaticResource BS6}" VerticalAlignment="Top" Width="91.084"/>
             			<Button x:Name="Lindaman_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="37" Margin="644,369,-587,-306" Style="{StaticResource BS40}" VerticalAlignment="Top" Width="43.166"/>
             			<Button x:Name="Library_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="66.5" Margin="719,397,-699,-364" Style="{StaticResource BS41}" VerticalAlignment="Top" Width="79.501"/>
             			<Button x:Name="Hendrick_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="45.834" Margin="901,363,-819,-309" Style="{StaticResource BS13}" VerticalAlignment="Top" Width="17.833"/>
             			<Button x:Name="Duvall_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="60.875" Margin="1141,351,-1084,-312" Style="{StaticResource BS17}" VerticalAlignment="Top" Width="43.375"/>
             			<Button x:Name="MacKay_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="32.75" Margin="725,719,-658,-652" Style="{StaticResource BS24}" VerticalAlignment="Top" Width="33.292"/>
-            			<Button x:Name="BaldwinJenkins_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="42.937" Margin="900,246,-872,-189" Style="{StaticResource BS22}" VerticalAlignment="Top" Width="72.423"/>
+                        <Button x:Name="BJ_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="42.937" Margin="900,246,-872,-189" Style="{StaticResource BS22}" VerticalAlignment="Top" Width="72.423"/>
             			<Button x:Name="McMillan_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="50.937" Margin="481,333,-427,-284" Style="{StaticResource BS34}" VerticalAlignment="Top" Width="46.437"/>
             			<Button x:Name="Village_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="55.124" Margin="997,284,-962,-239" Style="{StaticResource BS19}" VerticalAlignment="Top" Width="64.625"/>
             			<Button x:Name="Cove_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="27.279" Margin="1082,168,-1006,-95" Style="{StaticResource BS21}" VerticalAlignment="Top" Width="24.441"/>
