@@ -13,23 +13,28 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Devices.Geolocation;
 using Windows.UI.ViewManagement;
-
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
+using System.Collections.ObjectModel;
+using System.Text.RegularExpressions;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace WhitworthMap
 {
 
     public sealed partial class MainPage : Page
     {
+
+        //private MobileServiceCollection<Event, Event> events;
+        private IMobileServiceTable<Event> eventsTable = App.MobileService.GetTable<Event>();
+
         public MainPage()
         {
             this.InitializeComponent();
-            Get_Coord();
+            GetCoord();
             Window_adjustment();
             Window.Current.SizeChanged += WindowSizeChanged;
         }
 
-        public async void Get_Coord()
+        public async void GetCoord() 
         {
             //creates object of geolocator type
             Geolocator geolocator = new Geolocator();
@@ -48,23 +53,19 @@ namespace WhitworthMap
             Canvas.SetLeft(locationPingShadow, Calc2 - 24);
             Canvas.SetTop(locationPingShadow, Calc1 - 14);
         }
-
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-
-        }
+        
+			
 
         private void BackButton_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-            // TODO: Add event handler implementation here.
             ViewBuildings.Begin();
         }
 
         private void Title_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-            // TODO: Add event handler implementation here.
             ViewEvents.Begin();
         }
+
         public void Window_adjustment() 
         {
             Thickness margin = ScrollContainer.Margin;
@@ -79,5 +80,34 @@ namespace WhitworthMap
         {
             Window_adjustment();
         }
+
+        private async void Building_Tapped(object sender, RoutedEventArgs e)
+        {
+            FrameworkElement Building = (sender as FrameworkElement);
+            TextBlock BuildingText = (VisualTreeHelper.GetChild(Building, 1) as TextBlock);
+
+            var key = Regex.Match(Building.Name, @"^.*?(?=_)").ToString();
+
+            var query = await eventsTable
+                .Where(o => o.Locations.Contains(key))
+                .Select(o => o)
+                .ToCollectionAsync();
+
+            BuildingTitle.Text = BuildingText.Text;
+
+            if (query.Count() > 0)
+            {
+                EventList.ItemsSource = query;
+                NoEvents.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                EventList.ItemsSource = null;
+                NoEvents.Visibility = Visibility.Visible;
+            }
+
+            ViewEvents.Begin();
+        }
+
     }
 }

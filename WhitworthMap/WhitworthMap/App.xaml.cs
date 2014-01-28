@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,6 +24,14 @@ namespace WhitworthMap
     /// </summary>
     sealed partial class App : Application
     {
+        /// <summary>
+        /// Connnects to Mobile Service
+        /// </summary>
+        public static MobileServiceClient MobileService = new MobileServiceClient(
+            "https://whitworthmaps.azure-mobile.net/",
+            "xPJqRULAEhwZSXUHnlSWKyDDPGHVZq46"
+        );
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
