@@ -38,6 +38,7 @@ namespace WhitworthMap
 
         public async void GetCoord()
         {
+            //EN
             //creates object of geolocator type
             Geolocator geolocator = new Geolocator();
             //creates geopostion object, makes requests every 10 seconds for 5 minutes
@@ -46,6 +47,7 @@ namespace WhitworthMap
             double LongIt = geopostion.Coordinate.Longitude;
             locationPing.Visibility = Visibility.Visible;
             locationPingShadow.Visibility = Visibility.Visible;
+            //calculates the location according to the screen.
             double calc1 = (47.757025 - LatIt) * (111545.9883);
             double calc2 = (117.426186 + LongIt) * (83612.52731);
             int Calc1 = Convert.ToInt32(Math.Round(calc1));
@@ -58,11 +60,13 @@ namespace WhitworthMap
 
         private void BackButton_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
+           //AM
             ViewBuildings.Begin();
         }
 
         public void WindowResize()
         {
+            //EN
             // Gets the scroll containers margin property
             Thickness margin = ScrollContainer.Margin;
             // Gets the current windows resolution percentage
@@ -72,35 +76,33 @@ namespace WhitworthMap
             // Gets the current height of the window and multiplies it by the resolution percentage
             double Perfheight = (Window.Current.Bounds.Width * resolutionOffset) * .5625;
             // Elias uses his less magical number
+            double answer;
             if (Window.Current.Bounds.Height <= 768)
             {
                 double answer1 = (Perfheight * .09);
                 double answer2 = Math.Abs(Perfheight - Window.Current.Bounds.Height) + 87;
-                double answer = answer1 + answer2;
+                answer = answer1 + answer2;
                 // Sets the margin properties
-                margin.Top = answer;
-                margin.Bottom = answer;
-                margin.Left = 0;
-                margin.Right = 0;
-                // Sets the Scroll containers margin
-                ScrollContainer.Margin = margin;
+
             }
             else
             {
                 double resCheck = (Window.Current.Bounds.Height - Perfheight) / 2;
-                double answer = (Perfheight * .09) - resCheck;
+                answer = (Perfheight * .09) - resCheck;
 
-                margin.Top = answer;
-                margin.Bottom = answer;
-                margin.Left = 0;
-                margin.Right = 0;
-                // Sets the Scroll containers margin
-                ScrollContainer.Margin = margin;
             }
+
+            margin.Top = answer;
+            margin.Bottom = answer;
+            margin.Left = 0;
+            margin.Right = 0;
+            // Sets the Scroll containers margin
+            ScrollContainer.Margin = margin;
         }
 
         private async void Building_Tapped(object sender, RoutedEventArgs e)
         {
+            //AM
             FrameworkElement Building = (sender as FrameworkElement);
 
             var type = Regex.Match(Building.Name, @"(?<=_)\w*").ToString();
@@ -148,7 +150,7 @@ namespace WhitworthMap
             }
 
             var translateX = (BuildingEventsContainer.RenderTransform as CompositeTransform).TranslateX;
-            
+
             if (translateX == 350)
             {
                 ViewEvents.Begin();
@@ -157,6 +159,7 @@ namespace WhitworthMap
 
         private void Search_TextChanged(object sender, TextChangedEventArgs e)
         {
+            //AM
             TextBox SearchBox = (sender as TextBox);
 
             if (SearchBox.Text != "")
@@ -188,16 +191,19 @@ namespace WhitworthMap
 
         private void MapContainer_SizeChanged(object sender, Windows.UI.Xaml.SizeChangedEventArgs e)
         {
+          //EN
             WindowResize();
         }
 
         private void appBarOpen_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            //EN
             appBar.IsOpen = true;
         }
 
         private void road_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            //EN
             if (RoadLayer.Visibility != Visibility.Collapsed)
                 RoadLayer.Visibility = Visibility.Collapsed;
             else
@@ -206,6 +212,7 @@ namespace WhitworthMap
 
         private void text_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            //EN
             if (TextLayer.Visibility != Visibility.Collapsed)
                 TextLayer.Visibility = Visibility.Collapsed;
             else
