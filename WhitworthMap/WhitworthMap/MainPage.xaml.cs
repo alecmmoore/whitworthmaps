@@ -51,8 +51,6 @@ namespace WhitworthMap
             Canvas.SetTop(locationPingShadow, Calc1 - 14);
         }
         
-			
-
         private void BackButton_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
             ViewBuildings.Begin();
@@ -89,6 +87,37 @@ namespace WhitworthMap
             }
 
             ViewEvents.Begin();
+        }
+
+        private void Search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox SearchBox = (sender as TextBox);
+
+            if (SearchBox.Text != "")
+            {
+                for (var i = 0; i < VisualTreeHelper.GetChildrenCount(this.BuildingsList); i++)
+                {
+                    FrameworkElement ListItem = (VisualTreeHelper.GetChild(this.BuildingsList, i) as FrameworkElement);
+                    string ListItemTitle = (VisualTreeHelper.GetChild(ListItem, 1) as TextBlock).Text;
+
+                    if (ListItemTitle.Contains(SearchBox.Text))
+                    {
+                        ListItem.Visibility = Visibility.Visible;
+                    }
+                    else
+                    {
+                        ListItem.Visibility = Visibility.Collapsed;
+                    }
+                }
+            }
+            else
+            {
+                for (var i = 0; i < VisualTreeHelper.GetChildrenCount(this.BuildingsList); i++)
+                {
+                    FrameworkElement ListItem = (VisualTreeHelper.GetChild(this.BuildingsList, i) as FrameworkElement);
+                    ListItem.Visibility = Visibility.Visible;
+                }
+            }
         }
 
     }
