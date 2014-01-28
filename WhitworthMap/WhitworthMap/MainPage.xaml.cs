@@ -74,9 +74,11 @@ namespace WhitworthMap
             // Converts the resolution percentage to a double
             double resolutionOffset = (Convert.ToDouble(resolutionScale) * 0.01);
             // Gets the current height of the window and multiplies it by the resolution percentage
-            double height = Window.Current.Bounds.Height * resolutionOffset;
+            double Perfheight = ((Window.Current.Bounds.Width) * .5625) * resolutionOffset;
             // Elias uses his less magical number
-            double answer = (height - 768) / 4;
+            double answer1 = (Perfheight * .09);
+            double answer2 = Math.Abs(Perfheight - Window.Current.Bounds.Height) + 87;
+            double answer = answer1 + answer2;
             // Sets the margin properties
             margin.Top = answer;
             margin.Bottom = answer;
