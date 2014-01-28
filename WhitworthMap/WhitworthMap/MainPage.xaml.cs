@@ -85,7 +85,7 @@ namespace WhitworthMap
                 // Sets the Scroll containers margin
                 ScrollContainer.Margin = margin;
             }
-            else 
+            else
             {
                 double resCheck = (Window.Current.Bounds.Height - Perfheight) / 2;
                 double answer = (Perfheight * .09) - resCheck;
@@ -102,7 +102,7 @@ namespace WhitworthMap
         private async void Building_Tapped(object sender, RoutedEventArgs e)
         {
             FrameworkElement Building = (sender as FrameworkElement);
-            
+
             var type = Regex.Match(Building.Name, @"(?<=_)\w*").ToString();
             var key = Regex.Match(Building.Name, @"^.*?(?=_)").ToString();
 
@@ -190,6 +190,31 @@ namespace WhitworthMap
         {
             WindowResize();
         }
+
+        private void appBarOpen_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            appBar.IsOpen = true;
+        }
+
+        private void road_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            if (RoadLayer.Visibility != Visibility.Collapsed)
+                RoadLayer.Visibility = Visibility.Collapsed;
+            else
+                RoadLayer.Visibility = Visibility.Visible;
+        }
+
+        private void text_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            if (TextLayer.Visibility != Visibility.Collapsed)
+                TextLayer.Visibility = Visibility.Collapsed;
+            else
+                TextLayer.Visibility = Visibility.Visible;
+        }
+
+
+
+
 
     }
 }
