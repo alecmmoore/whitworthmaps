@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Devices.Geolocation;
+using Windows.UI.ViewManagement;
 using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
 using Microsoft.WindowsAzure.MobileServices;
@@ -29,13 +30,15 @@ namespace WhitworthMap
         {
             this.InitializeComponent();
             GetCoord();
+            Window_adjustment();
+            Window.Current.SizeChanged += WindowSizeChanged;
         }
 
         public async void GetCoord() 
         {
             //creates object of geolocator type
             Geolocator geolocator = new Geolocator();
-            //creates geopostion object, makes requests every 10 seconds for f minutes
+            //creates geopostion object, makes requests every 10 seconds for 5 minutes
             Geoposition geopostion = await geolocator.GetGeopositionAsync(maximumAge: TimeSpan.FromMinutes(5), timeout: TimeSpan.FromSeconds(10));
             double LatIt = geopostion.Coordinate.Latitude;
             double LongIt = geopostion.Coordinate.Longitude;
@@ -59,6 +62,21 @@ namespace WhitworthMap
         private void Title_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
             ViewEvents.Begin();
+        }
+
+        public void Window_adjustment() 
+        {
+            Thickness margin = ScrollContainer.Margin;
+            double answer = (Window.Current.Bounds.Height) * .0731482;
+            margin.Top = answer;
+            margin.Bottom = answer;
+            margin.Left = 0;
+            margin.Right = 0;
+            ScrollContainer.Margin = margin;
+        }
+        public void WindowSizeChanged(object sender, Windows.UI.Core.WindowSizeChangedEventArgs e) 
+        {
+            Window_adjustment();
         }
 
         private async void Building_Tapped(object sender, RoutedEventArgs e)
