@@ -75,7 +75,7 @@ namespace WhitworthMap
             // Converts the resolution percentage to a double
             double resolutionOffset = (Convert.ToDouble(resolutionScale) * 0.01);
             // Gets the current height of the window and multiplies it by the resolution percentage
-            double Perfheight = (Window.Current.Bounds.Width * .5625) * resolutionOffset;
+            double Perfheight = (Window.Current.Bounds.Width * resolutionOffset) * .5625;
             // Elias uses his less magical number
             if (Window.Current.Bounds.Height <= 768)
             {
@@ -92,7 +92,8 @@ namespace WhitworthMap
             }
             else 
             {
-                double answer = (Perfheight - 768) / 4;
+                double resCheck = (Window.Current.Bounds.Height - Perfheight) / 2;
+                double answer = (Perfheight * .09) - resCheck;
 
                 margin.Top = answer;
                 margin.Bottom = answer;
@@ -122,7 +123,7 @@ namespace WhitworthMap
                     FrameworkElement ListItem = (VisualTreeHelper.GetChild(this.BuildingsList, i) as FrameworkElement);
                     string ListItemTitle = (VisualTreeHelper.GetChild(ListItem, 1) as TextBlock).Text;
 
-                    if (ListItemTitle.Contains(key))
+                    if (ListItem.Name.Contains(key))
                     {
                         BuildingTitle.Text = ListItemTitle;
                     }
@@ -149,7 +150,10 @@ namespace WhitworthMap
                 NoEvents.Visibility = Visibility.Visible;
             }
 
-            ViewEvents.Begin();
+            if (Convert.ToInt32((BuildingListContainer as Grid).RenderTransform) != 350)
+            {
+                ViewEvents.Begin();
+            }
         }
 
         private void Search_TextChanged(object sender, TextChangedEventArgs e)
