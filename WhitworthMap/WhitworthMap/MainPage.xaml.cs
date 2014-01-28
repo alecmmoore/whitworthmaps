@@ -70,19 +70,25 @@ namespace WhitworthMap
         {
             // Gets the scroll containers margin property
             Thickness margin = ScrollContainer.Margin;
+            
             // Gets the current windows resolution percentage
             ResolutionScale resolutionScale = DisplayProperties.ResolutionScale;
+            
             // Converts the resolution percentage to a double
             double resolutionOffset = (Convert.ToDouble(resolutionScale) * 0.01);
+            
             // Gets the current height of the window and multiplies it by the resolution percentage
             double height = Window.Current.Bounds.Height * resolutionOffset;
+
             // Elias uses his less magical number
-            double answer = (height - 768) / 4;
+            double answer = (height * .09);
+            
             // Sets the margin properties
             margin.Top = answer;
             margin.Bottom = answer;
             margin.Left = 0;
             margin.Right = 0;
+            
             // Sets the Scroll containers margin
             ScrollContainer.Margin = margin;
         }
@@ -90,16 +96,37 @@ namespace WhitworthMap
         private async void Building_Tapped(object sender, RoutedEventArgs e)
         {
             FrameworkElement Building = (sender as FrameworkElement);
-            TextBlock BuildingText = (VisualTreeHelper.GetChild(Building, 1) as TextBlock);
-
+            
+            var type = Regex.Match(Building.Name, @"(?<=_)\w*").ToString();
             var key = Regex.Match(Building.Name, @"^.*?(?=_)").ToString();
+
+            if (type == "ListButton")
+            {
+                TextBlock BuildingText = (VisualTreeHelper.GetChild(Building, 1) as TextBlock);
+                BuildingTitle.Text = BuildingText.Text;
+            }
+            else if (type == "CanvasButton")
+            {
+                for (var i = 0; i < VisualTreeHelper.GetChildrenCount(this.BuildingsList); i++)
+                {
+                    FrameworkElement ListItem = (VisualTreeHelper.GetChild(this.BuildingsList, i) as FrameworkElement);
+                    string ListItemTitle = (VisualTreeHelper.GetChild(ListItem, 1) as TextBlock).Text;
+
+                    if (ListItemTitle.Contains(key))
+                    {
+                        BuildingTitle.Text = ListItemTitle;
+                    }
+                }
+            }
+            else
+            {
+                BuildingTitle.Text = "No Building Title";
+            }
 
             var query = await eventsTable
                 .Where(o => o.Locations.Contains(key))
                 .Select(o => o)
                 .ToCollectionAsync();
-
-            BuildingTitle.Text = BuildingText.Text;
 
             if (query.Count() > 0)
             {
