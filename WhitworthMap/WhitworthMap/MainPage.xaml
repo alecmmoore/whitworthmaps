@@ -1937,11 +1937,325 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="TextEdit" TargetType="Button">
+        	<Setter Property="Foreground" Value="{StaticResource AppBarItemForegroundThemeBrush}"/>
+        	<Setter Property="VerticalAlignment" Value="Stretch"/>
+        	<Setter Property="FontFamily" Value="Segoe UI Symbol"/>
+        	<Setter Property="FontWeight" Value="Normal"/>
+        	<Setter Property="FontSize" Value="20"/>
+        	<Setter Property="AutomationProperties.ItemType" Value="App Bar Button"/>
+        	<Setter Property="Template">
+        		<Setter.Value>
+        			<ControlTemplate TargetType="Button">
+        				<Grid x:Name="RootGrid" Width="100" Background="Transparent">
+
+        					<VisualStateManager.VisualStateGroups>
+        						<VisualStateGroup x:Name="ApplicationViewStates">
+        							<VisualState x:Name="FullScreenLandscape"/>
+        							<VisualState x:Name="Filled"/>
+        							<VisualState x:Name="FullScreenPortrait">
+        								<Storyboard>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="TextLabel" Storyboard.TargetProperty="Visibility">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+        									</ObjectAnimationUsingKeyFrames>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Width">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="60"/>
+        									</ObjectAnimationUsingKeyFrames>
+        								</Storyboard>
+        							</VisualState>
+        							<VisualState x:Name="Snapped">
+        								<Storyboard>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="TextLabel" Storyboard.TargetProperty="Visibility">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+        									</ObjectAnimationUsingKeyFrames>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Width">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="60"/>
+        									</ObjectAnimationUsingKeyFrames>
+        								</Storyboard>
+        							</VisualState>
+        						</VisualStateGroup>
+        						<VisualStateGroup x:Name="CommonStates">
+        							<VisualState x:Name="Normal"/>
+        							<VisualState x:Name="PointerOver">
+        								<Storyboard>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGlyph" Storyboard.TargetProperty="Foreground">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarItemPointerOverBackgroundThemeBrush}"/>
+        									</ObjectAnimationUsingKeyFrames>
+        								</Storyboard>
+        							</VisualState>
+        							<VisualState x:Name="Pressed">
+        								<Storyboard>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="OutlineGlyph" Storyboard.TargetProperty="Foreground">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarItemForegroundThemeBrush}"/>
+        									</ObjectAnimationUsingKeyFrames>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGlyph" Storyboard.TargetProperty="Foreground">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarItemForegroundThemeBrush}"/>
+        									</ObjectAnimationUsingKeyFrames>
+        								</Storyboard>
+        							</VisualState>
+        							<VisualState x:Name="Disabled">
+        								<Storyboard>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="OutlineGlyph" Storyboard.TargetProperty="Foreground">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarItemDisabledForegroundThemeBrush}"/>
+        									</ObjectAnimationUsingKeyFrames>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="TextLabel" Storyboard.TargetProperty="Foreground">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarItemDisabledForegroundThemeBrush}"/>
+        									</ObjectAnimationUsingKeyFrames>
+        								</Storyboard>
+        							</VisualState>
+        						</VisualStateGroup>
+        						<VisualStateGroup x:Name="FocusStates">
+        							<VisualState x:Name="Focused">
+        								<Storyboard>
+        									<DoubleAnimation
+        										Storyboard.TargetName="FocusVisualWhite"
+        										Storyboard.TargetProperty="Opacity"
+        										To="1"
+        										Duration="0"/>
+        									<DoubleAnimation
+        										Storyboard.TargetName="FocusVisualBlack"
+        										Storyboard.TargetProperty="Opacity"
+        										To="1"
+        										Duration="0"/>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background)" Storyboard.TargetName="RootGrid">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Null}"/>
+        									</ObjectAnimationUsingKeyFrames>
+        								</Storyboard>
+        							</VisualState>
+        							<VisualState x:Name="Unfocused" />
+        							<VisualState x:Name="PointerFocused" />
+        						</VisualStateGroup>
+        						<VisualStateGroup x:Name="CheckStates">
+        							<VisualState x:Name="Checked">
+        								<Storyboard>
+        									<DoubleAnimation Duration="0" To="0" Storyboard.TargetName="OutlineGlyph" Storyboard.TargetProperty="Opacity"/>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGlyph" Storyboard.TargetProperty="Foreground">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarItemForegroundThemeBrush}"/>
+        									</ObjectAnimationUsingKeyFrames>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundCheckedGlyph" Storyboard.TargetProperty="Visibility">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+        									</ObjectAnimationUsingKeyFrames>
+        								</Storyboard>
+        							</VisualState>
+        							<VisualState x:Name="Unchecked"/>
+        							<VisualState x:Name="Indeterminate"/>
+        						</VisualStateGroup>
+        					</VisualStateManager.VisualStateGroups>
+        					<StackPanel VerticalAlignment="Top" Margin="0,5,0,-7" Height="68">
+        						<Grid Width="40" Height="40" Margin="0,0,0,5" HorizontalAlignment="Center">
+        							<Path Data="M32.0068359375,12.6235275268555L33.062744140625,12.6357355117798 33.49609375,13.0629806518555 33.990478515625,16.5663986206055 34.1064453125,20.5825119018555 33.99658203125,21.1806564331055 33.49609375,21.4125900268555 32.745361328125,21.3393478393555 32.2998046875,20.7289962768555 31.15234375,18.0251388549805 29.8095703125,16.4077072143555 28.6209106445313,15.7561569213867 27.056884765625,15.2907638549805 25.1174926757813,15.0115280151367 22.802734375,14.9184494018555 21.234130859375,15.0283126831055 20.5810546875,15.3579025268555 20.5078125,15.7729415893555 20.5078125,40.1137619018555 20.69091796875,41.441276550293 21.240234375,42.2988204956055 22.332763671875,42.893913269043 24.1455078125,43.4340744018555 24.871826171875,43.5988693237305 25.1953125,43.7026290893555 25.439453125,44.6303634643555 24.90234375,45.2407150268555 24.627685546875,45.2346115112305 23.9013671875,45.1674728393555 18.017578125,44.8745040893555 13.2568359375,45.1186447143555 11.962890625,45.1186447143555 11.6455078125,44.5327072143555 11.761474609375,43.8796310424805 12.5,43.4829025268555 14.2578125,42.8908615112305 15.33203125,42.1889572143555 15.95458984375,41.0720138549805 16.162109375,39.4301681518555 16.162109375,15.7729415893555 15.9423828125,15.2114191055298 15.283203125,14.9428634643555 14.874267578125,14.9245529174805 13.8427734375,14.9184494018555 9.814453125,15.3212814331055 7.0068359375,16.5297775268555 5.438232421875,18.2265548706055 4.052734375,20.9243087768555 3.558349609375,21.5895919799805 2.9052734375,21.5834884643555 2.337646484375,21.2600021362305 2.294921875,20.6801681518555 2.93579077720642,17.5002384185791 3.14941382408142,13.2338790893555 3.52172827720642,12.8371524810791 4.638671875,12.7700119018555 10.19287109375,13.0263595581055 16.30859375,13.1118087768555 21.8307476043701,13.0812911987305 26.2878398895264,12.9897384643555 29.6798686981201,12.8371505737305 32.0068359375,12.6235275268555z" Stretch="Uniform" Fill="#FFFFFFFF" Width="16" Height="16" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+									  <Path.RenderTransform>
+										<TransformGroup>
+										  <TransformGroup.Children>
+											<RotateTransform Angle="0" />
+											<ScaleTransform ScaleX="1" ScaleY="1" />
+										  </TransformGroup.Children>
+										</TransformGroup>
+									  </Path.RenderTransform>
+									</Path>
+									<TextBlock x:Name="BackgroundGlyph" Text="&#xE0A8;" FontFamily="Segoe UI Symbol" FontSize="53.333" Margin="-4,-19,0,0" Foreground="{StaticResource AppBarItemBackgroundThemeBrush}"/>
+        							<TextBlock x:Name="OutlineGlyph" Text="&#xE0A7;" FontFamily="Segoe UI Symbol" FontSize="53.333" Margin="-4,-19,0,0"/>
+        						</Grid>
+        						<TextBlock
+        							x:Name="TextLabel"
+        							Foreground="{StaticResource AppBarItemForegroundThemeBrush}"
+        							Margin="0,0,2,0"
+        							FontSize="12"
+        							TextAlignment="Center"
+        							Width="88"
+        							MaxHeight="32"
+        							TextTrimming="WordEllipsis"
+        							Style="{StaticResource BasicTextStyle}" Text="text layer"/>
+        					</StackPanel>
+        					<Rectangle
+        						x:Name="FocusVisualWhite"
+        						IsHitTestVisible="False"
+        						Stroke="{StaticResource FocusVisualWhiteStrokeThemeBrush}"
+        						StrokeEndLineCap="Square"
+        						StrokeDashArray="1,1"
+        						Opacity="0"
+        						StrokeDashOffset="1.5"/>
+        					<Rectangle
+        						x:Name="FocusVisualBlack"
+        						IsHitTestVisible="False"
+        						Stroke="{StaticResource FocusVisualBlackStrokeThemeBrush}"
+        						StrokeEndLineCap="Square"
+        						StrokeDashArray="1,1"
+        						Opacity="0"
+        						StrokeDashOffset="0.5"/>
+
+        				</Grid>
+        			</ControlTemplate>
+        		</Setter.Value>
+        	</Setter>
+        </Style>
+        <Style x:Key="EditRoad" TargetType="Button">
+        	<Setter Property="Foreground" Value="{StaticResource AppBarItemForegroundThemeBrush}"/>
+        	<Setter Property="VerticalAlignment" Value="Stretch"/>
+        	<Setter Property="FontFamily" Value="Segoe UI Symbol"/>
+        	<Setter Property="FontWeight" Value="Normal"/>
+        	<Setter Property="FontSize" Value="20"/>
+        	<Setter Property="AutomationProperties.ItemType" Value="App Bar Button"/>
+        	<Setter Property="Template">
+        		<Setter.Value>
+        			<ControlTemplate TargetType="Button">
+        				<Grid x:Name="RootGrid" Width="100" Background="Transparent">
+
+        					<VisualStateManager.VisualStateGroups>
+        						<VisualStateGroup x:Name="ApplicationViewStates">
+        							<VisualState x:Name="FullScreenLandscape"/>
+        							<VisualState x:Name="Filled"/>
+        							<VisualState x:Name="FullScreenPortrait">
+        								<Storyboard>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="TextLabel" Storyboard.TargetProperty="Visibility">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+        									</ObjectAnimationUsingKeyFrames>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Width">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="60"/>
+        									</ObjectAnimationUsingKeyFrames>
+        								</Storyboard>
+        							</VisualState>
+        							<VisualState x:Name="Snapped">
+        								<Storyboard>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="TextLabel" Storyboard.TargetProperty="Visibility">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+        									</ObjectAnimationUsingKeyFrames>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Width">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="60"/>
+        									</ObjectAnimationUsingKeyFrames>
+        								</Storyboard>
+        							</VisualState>
+        						</VisualStateGroup>
+        						<VisualStateGroup x:Name="CommonStates">
+        							<VisualState x:Name="Normal"/>
+        							<VisualState x:Name="PointerOver">
+        								<Storyboard>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGlyph" Storyboard.TargetProperty="Foreground">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarItemPointerOverBackgroundThemeBrush}"/>
+        									</ObjectAnimationUsingKeyFrames>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="Foreground">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarItemPointerOverForegroundThemeBrush}"/>
+        									</ObjectAnimationUsingKeyFrames>
+        								</Storyboard>
+        							</VisualState>
+        							<VisualState x:Name="Pressed">
+        								<Storyboard>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="OutlineGlyph" Storyboard.TargetProperty="Foreground">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarItemForegroundThemeBrush}"/>
+        									</ObjectAnimationUsingKeyFrames>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGlyph" Storyboard.TargetProperty="Foreground">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarItemForegroundThemeBrush}"/>
+        									</ObjectAnimationUsingKeyFrames>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="Foreground">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarItemPressedForegroundThemeBrush}"/>
+        									</ObjectAnimationUsingKeyFrames>
+        								</Storyboard>
+        							</VisualState>
+        							<VisualState x:Name="Disabled">
+        								<Storyboard>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="OutlineGlyph" Storyboard.TargetProperty="Foreground">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarItemDisabledForegroundThemeBrush}"/>
+        									</ObjectAnimationUsingKeyFrames>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="Foreground">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarItemDisabledForegroundThemeBrush}"/>
+        									</ObjectAnimationUsingKeyFrames>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="TextLabel" Storyboard.TargetProperty="Foreground">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarItemDisabledForegroundThemeBrush}"/>
+        									</ObjectAnimationUsingKeyFrames>
+        								</Storyboard>
+        							</VisualState>
+        						</VisualStateGroup>
+        						<VisualStateGroup x:Name="FocusStates">
+        							<VisualState x:Name="Focused">
+        								<Storyboard>
+        									<DoubleAnimation
+        										Storyboard.TargetName="FocusVisualWhite"
+        										Storyboard.TargetProperty="Opacity"
+        										To="1"
+        										Duration="0"/>
+        									<DoubleAnimation
+        										Storyboard.TargetName="FocusVisualBlack"
+        										Storyboard.TargetProperty="Opacity"
+        										To="1"
+        										Duration="0"/>
+        								</Storyboard>
+        							</VisualState>
+        							<VisualState x:Name="Unfocused" />
+        							<VisualState x:Name="PointerFocused" />
+        						</VisualStateGroup>
+        						<VisualStateGroup x:Name="CheckStates">
+        							<VisualState x:Name="Checked">
+        								<Storyboard>
+        									<DoubleAnimation Duration="0" To="0" Storyboard.TargetName="OutlineGlyph" Storyboard.TargetProperty="Opacity"/>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGlyph" Storyboard.TargetProperty="Foreground">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarItemForegroundThemeBrush}"/>
+        									</ObjectAnimationUsingKeyFrames>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundCheckedGlyph" Storyboard.TargetProperty="Visibility">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+        									</ObjectAnimationUsingKeyFrames>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="Foreground">
+        										<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarItemPressedForegroundThemeBrush}"/>
+        									</ObjectAnimationUsingKeyFrames>
+        								</Storyboard>
+        							</VisualState>
+        							<VisualState x:Name="Unchecked"/>
+        							<VisualState x:Name="Indeterminate"/>
+        						</VisualStateGroup>
+        					</VisualStateManager.VisualStateGroups>
+        					<StackPanel VerticalAlignment="Top" Margin="0,5,0,-7" Height="68">
+        						<Grid Width="40" Height="40" Margin="0,0,0,5" HorizontalAlignment="Center">
+        							<Path Data="M30.148008,19.415998L33.724035,19.415998 34.234037,26.313997 29.381004,26.313997z M30.629031,9.8749987L33.170007,9.8749987 33.532003,14.778001 30.083038,14.778001z M31.195024,2.9420003L32.514039,2.9420003 32.703042,5.4869997 30.91302,5.4869997z M37.940988,9.5366011E-07L63.999044,29.125002 55.569352,29.125002 36.791028,1.916194z M26.06091,0L27.209998,1.916194 8.4313261,29.125 0,29.125z" Stretch="Uniform" Fill="#FFFFFFFF" Width="16" Height="16" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+									  <Path.RenderTransform>
+										<TransformGroup>
+										  <TransformGroup.Children>
+											<RotateTransform Angle="0" />
+											<ScaleTransform ScaleX="1" ScaleY="1" />
+										  </TransformGroup.Children>
+										</TransformGroup>
+									  </Path.RenderTransform>
+									</Path>
+									<TextBlock x:Name="BackgroundGlyph" Text="&#xE0A8;" FontFamily="Segoe UI Symbol" FontSize="53.333" Margin="-4,-19,0,0" Foreground="{StaticResource AppBarItemBackgroundThemeBrush}"/>
+        							<TextBlock x:Name="OutlineGlyph" Text="&#xE0A7;" FontFamily="Segoe UI Symbol" FontSize="53.333" Margin="-4,-19,0,0"/>
+        							<ContentPresenter x:Name="Content" HorizontalAlignment="Center" Margin="-1,-1,0,0" VerticalAlignment="Center" Visibility="Collapsed"/>
+        						</Grid>
+        						<TextBlock
+        							x:Name="TextLabel"
+        							Foreground="{StaticResource AppBarItemForegroundThemeBrush}"
+        							Margin="0,0,2,0"
+        							FontSize="12"
+        							TextAlignment="Center"
+        							Width="88"
+        							MaxHeight="32"
+        							TextTrimming="WordEllipsis"
+        							Style="{StaticResource BasicTextStyle}" Text="road layer"/>
+        					</StackPanel>
+        					<Rectangle
+        						x:Name="FocusVisualWhite"
+        						IsHitTestVisible="False"
+        						Stroke="{StaticResource FocusVisualWhiteStrokeThemeBrush}"
+        						StrokeEndLineCap="Square"
+        						StrokeDashArray="1,1"
+        						Opacity="0"
+        						StrokeDashOffset="1.5"/>
+        					<Rectangle
+        						x:Name="FocusVisualBlack"
+        						IsHitTestVisible="False"
+        						Stroke="{StaticResource FocusVisualBlackStrokeThemeBrush}"
+        						StrokeEndLineCap="Square"
+        						StrokeDashArray="1,1"
+        						Opacity="0"
+        						StrokeDashOffset="0.5"/>
+
+        				</Grid>
+        			</ControlTemplate>
+        		</Setter.Value>
+        	</Setter>
+        </Style>
     </Page.Resources>
 
     <Grid x:Name="MainContainer">
 
-        <Grid x:Name="ListContainer" Width="350" HorizontalAlignment="Left" Background="#FF424242">
+        <Grid x:Name="ListContainer" Width="350" HorizontalAlignment="Left" Background="{StaticResource CheckBoxContentDisabledForegroundThemeBrush}">
             <Grid x:Name="BuildingListContainer" RenderTransformOrigin="0.5,0.5" Margin="10,0,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="79*"/>
@@ -1953,10 +2267,10 @@
                 <TextBlock x:Name="Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Whitworth University" VerticalAlignment="Top" FontSize="35" Margin="0,10,0,0" Grid.ColumnSpan="2"/>
                 <xtk:WatermarkTextBox WatermarkText="Search"  x:Name="Search" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,60,20,0" InputScope="Search" Padding="9,3,10,5" Grid.ColumnSpan="2" TextChanged="Search_TextChanged"/>
                 <Grid Grid.ColumnSpan="2" Margin="0,103,0,0">
-                    <ScrollViewer Margin="0">
+                    <ScrollViewer Margin="0" ZoomMode="Disabled">
                         <StackPanel x:Name="BuildingsList">
                             <Grid x:Name="Aquatic_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid" Width="48" Height="48" Visibility="Visible">
@@ -1978,7 +2292,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Aquatic Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Arend_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid1" Width="48" Height="48" Visibility="Visible">
@@ -2001,7 +2315,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Arend Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Auld_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid39" Width="48" Height="48" Visibility="Visible">
@@ -2023,7 +2337,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Auld House" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="BJ_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid2" Width="48" Height="48" Visibility="Visible">
@@ -2045,7 +2359,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Baldwin Jenkins Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Ballard_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid3" Width="48" Height="48" Visibility="Visible">
@@ -2067,7 +2381,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Ballard Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Boppell_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid4" Width="48" Height="48" Visibility="Visible">
@@ -2089,7 +2403,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Boppell Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Cornerstone_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid5" Width="48" Height="48" Visibility="Visible">
@@ -2108,10 +2422,10 @@
                                         </Grid>
                                     </Viewbox>
                                 </Grid>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Cornerstone Hall" Height="25" Margin="75,15,0,0"/>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Cornerstone Building" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Auditorium_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid46" Width="48" Height="48" Visibility="Visible">
@@ -2133,7 +2447,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Cowles Auditorium" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Dixon_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid24" Width="48" Height="48" Visibility="Visible">
@@ -2155,7 +2469,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Dixon Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Duvall_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid6" Width="48" Height="48" Visibility="Visible">
@@ -2177,7 +2491,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Duvall Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="East_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid7" Width="48" Height="48" Visibility="Visible">
@@ -2199,7 +2513,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="East Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Facilities_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid41" Width="48" Height="48" Visibility="Visible">
@@ -2221,7 +2535,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Facilities Services" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Fieldhouse_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid16" Width="48" Height="48" Visibility="Visible">
@@ -2243,7 +2557,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Fieldhouse" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Graves_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid14" Width="48" Height="48" Visibility="Visible">
@@ -2265,7 +2579,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Graves Gym" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Library_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid42" Width="48" Height="48" Visibility="Visible">
@@ -2287,7 +2601,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="H.C. Cowles Library" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Hardwick_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid45" Width="48" Height="48" Visibility="Visible">
@@ -2309,7 +2623,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Hardwick House" Height="25" Margin="75,15,0,0"/>
                             </Grid>
 							 <Grid x:Name="Hawthorne_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid23" Width="48" Height="48" Visibility="Visible">
@@ -2331,7 +2645,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Hawthorne Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Hendrick_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid35" Width="48" Height="48" Visibility="Visible">
@@ -2353,7 +2667,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Hendrick Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Hill_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid37" Width="48" Height="48" Visibility="Visible">
@@ -2375,7 +2689,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Hill House" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="HUB_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid25" Width="48" Height="48" Visibility="Visible">
@@ -2397,7 +2711,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="The HUB" Height="25" Margin="75,15,0,0"/>
                             </Grid>
 							 <Grid x:Name="Johnston_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid26" Width="48" Height="48" Visibility="Visible">
@@ -2419,7 +2733,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Johnston Science Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Lied_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid18" Width="48" Height="48" Visibility="Visible">
@@ -2441,7 +2755,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Lied Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Lindaman_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid22" Width="48" Height="48" Visibility="Visible">
@@ -2463,7 +2777,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Lindaman Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="MacKay_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid44" Width="48" Height="48" Visibility="Visible">
@@ -2485,7 +2799,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="MacKay Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
 							 <Grid x:Name="Marks_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid32" Width="48" Height="48" Visibility="Visible">
@@ -2507,7 +2821,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Marks Field" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="McEachran_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid36" Width="48" Height="48" Visibility="Visible">
@@ -2529,7 +2843,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="McEachran Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="McMillan_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid11" Width="48" Height="48" Visibility="Visible">
@@ -2551,7 +2865,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="McMillan Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
 							<Grid x:Name="Merkel_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid34" Width="48" Height="48" Visibility="Visible">
@@ -2573,7 +2887,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Merkel Field" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Music_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid19" Width="48" Height="48" Visibility="Visible">
@@ -2595,7 +2909,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Music Building" Height="25" Margin="75,15,0,0"/>
                             </Grid>
 							 <Grid x:Name="Omache_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid31" Width="48" Height="48" Visibility="Visible">
@@ -2617,7 +2931,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Omache Field" Height="25" Margin="75,15,0,0"/>
                             </Grid>
 							<Grid x:Name="Pine_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid33" Width="48" Height="48" Visibility="Visible">
@@ -2639,7 +2953,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Pine Bowl" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Cove_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid27" Width="48" Height="48" Visibility="Visible">
@@ -2661,7 +2975,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Pirate's Cove" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="President_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid12" Width="48" Height="48" Visibility="Visible">
@@ -2683,7 +2997,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="President's House" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Robinson_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid17" Width="48" Height="48" Visibility="Visible">
@@ -2705,7 +3019,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Robinson Science Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Schumacher_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid40" Width="48" Height="48" Visibility="Visible">
@@ -2727,7 +3041,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Schumacher Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Conditioning_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid13" Width="48" Height="48" Visibility="Visible">
@@ -2749,7 +3063,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Scotford Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Seeley_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid47" Width="48" Height="48" Visibility="Visible">
@@ -2771,7 +3085,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Seeley Chapel" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Center_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid29" Width="48" Height="48" Visibility="Visible">
@@ -2793,7 +3107,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Scotford Tennis Center / Cutter Courts / Beeksma Tennis Bubble" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Soccer_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid30" Width="48" Height="48" Visibility="Visible">
@@ -2815,7 +3129,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Soccer Field" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Stewart_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid10" Width="48" Height="48" Visibility="Visible">
@@ -2837,7 +3151,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Stewart Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
 							 <Grid x:Name="Courts_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid28" Width="48" Height="48" Visibility="Visible">
@@ -2859,7 +3173,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Tennis Courts" Height="25" Margin="75,15,0,0"/>
                             </Grid>
 							<Grid x:Name="Recreation_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid15" Width="48" Height="48" Visibility="Visible">
@@ -2881,7 +3195,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="University Recreation Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Village_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid8" Width="48" Height="48" Visibility="Visible">
@@ -2903,7 +3217,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="The Village" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Warren_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid9" Width="48" Height="48" Visibility="Visible">
@@ -2925,7 +3239,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Warren Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Westminister_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid20" Width="48" Height="48" Visibility="Visible">
@@ -2947,7 +3261,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Westminster Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Weyerhaeuser_ListButton" Height="50" Margin="0,0,10,5"  Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
 
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
@@ -2970,7 +3284,7 @@
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhaeuser Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Quall_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
                                             <Grid Name="backgroundGrid48" Width="48" Height="48" Visibility="Visible">
@@ -3001,12 +3315,12 @@
                 </Grid.RenderTransform>
                 <Button x:Name="BackButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="52" Margin="10,4,0,0" Width="48" Style="{StaticResource BackButtonStyle}" Tapped="BackButton_Tapped"/>
                 <Grid x:Name="EventHeader" HorizontalAlignment="Left" VerticalAlignment="Top" Height="128" Canvas.ZIndex="2" Margin="0,50,0,0">
-                    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Background="Gray" Margin="10">
+                    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Background="#FF0B4678" Margin="10">
 						<TextBlock x:Name="EventCount" HorizontalAlignment="Center" Text="" VerticalAlignment="Center" FontSize="50"/>
 					</Grid>
                     <TextBlock x:Name="BuildingTitle" Text="" Margin="125,6,0,4" FontSize="35" TextWrapping="Wrap"/>
                 </Grid>
-                <ScrollViewer Margin="0,183,0,0" Background="{x:Null}">
+                <ScrollViewer Margin="0,183,0,0" Background="{x:Null}" ZoomMode="Disabled">
                     <ListBox x:Name="EventList" ItemsSource="{Binding}" HorizontalAlignment="Left" Canvas.ZIndex="1" BorderThickness="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{StaticResource EventListStyle}" Width="350">
                         <ListBoxItem x:Name="NoEvents" Visibility="Collapsed">
                             <TextBlock Text="There are no events for this location"></TextBlock>
@@ -3014,7 +3328,7 @@
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
-                                    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Background="Gray" Margin="5">
+                                    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Background="#FF0B4678" Margin="5">
 										<Path Data="F1M-518.726,-3163.6L-533.078,-3173.63 -537.251,-3156.62 -542.97,-3173.17 -556.341,-3161.86 -551.24,-3178.61 -568.709,-3177.32 -554.729,-3187.88 -569.629,-3197.1 -552.108,-3197.43 -558.734,-3213.64 -544.38,-3203.61 -540.204,-3220.62 -534.49,-3204.06 -521.113,-3215.38 -526.224,-3198.62 -508.75,-3199.91 -522.735,-3189.35 -507.835,-3180.14 -525.346,-3179.81 -518.726,-3163.6z" Stretch="Uniform" Fill="#FFFFFFFF" Width="25" Height="25" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
 										  <Path.RenderTransform>
 											<TransformGroup>
@@ -3102,111 +3416,111 @@
             			<Path x:Name="locationPing" Visibility="Collapsed" Data="M27.2886,66.9624 L28.5131,69.041 L29.4927,69.041 L29.9825,68.1851 L24.8396,55.3468 C23.7256,49.0401 24.8924,43.4749 30.8397,40.7967 C35.713,38.9437 41.3407,38.2364 48.1054,39.6962 C50.1312,39.5974 51.1182,40.9023 52.7586,41.2857 C60.1213,44.8492 65.8599,45.4111 69.6569,42.3862 C75.7741,40.1389 80.5879,40.7248 84.2286,42.1416 C87.4579,42.4683 86.6556,40.7844 84.596,38.4735 C82.0877,37.0935 79.286,36.5616 76.1468,37.0063 C73.5685,36.7388 73.4147,35.5323 75.1672,33.5827 C76.835,31.791 75.9352,30.8872 73.8202,30.4037 C61.2077,31.871 65.1262,20.3777 74.555,24.0457 L76.2693,25.0239 C79.4148,25.7542 80.1848,24.338 79.0857,21.2335 C78.2564,19.7102 77.3846,18.5182 76.8815,17.3209 C75.4121,15.395 75.5919,13.4548 77.2489,11.4519 C77.602,8.46246 76.3339,6.69141 72.7182,6.68339 C67.5679,8.38401 61.9331,7.54416 55.9423,5.70523 L43.5747,1.42578 C24.8806,-1.20678 11.9702,1.62865 6.83918,11.8187 C5.42212,9.60847 3.40674,9.37386 0.839051,10.9628 C-0.050286,13.9636 0.783296,15.6344 3.65544,15.7314 z M14.636,12.3153 L17.6764,16.9114 C17.6764,16.9114 19.8655,14.8552 19.7439,15.46 C19.6222,16.0648 32.5136,34.4494 32.5136,34.4494 L39.0808,33.7237 L38.4728,23.08 L43.8239,33.8447 L50.3909,35.538 L51.2422,16.1857 L54.0394,16.6695 L54.161,11.8315 C50.7913,10.0553 47.1423,9.17787 43.7021,8.92861 L43.4589,13.6457 L45.6479,14.2505 L45.0399,22.7171 L39.5672,10.6219 L31.4189,10.38 L31.9054,22.2333 L25.703,13.4038 L28.3785,12.6781 L25.5814,7.961 C21.8394,8.62444 18.1875,10.0472 14.636,12.3153 z M16.361,12.8282 L18.1836,15.7244 L20.3707,14.5176 L33.4934,33.3429 L38.1107,33.1016 L37.3816,18.2586 L44.7935,33.3429 L49.1678,34.429 L50.5044,15.0003 L52.813,15.8451 L53.299,12.9489 C51.3739,11.7833 48.3615,10.9388 44.672,10.294 L44.672,13.1902 L46.9807,13.7936 L46.2516,26.9472 L39.2042,12.3455 C36.8772,11.7473 34.7419,11.6994 32.7644,12.1042 L33.3719,26.2231 L24.5019,13.4316 L26.5676,12.4662 L25.1095,9.932 C21.9515,10.1769 19.0584,11.2109 16.361,12.8282 z M21.52,48.43 L7.903,18.061 C11.7663,21.1469 14.7798,25.299 17.0866,30.3377 C19.6951,36.3437 21.2297,42.3733 21.52,48.43 z" Fill="#FF060606" HorizontalAlignment="Left" Height="35.781" Stretch="Fill" Stroke="White" UseLayoutRounding="False" VerticalAlignment="Top" Width="43.875" Canvas.Left="38.542"/>
             		</Canvas>
             		<Grid x:Name="TextLayer" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="1322">
-            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Hawthorne Hall" VerticalAlignment="Top" Margin="1207,644,0,0"/>
-            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Pirate's Cove Shleter" VerticalAlignment="Top" Margin="1040,155,0,0"/>
-            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="East Hall" VerticalAlignment="Top" Margin="1104,274,0,0"/>
-            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Boppell Hall" VerticalAlignment="Top" Margin="1072,460,0,0"/>
-            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="MacKay Hall" VerticalAlignment="Top" Margin="713,745,0,0"/>
-            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Stewart Hall" VerticalAlignment="Top" Margin="947,328,0,0"/>
-            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Hill House" VerticalAlignment="Top" Margin="540,758,0,-4"/>
-            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="President's House" VerticalAlignment="Top" Margin="900,735,0,0"/>
-            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="464,701,0,0" TextAlignment="Center">
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Hawthorne Hall" VerticalAlignment="Top" Margin="1203,638,0,0" FontSize="13.333"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Pirate's Cove Shleter" VerticalAlignment="Top" Margin="1036,151,0,0" FontSize="13.333"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="East Hall" VerticalAlignment="Top" Margin="1104,274,0,0" FontSize="13.333"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Boppell Hall" VerticalAlignment="Top" Margin="1072,460,0,0" FontSize="13.333"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="MacKay Hall" VerticalAlignment="Top" Margin="713,745,0,0" FontSize="13.333"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Stewart Hall" VerticalAlignment="Top" Margin="947,328,0,0" FontSize="13.333"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Hill House" VerticalAlignment="Top" Margin="540,752,0,0" FontSize="13.333"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="President's House" VerticalAlignment="Top" Margin="900,735,0,0" FontSize="13.333"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="464,701,0,0" TextAlignment="Center" FontSize="13.333">
             				<Run Text="Auld House "/>
             				<LineBreak/>
             				<Run Text="(Human Resources Center)"/>
                         </TextBlock>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Cornerstone Building" VerticalAlignment="Top" Margin="182,707,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Village" VerticalAlignment="Top" Margin="1017,303,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="829,611,0,0" TextAlignment="Center">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Cornerstone Building" VerticalAlignment="Top" Margin="176,715,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Village" VerticalAlignment="Top" Margin="1017,303,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="829,611,0,0" TextAlignment="Center" FontSize="13.333">
             				<Run Text="Whitworth Presbyterian"/>
             				<LineBreak/>
             				<Run Text=" Church"/>
                         </TextBlock>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="705,644,0,0" TextAlignment="Center">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="705,644,0,0" TextAlignment="Center" FontSize="13.333">
             				<Run Text="McEachran Hall "/>
             				<LineBreak/>
             				<Run Text="(Administration)"/>
                         </TextBlock>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Dixon Hall" VerticalAlignment="Top" Margin="619,562,0,0" RenderTransformOrigin="-0.116,0.807"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Cowles Auditorium" VerticalAlignment="Top" Margin="608,634,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Arend Hall" VerticalAlignment="Top" Margin="877,424,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="900,378,0,0" TextAlignment="Center">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Dixon Hall" VerticalAlignment="Top" Margin="619,562,0,0" RenderTransformOrigin="-0.116,0.807" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Cowles Auditorium" VerticalAlignment="Top" Margin="608,634,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Arend Hall" VerticalAlignment="Top" Margin="877,424,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="900,378,0,0" TextAlignment="Center" FontSize="13.333">
             				<Run Text="Hendrick "/>
             				<LineBreak/>
             				<Run Text="Hall"/>
                         </TextBlock>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" Margin="843,503,0,0" HorizontalAlignment="Left" TextAlignment="Center">
+                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" Margin="843,503,0,0" HorizontalAlignment="Left" TextAlignment="Center" FontSize="13.333">
             				<Run Text="Hixson Union Building"/>
             				<LineBreak/>
             				<Run Text="(HUB)"/>
             			</TextBlock>
-            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Music Building" VerticalAlignment="Top" Margin="530,670,0,0"/>
-            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="807,357,0,0" TextAlignment="Center">
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Music Building" VerticalAlignment="Top" Margin="530,670,0,0" FontSize="13.333"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="807,357,0,0" TextAlignment="Center" FontSize="13.333">
             				<Run Text="Johnston "/>
             				<LineBreak/>
             				<Run Text="Science Center"/>
                         </TextBlock>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Baldwin-Jenkins Hall" VerticalAlignment="Top" Margin="889,258,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="720,418,0,0" TextAlignment="Center">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Baldwin-Jenkins Hall" VerticalAlignment="Top" Margin="889,258,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="720,418,0,0" TextAlignment="Center" FontSize="13.333">
             				<Run FontFamily="Segoe UI, Tahoma, Arial, Arial Unicode MS, Microsoft Sans Serif, Lucida Sans Unicode" Text="H.C. Cowles "/>
             				<LineBreak/>
             				<Run FontFamily="Segoe UI, Tahoma, Arial, Arial Unicode MS, Microsoft Sans Serif, Lucida Sans Unicode" Text="Memorial Library"/>
                         </TextBlock>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="639,371,0,0" TextAlignment="Center">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="639,371,0,0" TextAlignment="Center" FontSize="13.333">
             				<Run Text="Lindaman "/>
             				<LineBreak/>
             				<Run Text="Center"/>
                         </TextBlock>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Warren Hall" VerticalAlignment="Top" Margin="557,519,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Robinson Science Hall" VerticalAlignment="Top" Margin="705,300,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Omache Field" VerticalAlignment="Top" Margin="201,621,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="504,438,0,0" TextAlignment="Center">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Warren Hall" VerticalAlignment="Top" Margin="557,519,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Robinson Science Hall" VerticalAlignment="Top" Margin="705,300,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Omache Field" VerticalAlignment="Top" Margin="201,621,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="504,438,0,0" TextAlignment="Center" FontSize="13.333">
             				<Run Text="Seeley G. Mudd"/>
             				<LineBreak/>
             				<Run Text=" Chapel"/>
                         </TextBlock>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ballard Hall" VerticalAlignment="Top" Margin="461,418,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="602,261,0,0" TextAlignment="Center">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ballard Hall" VerticalAlignment="Top" Margin="461,418,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="602,261,0,0" TextAlignment="Center" FontSize="13.333">
             				<Run Text="Schumacher Hall "/>
             				<LineBreak/>
             				<Run Text="(Health/Counseling Center)"/>
                         </TextBlock>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="571,328,0,0" TextAlignment="Center">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="571,328,0,0" TextAlignment="Center" FontSize="13.333">
             				<Run Text="Weyerhaeuser "/>
             				<LineBreak/>
             				<Run Text="Hall"/>
                         </TextBlock>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="McMillan Hall" VerticalAlignment="Top" Margin="476,341,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Facilities Services" VerticalAlignment="Top" Margin="713,214,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="582,201,0,0" TextAlignment="Center">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="McMillan Hall" VerticalAlignment="Top" Margin="476,341,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Facilities Services" VerticalAlignment="Top" Margin="713,214,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="582,201,0,0" TextAlignment="Center" FontSize="13.333">
             				<Run Text="Lied Center "/>
             				<LineBreak/>
             				<Run Text="for the Visual Arts"/>
                         </TextBlock>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Westminster Hall" VerticalAlignment="Top" Margin="491,224,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Graves Gym" VerticalAlignment="Top" Margin="387,375,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Pine Bowl" VerticalAlignment="Top" Margin="398,540,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Soccer Field" VerticalAlignment="Top" Margin="162,493,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Marks Field" VerticalAlignment="Top" Margin="256,516,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Tennis Courts" VerticalAlignment="Top" Margin="338,357,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="368,178,0,0" TextAlignment="Center">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Westminster Hall" VerticalAlignment="Top" Margin="481,222,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Graves Gym" VerticalAlignment="Top" Margin="387,375,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Pine Bowl" VerticalAlignment="Top" Margin="398,540,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Soccer Field" VerticalAlignment="Top" Margin="154,493,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Marks Field" VerticalAlignment="Top" Margin="256,516,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Tennis Courts" VerticalAlignment="Top" Margin="338,357,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="368,178,0,0" TextAlignment="Center" FontSize="13.333">
             				<Run Text="Aquatics "/>
             				<LineBreak/>
             				<Run Text="Center"/>
                         </TextBlock>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="310,204,0,0" TextAlignment="Center">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="310,204,0,0" TextAlignment="Center" FontSize="13.333">
             				<Run Text="Scotford Conditioning  "/>
             				<LineBreak/>
             				<Run Text="Center"/>
                         </TextBlock>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Fieldhouse" VerticalAlignment="Top" Margin="275,224,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="317,98,0,0" TextAlignment="Center">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Fieldhouse" VerticalAlignment="Top" Margin="275,224,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="317,98,0,0" TextAlignment="Center" FontSize="13.333">
             				<Run Text="Scotford Tennis Center, Ross Cutter Courts &amp;"/>
             				<LineBreak/>
             				<Run Text="Beeksma Tennis Bubble"/>
                         </TextBlock>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Merkel Field" VerticalAlignment="Top" Margin="79,75,0,0"/>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Duvall Hall" VerticalAlignment="Top" Margin="1133,371,0,0"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Merkel Field" VerticalAlignment="Top" Margin="79,75,0,0" FontSize="13.333"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Duvall Hall" VerticalAlignment="Top" Margin="1133,371,0,0" FontSize="13.333"/>
                     </Grid>
 
                 </Grid>
@@ -3214,13 +3528,13 @@
             </ScrollViewer>
 
         </Viewbox>
-        <Button x:Name="appBarOpen"  VerticalAlignment="Bottom" HorizontalAlignment="right" Content="edit" FontSize="10.667" Style="{StaticResource AppBarButtonStyle}" Tapped="appBarOpen_Tapped" Height="87" BorderThickness="2"/>
+        <Button x:Name="appBarOpen" HorizontalAlignment="right" Content="edit" FontSize="10.667" Style="{StaticResource AppBarButtonStyle}" Tapped="appBarOpen_Tapped" BorderThickness="0" Margin="0,0,0,5" VerticalAlignment="Bottom" Width="90"/>
     </Grid>
     <Page.BottomAppBar>
         <AppBar Height="50" x:Name="appBar">
             <StackPanel Orientation="Horizontal">
-                <Button x:Name="text" FontSize="10" Content="text" Style="{StaticResource AppBarButtonStyle}" Tapped="text_Tapped" Margin="0,-2,0,0"/>
-                <Button x:Name="road" FontSize="10" Content="road" Style="{StaticResource AppBarButtonStyle}" Tapped="road_Tapped" />
+                <Button x:Name="text" FontSize="10" Content="text" Style="{StaticResource TextEdit}" Tapped="text_Tapped" Margin="0,-2,0,0"/>
+                <Button x:Name="road" FontSize="10" Content="road" Style="{StaticResource EditRoad}" Tapped="road_Tapped" Margin="0,-2,0,0" />
             </StackPanel>
         </AppBar>
     </Page.BottomAppBar>
