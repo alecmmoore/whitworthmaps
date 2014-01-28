@@ -36,7 +36,7 @@ namespace WhitworthMap
             WindowResize();
         }
 
-        public async void GetCoord() 
+        public async void GetCoord()
         {
             //creates object of geolocator type
             Geolocator geolocator = new Geolocator();
@@ -47,7 +47,7 @@ namespace WhitworthMap
             locationPing.Visibility = Visibility.Visible;
             locationPingShadow.Visibility = Visibility.Visible;
             double calc1 = (47.757025 - LatIt) * (111545.9883);
-            double calc2 = (117.426186 + LongIt) * (83612.52731); 
+            double calc2 = (117.426186 + LongIt) * (83612.52731);
             int Calc1 = Convert.ToInt32(Math.Round(calc1));
             int Calc2 = Convert.ToInt32(Math.Round(calc2));
             Canvas.SetLeft(locationPing, Calc2 - 15);
@@ -55,7 +55,7 @@ namespace WhitworthMap
             Canvas.SetLeft(locationPingShadow, Calc2 - 24);
             Canvas.SetTop(locationPingShadow, Calc1 - 14);
         }
-        
+
         private void BackButton_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
             ViewBuildings.Begin();
@@ -66,31 +66,41 @@ namespace WhitworthMap
             ViewEvents.Begin();
         }
 
-        public void WindowResize() 
+        public void WindowResize()
         {
             // Gets the scroll containers margin property
             Thickness margin = ScrollContainer.Margin;
-            
             // Gets the current windows resolution percentage
             ResolutionScale resolutionScale = DisplayProperties.ResolutionScale;
-            
             // Converts the resolution percentage to a double
             double resolutionOffset = (Convert.ToDouble(resolutionScale) * 0.01);
-            
             // Gets the current height of the window and multiplies it by the resolution percentage
-            double height = Window.Current.Bounds.Height * resolutionOffset;
-
+            double Perfheight = (Window.Current.Bounds.Width * .5625) * resolutionOffset;
             // Elias uses his less magical number
-            double answer = (height * .09);
-            
-            // Sets the margin properties
-            margin.Top = answer;
-            margin.Bottom = answer;
-            margin.Left = 0;
-            margin.Right = 0;
-            
-            // Sets the Scroll containers margin
-            ScrollContainer.Margin = margin;
+            if (Window.Current.Bounds.Height <= 768)
+            {
+                double answer1 = (Perfheight * .09);
+                double answer2 = Math.Abs(Perfheight - Window.Current.Bounds.Height) + 87;
+                double answer = answer1 + answer2;
+                // Sets the margin properties
+                margin.Top = answer;
+                margin.Bottom = answer;
+                margin.Left = 0;
+                margin.Right = 0;
+                // Sets the Scroll containers margin
+                ScrollContainer.Margin = margin;
+            }
+            else 
+            {
+                double answer = (Perfheight - 768) / 4;
+
+                margin.Top = answer;
+                margin.Bottom = answer;
+                margin.Left = 0;
+                margin.Right = 0;
+                // Sets the Scroll containers margin
+                ScrollContainer.Margin = margin;
+            }
         }
 
         private async void Building_Tapped(object sender, RoutedEventArgs e)
