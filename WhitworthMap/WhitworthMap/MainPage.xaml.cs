@@ -47,7 +47,7 @@ namespace WhitworthMap
             locationPing.Visibility = Visibility.Visible;
             locationPingShadow.Visibility = Visibility.Visible;
             double calc1 = (47.757025 - LatIt) * (111545.9883);
-            double calc2 = (117.426186 + LongIt) * (83612.52731);
+            double calc2 = (117.426186 + LongIt) * (83612.52731); 
             int Calc1 = Convert.ToInt32(Math.Round(calc1));
             int Calc2 = Convert.ToInt32(Math.Round(calc2));
             Canvas.SetLeft(locationPing, Calc2 - 15);
