@@ -16,6 +16,8 @@ using Windows.UI.ViewManagement;
 using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
 using Microsoft.WindowsAzure.MobileServices;
+using System.Threading.Tasks;
+using Windows.Graphics.Display;
 
 namespace WhitworthMap
 {
@@ -23,15 +25,14 @@ namespace WhitworthMap
     public sealed partial class MainPage : Page
     {
 
-        //private MobileServiceCollection<Event, Event> events;
+        // List of events that is queried from the Azure Mobile Service
         private IMobileServiceTable<Event> eventsTable = App.MobileService.GetTable<Event>();
 
         public MainPage()
         {
             this.InitializeComponent();
             GetCoord();
-            Window_adjustment();
-            Window.Current.SizeChanged += WindowSizeChanged;
+            WindowResize();
         }
 
         public async void GetCoord() 
@@ -64,19 +65,25 @@ namespace WhitworthMap
             ViewEvents.Begin();
         }
 
-        public void Window_adjustment() 
+        public void WindowResize() 
         {
+            // Gets the scroll containers margin property
             Thickness margin = ScrollContainer.Margin;
-            double answer = (Window.Current.Bounds.Height) * .0731482;
+            // Gets the current windows resolution percentage
+            ResolutionScale resolutionScale = DisplayProperties.ResolutionScale;
+            // Converts the resolution percentage to a double
+            double resolutionOffset = (Convert.ToDouble(resolutionScale) * 0.01);
+            // Gets the current height of the window and multiplies it by the resolution percentage
+            double height = Window.Current.Bounds.Height * resolutionOffset;
+            // Elias uses his less magical number
+            double answer = (height - 768) / 4;
+            // Sets the margin properties
             margin.Top = answer;
             margin.Bottom = answer;
             margin.Left = 0;
             margin.Right = 0;
+            // Sets the Scroll containers margin
             ScrollContainer.Margin = margin;
-        }
-        public void WindowSizeChanged(object sender, Windows.UI.Core.WindowSizeChangedEventArgs e) 
-        {
-            Window_adjustment();
         }
 
         private async void Building_Tapped(object sender, RoutedEventArgs e)
@@ -136,6 +143,11 @@ namespace WhitworthMap
                     ListItem.Visibility = Visibility.Visible;
                 }
             }
+        }
+
+        private void MapContainer_SizeChanged(object sender, Windows.UI.Xaml.SizeChangedEventArgs e)
+        {
+            WindowResize();
         }
 
     }
