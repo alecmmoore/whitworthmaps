@@ -1928,161 +1928,1042 @@
                     <ScrollViewer Margin="0">
                         <StackPanel x:Name="BuildingsList">
                             <Grid x:Name="Aquatic_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M36.614902,12.934C38.21653,14.854298 40.130559,14.957187 42.667001,15.198062 41.349379,17.453024 38.422233,17.525916 36.614902,16.218955 36.614902,16.218955 32.552335,18.691294 30.534001,15.281452 35.547185,17.525916 36.614902,12.934 36.614902,12.934z M30.355751,0.27499962C33.169468,0.27499962 35.435002,2.5524158 35.435002,5.3543787 35.435002,8.1683025 33.169468,10.434 30.355751,10.434 27.553633,10.434 25.283,8.1683025 25.283,5.3543787 25.283,2.5524158 27.553633,0.27499962 30.355751,0.27499962z M15.288996,0L29.005001,15.638152C27.546711,17.301079 24.460732,18.916905 22.369647,15.333547 20.282461,18.910505 16.752485,17.612184 15.520794,15.268446 13.878805,17.731986 10.554628,18.427297 8.7460308,15.46635 6.8411427,18.049691 2.7343616,18.672201 1.4765511,14.412932L15.467294,7.4102798 13.494707,4.8438282 0,7.9700985 0.66796494,5.4661484z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Aquatic Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Arend_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid1" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect1" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M30.665044,29.43524C32.627258,29.510739,37.909897,33.510706,38.363001,46.038002L0.022914886,46.339998C0.022914886,46.339998 -1.0330925,30.340132 11.192898,29.585039 16.023035,28.831045 20.851871,33.660504 23.569891,33.207309 26.288011,32.755512 28.702229,29.35974 30.665044,29.43524z M38.318982,23.924138C39.961614,23.855138 41.984453,26.947552 44.259894,27.359052 46.536636,27.771854 50.580315,23.373336 54.62529,24.060839 64.864386,24.748342 63.980869,39.320003 63.980869,39.320003L40.691429,39.119501C39.285801,31.718471 35.915338,28.750959 34.093004,28.239255 35.56763,25.150744 37.388667,23.96184 38.318982,23.924138z M21.908853,4.0760002C27.411691,4.0760002 31.872003,9.144783 31.872004,15.395785 31.872003,21.649417 27.411691,26.717 21.908853,26.717 16.407515,26.717 11.947002,21.649417 11.947002,15.395785 11.947002,9.144783 16.407515,4.0760002 21.908853,4.0760002z M45.455803,0C50.541592,0 54.664001,4.5950603 54.664001,10.2643 54.664001,15.9336 50.541592,20.53 45.455803,20.53 40.371314,20.53 36.249004,15.9336 36.249004,10.2643 36.249004,4.5950603 40.371314,0 45.455803,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
+
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Arend Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Auld_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid39" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect39" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M21.438622,3.4111023L21.438622,11.730999 42.374874,11.730999 42.374874,3.4111023z M21.252419,0L42.748577,0C44.25259,-9.5367432E-07,45.472,1.2187386,45.472,2.7226372L45.472,9.3964019C45.472,10.336344,44.995667,11.164873,44.271229,11.65409L44.144581,11.730999 61.333302,11.730999C62.805901,11.730999,64,12.662584,64,13.811965L64,46.415932C64,47.564411,62.805901,48.495998,61.333302,48.495998L2.66675,48.495998C1.19409,48.495998,0,47.564411,0,46.415932L0,13.811965C0,12.662584,1.19409,11.730999,2.66675,11.730999L19.856419,11.730999 19.729771,11.65409C19.005331,11.164873,18.528999,10.336344,18.528999,9.3964019L18.528999,2.7226372C18.528999,1.2187386,19.748409,-9.5367432E-07,21.252419,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Auld House" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="BaldwinJenkins_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid2" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect2" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M30.665044,29.43524C32.627258,29.510739,37.909897,33.510706,38.363001,46.038002L0.022914886,46.339998C0.022914886,46.339998 -1.0330925,30.340132 11.192898,29.585039 16.023035,28.831045 20.851871,33.660504 23.569891,33.207309 26.288011,32.755512 28.702229,29.35974 30.665044,29.43524z M38.318982,23.924138C39.961614,23.855138 41.984453,26.947552 44.259894,27.359052 46.536636,27.771854 50.580315,23.373336 54.62529,24.060839 64.864386,24.748342 63.980869,39.320003 63.980869,39.320003L40.691429,39.119501C39.285801,31.718471 35.915338,28.750959 34.093004,28.239255 35.56763,25.150744 37.388667,23.96184 38.318982,23.924138z M21.908853,4.0760002C27.411691,4.0760002 31.872003,9.144783 31.872004,15.395785 31.872003,21.649417 27.411691,26.717 21.908853,26.717 16.407515,26.717 11.947002,21.649417 11.947002,15.395785 11.947002,9.144783 16.407515,4.0760002 21.908853,4.0760002z M45.455803,0C50.541592,0 54.664001,4.5950603 54.664001,10.2643 54.664001,15.9336 50.541592,20.53 45.455803,20.53 40.371314,20.53 36.249004,15.9336 36.249004,10.2643 36.249004,4.5950603 40.371314,0 45.455803,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Baldwin Jenkins Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Ballard_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid3" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect3" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M30.665044,29.43524C32.627258,29.510739,37.909897,33.510706,38.363001,46.038002L0.022914886,46.339998C0.022914886,46.339998 -1.0330925,30.340132 11.192898,29.585039 16.023035,28.831045 20.851871,33.660504 23.569891,33.207309 26.288011,32.755512 28.702229,29.35974 30.665044,29.43524z M38.318982,23.924138C39.961614,23.855138 41.984453,26.947552 44.259894,27.359052 46.536636,27.771854 50.580315,23.373336 54.62529,24.060839 64.864386,24.748342 63.980869,39.320003 63.980869,39.320003L40.691429,39.119501C39.285801,31.718471 35.915338,28.750959 34.093004,28.239255 35.56763,25.150744 37.388667,23.96184 38.318982,23.924138z M21.908853,4.0760002C27.411691,4.0760002 31.872003,9.144783 31.872004,15.395785 31.872003,21.649417 27.411691,26.717 21.908853,26.717 16.407515,26.717 11.947002,21.649417 11.947002,15.395785 11.947002,9.144783 16.407515,4.0760002 21.908853,4.0760002z M45.455803,0C50.541592,0 54.664001,4.5950603 54.664001,10.2643 54.664001,15.9336 50.541592,20.53 45.455803,20.53 40.371314,20.53 36.249004,15.9336 36.249004,10.2643 36.249004,4.5950603 40.371314,0 45.455803,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Ballard Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Boppell_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid4" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect4" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M30.665044,29.43524C32.627258,29.510739,37.909897,33.510706,38.363001,46.038002L0.022914886,46.339998C0.022914886,46.339998 -1.0330925,30.340132 11.192898,29.585039 16.023035,28.831045 20.851871,33.660504 23.569891,33.207309 26.288011,32.755512 28.702229,29.35974 30.665044,29.43524z M38.318982,23.924138C39.961614,23.855138 41.984453,26.947552 44.259894,27.359052 46.536636,27.771854 50.580315,23.373336 54.62529,24.060839 64.864386,24.748342 63.980869,39.320003 63.980869,39.320003L40.691429,39.119501C39.285801,31.718471 35.915338,28.750959 34.093004,28.239255 35.56763,25.150744 37.388667,23.96184 38.318982,23.924138z M21.908853,4.0760002C27.411691,4.0760002 31.872003,9.144783 31.872004,15.395785 31.872003,21.649417 27.411691,26.717 21.908853,26.717 16.407515,26.717 11.947002,21.649417 11.947002,15.395785 11.947002,9.144783 16.407515,4.0760002 21.908853,4.0760002z M45.455803,0C50.541592,0 54.664001,4.5950603 54.664001,10.2643 54.664001,15.9336 50.541592,20.53 45.455803,20.53 40.371314,20.53 36.249004,15.9336 36.249004,10.2643 36.249004,4.5950603 40.371314,0 45.455803,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Boppell Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Cornerstone_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid5" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect5" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M30.665044,29.43524C32.627258,29.510739,37.909897,33.510706,38.363001,46.038002L0.022914886,46.339998C0.022914886,46.339998 -1.0330925,30.340132 11.192898,29.585039 16.023035,28.831045 20.851871,33.660504 23.569891,33.207309 26.288011,32.755512 28.702229,29.35974 30.665044,29.43524z M38.318982,23.924138C39.961614,23.855138 41.984453,26.947552 44.259894,27.359052 46.536636,27.771854 50.580315,23.373336 54.62529,24.060839 64.864386,24.748342 63.980869,39.320003 63.980869,39.320003L40.691429,39.119501C39.285801,31.718471 35.915338,28.750959 34.093004,28.239255 35.56763,25.150744 37.388667,23.96184 38.318982,23.924138z M21.908853,4.0760002C27.411691,4.0760002 31.872003,9.144783 31.872004,15.395785 31.872003,21.649417 27.411691,26.717 21.908853,26.717 16.407515,26.717 11.947002,21.649417 11.947002,15.395785 11.947002,9.144783 16.407515,4.0760002 21.908853,4.0760002z M45.455803,0C50.541592,0 54.664001,4.5950603 54.664001,10.2643 54.664001,15.9336 50.541592,20.53 45.455803,20.53 40.371314,20.53 36.249004,15.9336 36.249004,10.2643 36.249004,4.5950603 40.371314,0 45.455803,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Cornerstone Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Auditorium_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid46" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle  Name="Rect46" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M22.1474,37.925C18.456045,37.925 15.46,41.479634 15.46,45.865052 15.46,50.250367 18.456045,53.805001 22.1474,53.805001 25.840256,53.805001 28.835001,50.250367 28.835001,45.865052 28.835001,41.479634 25.840256,37.925 22.1474,37.925z M29.003576,0.00062128594C29.553446,0.011482194 30.070742,0.16480632 30.512447,0.47572753 32.082714,1.5811538 32.101013,4.2596626 30.551548,6.457581 29.63299,7.7626648 28.369251,8.6054148 27.165092,8.8436427L27.156012,8.8452029 24.261997,13.856075 24.261997,22.879004 41.705997,22.879004 41.705997,26.891003 44.295998,26.891003 44.295998,35.751004 36.689995,35.751004 36.689995,57.090001 38.989998,57.090001 38.989998,58.986004 41.495995,58.986004 41.495995,64 2.7979994,64 2.7979994,58.986004 5.3059998,58.986004 5.3059998,57.090001 7.6049995,57.090001 7.6049995,35.751004 0,35.751004 0,26.891003 2.5900002,26.891003 2.5900002,22.879004 20.416998,22.879004 20.416998,12.906002 20.475281,12.906002 23.888971,6.9977345 23.796516,6.6391244C23.544142,5.3913669 23.899883,3.8299846 24.867601,2.4562916 25.980391,0.87557599 27.598354,-0.027122543 29.003576,0.00062128594z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Cowles Auditorium" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Dixon_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid24" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect24" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M52.765,37.490002L52.765,41.404001 56.680001,41.404001 56.680001,37.490002z M7.3190002,37.490002L7.3190002,41.404001 11.234,41.404001 11.234,37.490002z M37.787003,37.489999L37.787003,41.574 41.872002,41.574 41.872002,37.489999z M29.957001,37.489999L29.957001,41.574 34.042002,41.574 34.042002,37.489999z M22.128001,37.489999L22.128001,41.574 26.212002,41.574 26.212002,37.489999z M48.169999,34.255001L61.276001,34.255001 61.276001,51.276001 48.169999,51.276001z M2.7229996,34.255001L15.829,34.255001 15.829,51.276001 2.7229996,51.276001z M37.787003,28.298001L37.787003,32.383001 41.872002,32.383001 41.872002,28.298001z M29.957001,28.298001L29.957001,32.383001 34.042002,32.383001 34.042002,28.298001z M22.128001,28.298001L22.128001,32.383001 26.212002,32.383001 26.212002,28.298001z M48.169999,27.788002L64,27.788002 64,31.362001 48.169999,31.362001z M0,27.788002L15.829,27.788002 15.829,31.362001 0,31.362001z M32.170098,15.703001L45.957001,24.723701 45.957001,51.446001 34.042002,51.446001 34.042002,46.000002 29.957001,46.000002 29.957001,51.446001 18.383,51.446001 18.383,24.723701z M31.021,0L33.064,0 33.064,1.48843 33.104409,1.5006828C34.123854,1.7944679,36.340107,2.0908051,40.085003,0.97900009L40.085003,6.2548065C40.085003,6.2548065,35.419613,7.3459492,33.194796,6.7662792L33.064,6.7268276 33.064,8.7389374 49.702,19.617363 47.319211,22.8518 31.9996,12.637983 16.510687,23.021002 14.298,19.617363 31.021,8.6828671z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Dixon Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Duvall_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid6" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect6" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M30.665044,29.43524C32.627258,29.510739,37.909897,33.510706,38.363001,46.038002L0.022914886,46.339998C0.022914886,46.339998 -1.0330925,30.340132 11.192898,29.585039 16.023035,28.831045 20.851871,33.660504 23.569891,33.207309 26.288011,32.755512 28.702229,29.35974 30.665044,29.43524z M38.318982,23.924138C39.961614,23.855138 41.984453,26.947552 44.259894,27.359052 46.536636,27.771854 50.580315,23.373336 54.62529,24.060839 64.864386,24.748342 63.980869,39.320003 63.980869,39.320003L40.691429,39.119501C39.285801,31.718471 35.915338,28.750959 34.093004,28.239255 35.56763,25.150744 37.388667,23.96184 38.318982,23.924138z M21.908853,4.0760002C27.411691,4.0760002 31.872003,9.144783 31.872004,15.395785 31.872003,21.649417 27.411691,26.717 21.908853,26.717 16.407515,26.717 11.947002,21.649417 11.947002,15.395785 11.947002,9.144783 16.407515,4.0760002 21.908853,4.0760002z M45.455803,0C50.541592,0 54.664001,4.5950603 54.664001,10.2643 54.664001,15.9336 50.541592,20.53 45.455803,20.53 40.371314,20.53 36.249004,15.9336 36.249004,10.2643 36.249004,4.5950603 40.371314,0 45.455803,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Duvall Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="East_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid7" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect7" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M30.665044,29.43524C32.627258,29.510739,37.909897,33.510706,38.363001,46.038002L0.022914886,46.339998C0.022914886,46.339998 -1.0330925,30.340132 11.192898,29.585039 16.023035,28.831045 20.851871,33.660504 23.569891,33.207309 26.288011,32.755512 28.702229,29.35974 30.665044,29.43524z M38.318982,23.924138C39.961614,23.855138 41.984453,26.947552 44.259894,27.359052 46.536636,27.771854 50.580315,23.373336 54.62529,24.060839 64.864386,24.748342 63.980869,39.320003 63.980869,39.320003L40.691429,39.119501C39.285801,31.718471 35.915338,28.750959 34.093004,28.239255 35.56763,25.150744 37.388667,23.96184 38.318982,23.924138z M21.908853,4.0760002C27.411691,4.0760002 31.872003,9.144783 31.872004,15.395785 31.872003,21.649417 27.411691,26.717 21.908853,26.717 16.407515,26.717 11.947002,21.649417 11.947002,15.395785 11.947002,9.144783 16.407515,4.0760002 21.908853,4.0760002z M45.455803,0C50.541592,0 54.664001,4.5950603 54.664001,10.2643 54.664001,15.9336 50.541592,20.53 45.455803,20.53 40.371314,20.53 36.249004,15.9336 36.249004,10.2643 36.249004,4.5950603 40.371314,0 45.455803,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="East Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Johnston_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid26" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect26" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M52.765,37.490002L52.765,41.404001 56.680001,41.404001 56.680001,37.490002z M7.3190002,37.490002L7.3190002,41.404001 11.234,41.404001 11.234,37.490002z M37.787003,37.489999L37.787003,41.574 41.872002,41.574 41.872002,37.489999z M29.957001,37.489999L29.957001,41.574 34.042002,41.574 34.042002,37.489999z M22.128001,37.489999L22.128001,41.574 26.212002,41.574 26.212002,37.489999z M48.169999,34.255001L61.276001,34.255001 61.276001,51.276001 48.169999,51.276001z M2.7229996,34.255001L15.829,34.255001 15.829,51.276001 2.7229996,51.276001z M37.787003,28.298001L37.787003,32.383001 41.872002,32.383001 41.872002,28.298001z M29.957001,28.298001L29.957001,32.383001 34.042002,32.383001 34.042002,28.298001z M22.128001,28.298001L22.128001,32.383001 26.212002,32.383001 26.212002,28.298001z M48.169999,27.788002L64,27.788002 64,31.362001 48.169999,31.362001z M0,27.788002L15.829,27.788002 15.829,31.362001 0,31.362001z M32.170098,15.703001L45.957001,24.723701 45.957001,51.446001 34.042002,51.446001 34.042002,46.000002 29.957001,46.000002 29.957001,51.446001 18.383,51.446001 18.383,24.723701z M31.021,0L33.064,0 33.064,1.48843 33.104409,1.5006828C34.123854,1.7944679,36.340107,2.0908051,40.085003,0.97900009L40.085003,6.2548065C40.085003,6.2548065,35.419613,7.3459492,33.194796,6.7662792L33.064,6.7268276 33.064,8.7389374 49.702,19.617363 47.319211,22.8518 31.9996,12.637983 16.510687,23.021002 14.298,19.617363 31.021,8.6828671z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Eric Johnston Science Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Facilities_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid41" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect41" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="F1M60.9043,41.6863C57.7236,39.6523 41.5319,29.1797 32.4893,23.332 33.1949,17.4545 30.6182,11.4167 25.3102,7.98975 20.0208,4.57422 13.4778,4.68884 8.41565,7.72009L22.7796,17.0052 22.3782,25.129 15.1432,28.8373 0.76886,19.5496C0.0845947,25.4115 2.66895,31.4285 7.95862,34.8463 13.2617,38.2709 19.8206,38.142 24.888,35.0925 33.9541,40.9545 50.2184,51.4688 53.303,53.4492 57.6168,56.2239 65.3626,44.5326 60.9043,41.6863z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Facilities Services" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Fieldhouse_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid16" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect16" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M37.501449,22.938627C38.200641,22.938627 38.741035,23.171777 39.125232,23.639188 39.508026,24.105367 39.700622,24.753806 39.700622,25.583158 39.700622,26.337097 39.500225,26.960798 39.09653,27.451698 38.695533,27.943897 38.169441,28.190097 37.521049,28.190097 36.833557,28.190097 36.282762,27.907398 35.868667,27.340997 35.453372,26.774597 35.246376,26.092307 35.246376,25.295556 35.246376,24.657377 35.455972,24.105367 35.873968,23.639188 36.290563,23.171777 36.833557,22.938627 37.501449,22.938627z M26.794059,17.863187C28.321399,17.863187 29.085796,19.613187 29.085796,23.114408 29.085796,26.498597 28.30577,28.190097 26.74719,28.190097 25.163951,28.190097 24.372205,26.525897 24.372205,23.197778 24.372205,19.641748 25.179571,17.863187 26.794059,17.863187z M38.679935,16.146997C36.961154,16.146997 35.579671,16.842311 34.536684,18.234397 33.495094,19.626127 32.973001,21.488187 32.973001,23.820218 32.973001,25.743306 33.372596,27.236797 34.170787,28.300798 34.967678,29.365796 36.070566,29.896997 37.47295,29.896997 38.741035,29.896997 39.789321,29.479198 40.614715,28.644397 41.440303,27.809697 41.853,26.730398 41.853,25.406158 41.853,24.144437 41.518402,23.136617 40.85041,22.381378 40.183818,21.627467 39.28273,21.249908 38.151241,21.249908 36.772357,21.249908 35.781568,21.805808 35.182575,22.919088L35.144777,22.919088C35.144777,21.380027 35.484672,20.152248 36.165565,19.236837 36.845256,18.321437 37.751447,17.863187 38.884231,17.863187 39.613525,17.863187 40.310016,18.038968 40.971511,18.391748L40.971511,16.527246C40.409015,16.273462,39.644725,16.146997,38.679935,16.146997z M26.895629,16.146997C25.368289,16.146997 24.199108,16.749902 23.389183,17.955587 22.578027,19.162748 22.173,20.940088 22.173,23.290428 22.173,25.430806 22.562402,27.067798 23.338403,28.199098 24.113178,29.330598 25.195201,29.896997 26.580562,29.896997 28.064931,29.896997 29.221174,29.304597 30.045389,28.119697 30.872163,26.936097 31.285001,25.217428 31.285001,22.965968 31.285001,18.419088 29.822731,16.146997 26.895629,16.146997z M4.0401535,10.473999L12.734,19.544988 7.5622625,22.873 0,14.783456z M59.958362,10.298L64,14.607656 56.438819,22.696998 51.267002,19.369087z M20.510239,0.00097340596C23.72974,0.041433396,25.765371,1.3297349,25.765371,1.3297345L25.839569,1.3271749C25.790071,1.614897 25.765371,1.9078588 25.765371,2.2086511 25.765371,5.3649243 28.599964,7.9235228 32.094759,7.9235228 35.593549,7.9235228 38.428043,5.3649243 38.428043,2.2086511 38.428043,1.7881079 38.374744,1.3805151 38.279644,0.98598166L38.603843,0.97682257C49.156021,-3.0673975,57.596,8.0120233,57.596,8.0120233L48.62862,17.861196 48.62862,45.471999 15.211992,45.471999 15.211992,17.685293 6.2419996,8.3636258C11.692087,1.5120447,16.861471,-0.044882392,20.510239,0.00097340596z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Fieldhouse" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Graves_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid14" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect14" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M37.501449,22.938627C38.200641,22.938627 38.741035,23.171777 39.125232,23.639188 39.508026,24.105367 39.700622,24.753806 39.700622,25.583158 39.700622,26.337097 39.500225,26.960798 39.09653,27.451698 38.695533,27.943897 38.169441,28.190097 37.521049,28.190097 36.833557,28.190097 36.282762,27.907398 35.868667,27.340997 35.453372,26.774597 35.246376,26.092307 35.246376,25.295556 35.246376,24.657377 35.455972,24.105367 35.873968,23.639188 36.290563,23.171777 36.833557,22.938627 37.501449,22.938627z M26.794059,17.863187C28.321399,17.863187 29.085796,19.613187 29.085796,23.114408 29.085796,26.498597 28.30577,28.190097 26.74719,28.190097 25.163951,28.190097 24.372205,26.525897 24.372205,23.197778 24.372205,19.641748 25.179571,17.863187 26.794059,17.863187z M38.679935,16.146997C36.961154,16.146997 35.579671,16.842311 34.536684,18.234397 33.495094,19.626127 32.973001,21.488187 32.973001,23.820218 32.973001,25.743306 33.372596,27.236797 34.170787,28.300798 34.967678,29.365796 36.070566,29.896997 37.47295,29.896997 38.741035,29.896997 39.789321,29.479198 40.614715,28.644397 41.440303,27.809697 41.853,26.730398 41.853,25.406158 41.853,24.144437 41.518402,23.136617 40.85041,22.381378 40.183818,21.627467 39.28273,21.249908 38.151241,21.249908 36.772357,21.249908 35.781568,21.805808 35.182575,22.919088L35.144777,22.919088C35.144777,21.380027 35.484672,20.152248 36.165565,19.236837 36.845256,18.321437 37.751447,17.863187 38.884231,17.863187 39.613525,17.863187 40.310016,18.038968 40.971511,18.391748L40.971511,16.527246C40.409015,16.273462,39.644725,16.146997,38.679935,16.146997z M26.895629,16.146997C25.368289,16.146997 24.199108,16.749902 23.389183,17.955587 22.578027,19.162748 22.173,20.940088 22.173,23.290428 22.173,25.430806 22.562402,27.067798 23.338403,28.199098 24.113178,29.330598 25.195201,29.896997 26.580562,29.896997 28.064931,29.896997 29.221174,29.304597 30.045389,28.119697 30.872163,26.936097 31.285001,25.217428 31.285001,22.965968 31.285001,18.419088 29.822731,16.146997 26.895629,16.146997z M4.0401535,10.473999L12.734,19.544988 7.5622625,22.873 0,14.783456z M59.958362,10.298L64,14.607656 56.438819,22.696998 51.267002,19.369087z M20.510239,0.00097340596C23.72974,0.041433396,25.765371,1.3297349,25.765371,1.3297345L25.839569,1.3271749C25.790071,1.614897 25.765371,1.9078588 25.765371,2.2086511 25.765371,5.3649243 28.599964,7.9235228 32.094759,7.9235228 35.593549,7.9235228 38.428043,5.3649243 38.428043,2.2086511 38.428043,1.7881079 38.374744,1.3805151 38.279644,0.98598166L38.603843,0.97682257C49.156021,-3.0673975,57.596,8.0120233,57.596,8.0120233L48.62862,17.861196 48.62862,45.471999 15.211992,45.471999 15.211992,17.685293 6.2419996,8.3636258C11.692087,1.5120447,16.861471,-0.044882392,20.510239,0.00097340596z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Graves Gym" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Library_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid42" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect42" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M57.063873,8.2469999L57.194774,8.2469999C58.06459,8.2469999,58.770999,8.9514209,58.770999,9.8225261L58.770999,38.854286C58.770999,39.686402 58.124488,40.367417 57.307075,40.424717 56.906971,40.55492 56.374462,40.53672 55.876354,40.273613 48.230434,36.226635 40.325012,36.824349 32.9743,41.024929 31.999685,41.57964 29.228841,40.213814 30.578762,39.441597 38.462085,34.938812 47.255821,34.282601 55.487049,38.005371L55.487049,9.8225261C55.487049,8.9514209,56.192459,8.2469999,57.063873,8.2469999z M1.5765214,7.9829995L1.7070088,7.9829995C2.578099,7.9829999,3.2835305,8.6900875,3.2835302,9.5586101L3.2835302,37.740711C11.514862,34.018036 20.308356,34.675633 28.191061,39.178204 29.541345,39.950298 26.770578,41.31749 25.79599,40.761494 18.445078,36.56102 10.540273,35.963425 2.8941953,40.011498 2.3958411,40.274498 1.8639274,40.291496 1.4628725,40.162499 0.64586639,40.103897 0,39.424301 0,38.589607L0,9.5586101C0,8.6900875,0.70641232,7.9829999,1.5765214,7.9829995z M44.139385,0.16105747C46.482063,0.15614485,49.207069,0.47021243,52.3661,1.2507425L52.368,34.715408C52.368,34.715408,41.521152,29.005823,30.824001,36.980999L31.015398,6.1933586C31.015398,6.1933586,33.987775,0.18234282,44.139385,0.16105747z M14.511298,0.00071966404C24.722303,0.075802114,27.714494,5.9942452,27.714494,5.9942447L27.947002,36.718002C16.608066,29.606054,6.4020005,34.451019,6.4020007,34.451019L6.4039606,0.98775288C9.2928014,0.31748327 11.818138,0.025515687 14.019586,0.0016085565 14.18532,-0.00019056614 14.349218,-0.00047104831 14.511298,0.00071966404z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="H.C. Cowles Library" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Hawthorne_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid23" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect23" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M52.765,37.490002L52.765,41.404001 56.680001,41.404001 56.680001,37.490002z M7.3190002,37.490002L7.3190002,41.404001 11.234,41.404001 11.234,37.490002z M37.787003,37.489999L37.787003,41.574 41.872002,41.574 41.872002,37.489999z M29.957001,37.489999L29.957001,41.574 34.042002,41.574 34.042002,37.489999z M22.128001,37.489999L22.128001,41.574 26.212002,41.574 26.212002,37.489999z M48.169999,34.255001L61.276001,34.255001 61.276001,51.276001 48.169999,51.276001z M2.7229996,34.255001L15.829,34.255001 15.829,51.276001 2.7229996,51.276001z M37.787003,28.298001L37.787003,32.383001 41.872002,32.383001 41.872002,28.298001z M29.957001,28.298001L29.957001,32.383001 34.042002,32.383001 34.042002,28.298001z M22.128001,28.298001L22.128001,32.383001 26.212002,32.383001 26.212002,28.298001z M48.169999,27.788002L64,27.788002 64,31.362001 48.169999,31.362001z M0,27.788002L15.829,27.788002 15.829,31.362001 0,31.362001z M32.170098,15.703001L45.957001,24.723701 45.957001,51.446001 34.042002,51.446001 34.042002,46.000002 29.957001,46.000002 29.957001,51.446001 18.383,51.446001 18.383,24.723701z M31.021,0L33.064,0 33.064,1.48843 33.104409,1.5006828C34.123854,1.7944679,36.340107,2.0908051,40.085003,0.97900009L40.085003,6.2548065C40.085003,6.2548065,35.419613,7.3459492,33.194796,6.7662792L33.064,6.7268276 33.064,8.7389374 49.702,19.617363 47.319211,22.8518 31.9996,12.637983 16.510687,23.021002 14.298,19.617363 31.021,8.6828671z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Hawthorne Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Hardwick_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid45" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect45" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M21.438622,3.4111023L21.438622,11.730999 42.374874,11.730999 42.374874,3.4111023z M21.252419,0L42.748577,0C44.25259,-9.5367432E-07,45.472,1.2187386,45.472,2.7226372L45.472,9.3964019C45.472,10.336344,44.995667,11.164873,44.271229,11.65409L44.144581,11.730999 61.333302,11.730999C62.805901,11.730999,64,12.662584,64,13.811965L64,46.415932C64,47.564411,62.805901,48.495998,61.333302,48.495998L2.66675,48.495998C1.19409,48.495998,0,47.564411,0,46.415932L0,13.811965C0,12.662584,1.19409,11.730999,2.66675,11.730999L19.856419,11.730999 19.729771,11.65409C19.005331,11.164873,18.528999,10.336344,18.528999,9.3964019L18.528999,2.7226372C18.528999,1.2187386,19.748409,-9.5367432E-07,21.252419,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Hardwick House" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Hendrick_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid35" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect35" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M21.438622,3.4111023L21.438622,11.730999 42.374874,11.730999 42.374874,3.4111023z M21.252419,0L42.748577,0C44.25259,-9.5367432E-07,45.472,1.2187386,45.472,2.7226372L45.472,9.3964019C45.472,10.336344,44.995667,11.164873,44.271229,11.65409L44.144581,11.730999 61.333302,11.730999C62.805901,11.730999,64,12.662584,64,13.811965L64,46.415932C64,47.564411,62.805901,48.495998,61.333302,48.495998L2.66675,48.495998C1.19409,48.495998,0,47.564411,0,46.415932L0,13.811965C0,12.662584,1.19409,11.730999,2.66675,11.730999L19.856419,11.730999 19.729771,11.65409C19.005331,11.164873,18.528999,10.336344,18.528999,9.3964019L18.528999,2.7226372C18.528999,1.2187386,19.748409,-9.5367432E-07,21.252419,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Hendrick Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Hill_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid37" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect37" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M21.438622,3.4111023L21.438622,11.730999 42.374874,11.730999 42.374874,3.4111023z M21.252419,0L42.748577,0C44.25259,-9.5367432E-07,45.472,1.2187386,45.472,2.7226372L45.472,9.3964019C45.472,10.336344,44.995667,11.164873,44.271229,11.65409L44.144581,11.730999 61.333302,11.730999C62.805901,11.730999,64,12.662584,64,13.811965L64,46.415932C64,47.564411,62.805901,48.495998,61.333302,48.495998L2.66675,48.495998C1.19409,48.495998,0,47.564411,0,46.415932L0,13.811965C0,12.662584,1.19409,11.730999,2.66675,11.730999L19.856419,11.730999 19.729771,11.65409C19.005331,11.164873,18.528999,10.336344,18.528999,9.3964019L18.528999,2.7226372C18.528999,1.2187386,19.748409,-9.5367432E-07,21.252419,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Hill House" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="HUB_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid25" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect25" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M3.0066905,8.6380036C16.363398,13.427042 13.233119,18.908087 13.233119,18.908087 13.05152,19.22609 13.11462,19.699093 13.373818,19.958096L32.792884,39.376251C34.852868,44.243294 31.001296,42.074276 31.001296,42.074276 30.682199,41.894272 30.208301,41.535271 29.949103,41.276268L10.622438,21.947111C3.3347883,23.699126 0.032711029,12.436034 0.032711029,12.436034 -0.070088387,12.084031 0.07761097,11.986031 0.36080933,12.219033L7.082062,17.723078C7.3652602,17.955078,7.4212598,17.902079,7.2058613,17.606076L2.0378976,10.500018C1.8223987,10.203017,1.8815985,10.146015,2.1699967,10.372017L8.8744499,15.65106C9.1628477,15.878063,9.2026474,15.836062,8.9636491,15.55806z M11.483635,0L41.825421,30.343672C41.825421,30.343672,44.460866,34.262764,39.404973,32.764714L22.535513,15.893348 18.583792,15.891364 8.8899875,5.7951386C8.8899873,5.7951386,6.3536388,0.59303035,11.483635,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="The HUB" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Lied_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid18" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect18" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M14.649709,44.925011C17.161891,44.919827,18.947906,46.664948,18.947906,46.664948L19.482798,47.153233C24.055327,52.878449 16.645942,58.668564 16.645942,58.668564 9.0193901,64.38958 0,58.915955 0,58.915955 3.0553131,59.496639 7.0318108,51.427998 7.0318108,51.427998 9.6510887,46.296848 12.433077,44.929585 14.649709,44.925011z M22.910164,33.509999L30.650001,40.477287C28.465735,42.476059,26.168902,44.405728,23.747741,46.209L18.087,41.371777C18.087,41.371777,19.858452,38.161026,22.910164,33.509999z M58.057741,0.0021658421C58.922144,0.049436389 59.314417,0.88288284 57.962999,3.7061314 57.962999,3.7061319 48.934311,22.852051 32.668151,38.579998 32.62065,38.533299 32.58745,38.480999 32.53665,38.434101L24.586002,31.279076 24.461001,31.186775C31.220837,21.254446 42.62715,6.8402917 55.084368,1.1607134 55.084368,1.160714 56.764704,0.065945281 57.878942,0.0028369695 57.94039,-0.00064309073 58.000116,-0.0009858168 58.057741,0.0021658421z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Lied Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Lindaman_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid22" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect22" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M52.765,37.490002L52.765,41.404001 56.680001,41.404001 56.680001,37.490002z M7.3190002,37.490002L7.3190002,41.404001 11.234,41.404001 11.234,37.490002z M37.787003,37.489999L37.787003,41.574 41.872002,41.574 41.872002,37.489999z M29.957001,37.489999L29.957001,41.574 34.042002,41.574 34.042002,37.489999z M22.128001,37.489999L22.128001,41.574 26.212002,41.574 26.212002,37.489999z M48.169999,34.255001L61.276001,34.255001 61.276001,51.276001 48.169999,51.276001z M2.7229996,34.255001L15.829,34.255001 15.829,51.276001 2.7229996,51.276001z M37.787003,28.298001L37.787003,32.383001 41.872002,32.383001 41.872002,28.298001z M29.957001,28.298001L29.957001,32.383001 34.042002,32.383001 34.042002,28.298001z M22.128001,28.298001L22.128001,32.383001 26.212002,32.383001 26.212002,28.298001z M48.169999,27.788002L64,27.788002 64,31.362001 48.169999,31.362001z M0,27.788002L15.829,27.788002 15.829,31.362001 0,31.362001z M32.170098,15.703001L45.957001,24.723701 45.957001,51.446001 34.042002,51.446001 34.042002,46.000002 29.957001,46.000002 29.957001,51.446001 18.383,51.446001 18.383,24.723701z M31.021,0L33.064,0 33.064,1.48843 33.104409,1.5006828C34.123854,1.7944679,36.340107,2.0908051,40.085003,0.97900009L40.085003,6.2548065C40.085003,6.2548065,35.419613,7.3459492,33.194796,6.7662792L33.064,6.7268276 33.064,8.7389374 49.702,19.617363 47.319211,22.8518 31.9996,12.637983 16.510687,23.021002 14.298,19.617363 31.021,8.6828671z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Lindaman Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="McEachran_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid36" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect36" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M21.438622,3.4111023L21.438622,11.730999 42.374874,11.730999 42.374874,3.4111023z M21.252419,0L42.748577,0C44.25259,-9.5367432E-07,45.472,1.2187386,45.472,2.7226372L45.472,9.3964019C45.472,10.336344,44.995667,11.164873,44.271229,11.65409L44.144581,11.730999 61.333302,11.730999C62.805901,11.730999,64,12.662584,64,13.811965L64,46.415932C64,47.564411,62.805901,48.495998,61.333302,48.495998L2.66675,48.495998C1.19409,48.495998,0,47.564411,0,46.415932L0,13.811965C0,12.662584,1.19409,11.730999,2.66675,11.730999L19.856419,11.730999 19.729771,11.65409C19.005331,11.164873,18.528999,10.336344,18.528999,9.3964019L18.528999,2.7226372C18.528999,1.2187386,19.748409,-9.5367432E-07,21.252419,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="McEachran Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
+                            <Grid x:Name="MerkelField_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid34" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect34" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M37.501449,22.938627C38.200641,22.938627 38.741035,23.171777 39.125232,23.639188 39.508026,24.105367 39.700622,24.753806 39.700622,25.583158 39.700622,26.337097 39.500225,26.960798 39.09653,27.451698 38.695533,27.943897 38.169441,28.190097 37.521049,28.190097 36.833557,28.190097 36.282762,27.907398 35.868667,27.340997 35.453372,26.774597 35.246376,26.092307 35.246376,25.295556 35.246376,24.657377 35.455972,24.105367 35.873968,23.639188 36.290563,23.171777 36.833557,22.938627 37.501449,22.938627z M26.794059,17.863187C28.321399,17.863187 29.085796,19.613187 29.085796,23.114408 29.085796,26.498597 28.30577,28.190097 26.74719,28.190097 25.163951,28.190097 24.372205,26.525897 24.372205,23.197778 24.372205,19.641748 25.179571,17.863187 26.794059,17.863187z M38.679935,16.146997C36.961154,16.146997 35.579671,16.842311 34.536684,18.234397 33.495094,19.626127 32.973001,21.488187 32.973001,23.820218 32.973001,25.743306 33.372596,27.236797 34.170787,28.300798 34.967678,29.365796 36.070566,29.896997 37.47295,29.896997 38.741035,29.896997 39.789321,29.479198 40.614715,28.644397 41.440303,27.809697 41.853,26.730398 41.853,25.406158 41.853,24.144437 41.518402,23.136617 40.85041,22.381378 40.183818,21.627467 39.28273,21.249908 38.151241,21.249908 36.772357,21.249908 35.781568,21.805808 35.182575,22.919088L35.144777,22.919088C35.144777,21.380027 35.484672,20.152248 36.165565,19.236837 36.845256,18.321437 37.751447,17.863187 38.884231,17.863187 39.613525,17.863187 40.310016,18.038968 40.971511,18.391748L40.971511,16.527246C40.409015,16.273462,39.644725,16.146997,38.679935,16.146997z M26.895629,16.146997C25.368289,16.146997 24.199108,16.749902 23.389183,17.955587 22.578027,19.162748 22.173,20.940088 22.173,23.290428 22.173,25.430806 22.562402,27.067798 23.338403,28.199098 24.113178,29.330598 25.195201,29.896997 26.580562,29.896997 28.064931,29.896997 29.221174,29.304597 30.045389,28.119697 30.872163,26.936097 31.285001,25.217428 31.285001,22.965968 31.285001,18.419088 29.822731,16.146997 26.895629,16.146997z M4.0401535,10.473999L12.734,19.544988 7.5622625,22.873 0,14.783456z M59.958362,10.298L64,14.607656 56.438819,22.696998 51.267002,19.369087z M20.510239,0.00097340596C23.72974,0.041433396,25.765371,1.3297349,25.765371,1.3297345L25.839569,1.3271749C25.790071,1.614897 25.765371,1.9078588 25.765371,2.2086511 25.765371,5.3649243 28.599964,7.9235228 32.094759,7.9235228 35.593549,7.9235228 38.428043,5.3649243 38.428043,2.2086511 38.428043,1.7881079 38.374744,1.3805151 38.279644,0.98598166L38.603843,0.97682257C49.156021,-3.0673975,57.596,8.0120233,57.596,8.0120233L48.62862,17.861196 48.62862,45.471999 15.211992,45.471999 15.211992,17.685293 6.2419996,8.3636258C11.692087,1.5120447,16.861471,-0.044882392,20.510239,0.00097340596z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Merkel Field" Height="25" Margin="75,15,0,0"/>
+                            </Grid>
+
                             <Grid x:Name="MacKay_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid44" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect44" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M21.438622,3.4111023L21.438622,11.730999 42.374874,11.730999 42.374874,3.4111023z M21.252419,0L42.748577,0C44.25259,-9.5367432E-07,45.472,1.2187386,45.472,2.7226372L45.472,9.3964019C45.472,10.336344,44.995667,11.164873,44.271229,11.65409L44.144581,11.730999 61.333302,11.730999C62.805901,11.730999,64,12.662584,64,13.811965L64,46.415932C64,47.564411,62.805901,48.495998,61.333302,48.495998L2.66675,48.495998C1.19409,48.495998,0,47.564411,0,46.415932L0,13.811965C0,12.662584,1.19409,11.730999,2.66675,11.730999L19.856419,11.730999 19.729771,11.65409C19.005331,11.164873,18.528999,10.336344,18.528999,9.3964019L18.528999,2.7226372C18.528999,1.2187386,19.748409,-9.5367432E-07,21.252419,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="MacKay Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="McMillan_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid11" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect11" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M30.665044,29.43524C32.627258,29.510739,37.909897,33.510706,38.363001,46.038002L0.022914886,46.339998C0.022914886,46.339998 -1.0330925,30.340132 11.192898,29.585039 16.023035,28.831045 20.851871,33.660504 23.569891,33.207309 26.288011,32.755512 28.702229,29.35974 30.665044,29.43524z M38.318982,23.924138C39.961614,23.855138 41.984453,26.947552 44.259894,27.359052 46.536636,27.771854 50.580315,23.373336 54.62529,24.060839 64.864386,24.748342 63.980869,39.320003 63.980869,39.320003L40.691429,39.119501C39.285801,31.718471 35.915338,28.750959 34.093004,28.239255 35.56763,25.150744 37.388667,23.96184 38.318982,23.924138z M21.908853,4.0760002C27.411691,4.0760002 31.872003,9.144783 31.872004,15.395785 31.872003,21.649417 27.411691,26.717 21.908853,26.717 16.407515,26.717 11.947002,21.649417 11.947002,15.395785 11.947002,9.144783 16.407515,4.0760002 21.908853,4.0760002z M45.455803,0C50.541592,0 54.664001,4.5950603 54.664001,10.2643 54.664001,15.9336 50.541592,20.53 45.455803,20.53 40.371314,20.53 36.249004,15.9336 36.249004,10.2643 36.249004,4.5950603 40.371314,0 45.455803,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="McMillan Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Music_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid19" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect19" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M717.784,2159.72L721.554,2159.72C721.554,2159.72 727.043,2165.2 735.728,2173.43 744.413,2181.66 747.113,2194.42 737.101,2205.43 732.527,2210.46 738.925,2198.57 738.925,2194.92 738.925,2191.26 731.613,2174.8 722.931,2174.8 722.931,2174.8 722.931,2206.8 722.931,2212.29 722.931,2217.77 717.443,2223.72 708.757,2223.72 700.067,2223.72 694.583,2217.32 697.327,2208.17 699.313,2201.54 712.869,2199.49 717.9,2205.89L717.784,2159.72z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Music Building" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Cove_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Pirates Cove" Height="25" Margin="75,15,0,0"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid27" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect27" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M9.6205606,40.32621C9.8573732,40.328938 10.087543,40.358227 10.304653,40.417786 10.516553,40.679489 10.651184,41.074875 10.700446,41.497097L10.704887,41.55117 10.778549,41.472553C11.535501,40.756859 12.687431,40.437893 14.000851,40.457882 14.334417,40.462959 14.6784,40.489899 15.028975,40.537754 15.515857,41.241016 15.820545,42.121201 15.784046,43.348015 14.635215,43.883343 12.67495,44.243309 10.96756,44.08569L10.74054,44.05901 10.744905,44.151062C10.724972,45.824612 7.5898008,45.508339 6.7371387,44.850002 6.2918563,44.503719 5.8309441,43.412563 5.8726311,42.902084 5.9796987,41.589638 7.9628701,40.307125 9.6205606,40.32621z M56.447861,39.866016C56.983192,39.874367 57.490227,39.935787 57.945126,40.105045 58.734207,43.811008 54.249897,43.279686 51.783749,43.024475 50.994762,41.792721 51.971245,40.60257 52.757729,39.998241 53.955467,40.086105 55.270138,39.847637 56.447861,39.866016z M59.588112,38.920301C60.596313,38.903221 61.87286,39.608654 62.281384,40.1077 62.432388,40.641636 62.385487,41.370686 62.388084,42.053131 61.703171,42.860382 60.23444,45.246044 58.92971,43.566231 58.158794,42.576466 58.914112,41.162472 59.362022,40.214508 59.247417,39.826283 58.421902,40.146702 58.388,39.675369 58.60553,39.136436 59.060005,38.929249 59.588112,38.920301z M25.394455,37.276064C26.138983,37.258238,26.823128,37.462669,27.356388,38.039612L27.452454,38.150175 27.714993,38.220341C28.727554,38.529617 29.668837,39.09778 30.333,40.021881 28.814911,40.628746 28.051966,41.089695 26.270794,41.725266 25.437555,42.024696 21.844116,43.644672 21.51334,42.376434 21.337902,41.697731 22.45726,40.474987 23.328007,39.728825L23.333534,39.724239 23.237778,39.746044C22.221842,39.956112 21.217972,39.877716 20.324999,39.131744 21.567623,38.583677 23.647297,37.317896 25.394455,37.276064z M53.552139,34.040243C53.60952,34.04199 53.668575,34.045588 53.72937,34.051123 54.682484,34.137121 55.515797,35.03801 55.784,35.889597 55.411697,36.092794 55.02359,36.282692 54.487183,36.321791 53.573067,36.811485 53.260559,38.121267 52.541851,39.024956 52.065243,39.618748 51.31263,39.923443 51.028824,40.644733 50.617317,41.68132 50.614719,42.855602 50.270912,43.889488 49.976707,44.772278 49.677204,45.96756 49.190197,46.699253 48.127678,48.30093 44.229214,48.488327 42.270782,47.241043 42.247383,46.459854 42.369785,45.824364 42.703091,45.40247 43.84901,45.196774 44.721321,46.280056 46.161545,45.728065 47.263065,45.30357 47.721371,43.561394 47.567768,42.267113 47.497467,41.683819 46.934959,41.178627 47.026062,40.644733 47.143261,39.996342 48.755287,39.50425 49.5131,38.808958 50.070408,38.298565 50.862122,37.358377 51.135525,36.754286 51.604797,35.712311 51.773373,33.986105 53.552139,34.040243z M16.109316,33.835001C17.812437,36.022442 18.184841,39.543247 20.648373,40.97031 20.361969,42.793159 19.822863,45.233192 21.512983,45.618584 22.8412,45.920677 25.408831,44.415417 24.974026,47.024746 19.802061,49.798271 16.757725,44.892105 15.783712,40.86351 15.377507,39.178658 15.213406,37.374006 14.380095,36.321835 13.96609,35.801147 13.338382,35.76985 13.296782,35.348061 13.189981,34.207392 15.374907,34.045996 16.109316,33.835001z M25.080891,20.861C25.153891,20.861 25.226791,20.861 25.297092,20.861 26.101803,21.553797 26.984613,22.629292 27.245016,23.998985 27.528238,25.50301 27.674088,27.329592 29.111759,27.727959L29.240002,27.758268 29.240002,26.237816C29.240002,25.935806 29.484644,25.691 29.786551,25.691 30.088358,25.691 30.333,25.935806 30.333,26.237816L30.333,27.831245 30.433109,27.841133C30.554514,27.853512,30.683187,27.86734,30.817696,27.882214L30.931999,27.895115 30.931999,26.7019C30.931999,26.399799 31.176867,26.155001 31.47905,26.155001 31.781233,26.155001 32.025997,26.399799 32.025997,26.7019L32.025997,28.019646 32.147049,28.033379 32.578003,28.0802 32.578003,26.383799C32.578003,26.081598 32.822845,25.836998 33.125,25.836998 33.427155,25.836998 33.671997,26.081598 33.671997,26.383799L33.671997,28.18413 33.753952,28.191175C34.011494,28.211048,34.259079,28.226351,34.489479,28.235043L34.695,28.239889 34.695,26.383799C34.695,26.081598 34.939754,25.836998 35.241798,25.836998 35.543846,25.836998 35.785999,26.081598 35.785999,26.383799L35.785999,28.142845 35.850151,28.114399C35.870464,28.103628 35.888458,28.092094 35.904022,28.079767 37.695644,27.324572 36.984734,22.243793 39.568066,21.728296 40.185272,22.829791 40.203476,26.199476 39.245163,27.673571 38.747757,28.436567 37.914448,28.946964 37.297237,29.61886 36.706032,30.264759 35.851921,31.202154 35.242516,31.348053 33.549793,31.756851 31.476868,30.790756 29.406542,30.809055 28.013226,29.642361 26.76581,28.332268 25.406494,27.131971 26.054901,24.673584 24.195478,22.798692 25.080891,20.861z M32.757828,14.698902C32.551765,15.163771 32.217907,15.795246 31.924196,16.483469 31.434488,17.630831 31.056423,18.935604 31.567572,19.889389 32.380211,19.983192 32.184875,19.063858 32.757877,18.915352 33.351776,19.186262 33.401188,20.001392 34.054996,20.215 36.011745,18.94285 34.218666,16.404474 33.083996,15.071312 32.96653,14.933282 32.856216,14.808276 32.757828,14.698902z M36.941814,10.954291L36.908745,10.954693 36.784885,10.9556 36.76688,10.956416 36.744862,10.956684 36.693115,10.959764 36.623177,10.962936 36.580708,10.966453 36.540493,10.968845 36.499996,10.973135 36.456707,10.976719 36.383717,10.985449 36.328667,10.99128 36.304928,10.994874 36.285454,10.997204 36.147079,11.018775 36.109348,11.024487C34.833248,11.245873 34.052052,11.852634 33.945248,12.753678 33.920013,12.972149 33.95372,13.218152 34.031723,13.478455 34.452999,14.884343 36.165886,16.707012 36.864594,16.863016 38.815384,17.290375 39.923828,15.243961 39.772247,13.471205 39.737251,13.061898 39.635166,12.667383 39.46085,12.321205L39.458355,12.316681 39.424355,12.252822 39.404606,12.219182 39.396801,12.205028 39.391174,12.196308 39.383644,12.183481C39.369373,12.160269,39.354397,12.136971,39.338711,12.113633L39.327644,12.097857 39.320751,12.087174 39.310516,12.073437 39.289536,12.043534C39.272438,12.020154,39.254627,11.996776,39.236099,11.973442L39.235046,11.972166 39.232601,11.968884 39.224304,11.95917 39.178383,11.903614 39.144867,11.866162 39.132252,11.851391 39.124969,11.843928 39.116364,11.83431C39.094971,11.811323,39.072857,11.788466,39.050022,11.765783L39.031181,11.747795 39.019611,11.735936 39.005505,11.72328 38.97934,11.698295C38.955051,11.676001,38.930038,11.653922,38.904293,11.632102L38.899895,11.628522 38.894585,11.623755 38.880241,11.612526 38.824867,11.56746 38.773716,11.529119 38.757069,11.516087 38.749176,11.510726 38.741039,11.504628C38.71236,11.484015,38.682945,11.463746,38.65279,11.443865L38.623695,11.425521 38.606976,11.414167 38.58979,11.404143 38.560101,11.385425C38.528461,11.366361,38.496078,11.347728,38.462948,11.329569L38.453247,11.324508 38.444206,11.319235 38.424107,11.309308 38.361313,11.276551 38.287605,11.241883 38.268665,11.232527 38.261257,11.22949 38.25518,11.226631C38.219048,11.210537,38.182163,11.195,38.144524,11.180067L38.102413,11.164366 38.080254,11.155281 38.060841,11.148867 38.029324,11.137115C37.990166,11.123428,37.950249,11.110387,37.909565,11.098033L37.89249,11.093233 37.87888,11.088734 37.853485,11.082268 37.785225,11.063078 37.682549,11.038735 37.664444,11.034124C37.627609,11.026086,37.590229,11.018596,37.552296,11.011683L37.530655,11.008121 37.52272,11.006581 37.503757,11.003696 37.436852,10.992689 37.400116,10.987928 37.384518,10.985555 37.365524,10.983445 37.318092,10.977299 37.262474,10.971998 37.24165,10.969686 37.228195,10.968732 37.196007,10.965665 37.111393,10.960457 37.094105,10.959232 37.088776,10.959064 37.070583,10.957945C37.028221,10.95604,36.985298,10.954814,36.941814,10.954291z M29.18959,10.89906L29.091854,10.90171 29.084038,10.901755 29.079205,10.902053 29.02997,10.903388C28.975786,10.905981 28.920624,10.909736 28.864481,10.91468 27.766796,11.010522 26.52043,11.623347 25.804468,12.591189L25.804234,12.591513C25.314299,13.253622 25.072702,14.081904 25.296991,15.024489 25.398382,15.450575 25.610302,15.798159 25.893204,16.071165L25.91876,16.094069 26.018883,16.183823C27.055449,17.04719,28.859858,17.040346,29.83824,16.321466L29.838551,16.321238C30.283848,15.993151 30.619846,15.201582 30.919342,14.592307 30.978748,14.471375 31.032061,14.350371 31.079224,14.22983L31.135355,14.076702 31.136124,14.074638 31.145351,14.049431 31.186153,13.920768 31.191765,13.903514 31.192745,13.899986 31.202215,13.870124 31.232241,13.757858 31.23896,13.733675 31.240519,13.726907 31.249773,13.692309 31.271385,13.5928 31.277676,13.565471 31.279488,13.5555 31.287983,13.516387 31.302702,13.427705 31.307873,13.399247 31.309608,13.386103 31.316803,13.342756 31.325766,13.263742 31.329515,13.235349 31.330833,13.219068 31.336193,13.171815 31.340338,13.101679 31.342569,13.074121 31.343113,13.054737 31.346113,13.003965 31.346266,12.942109 31.346998,12.915912 31.346386,12.893473 31.346519,12.839604 31.343435,12.78552 31.342768,12.761065 31.340591,12.735632 31.33737,12.679132 31.331757,12.632365 31.329838,12.609929 31.325659,12.581553 31.318624,12.52295 31.311157,12.483089 31.308176,12.462849 31.301504,12.431567 31.290241,12.371456 31.281563,12.338074 31.277744,12.320169 31.268032,12.286025 31.25218,12.22505 31.242912,12.197717 31.238508,12.182239 31.225111,12.14522 31.204397,12.084132 31.195143,12.062413 31.190434,12.0494 31.172544,12.009386 31.146852,11.9491 31.138191,11.932543 31.13348,11.922003 31.109991,11.878634 31.079506,11.820354 31.072004,11.808495 31.067616,11.80039 31.03669,11.752655 31.002312,11.698296 30.996517,11.690644 30.992802,11.684909 30.95034,11.629676 30.915234,11.583323 30.911674,11.57938 30.909004,11.575906 30.837206,11.496864 30.818226,11.475835 30.817425,11.475088 30.816187,11.473725C30.783739,11.440841,30.749783,11.409152,30.714312,11.378716L30.711731,11.37668 30.711248,11.376231 30.702524,11.369421 30.603346,11.291221 30.596685,11.286804 30.594261,11.284912 30.571697,11.270235 30.483252,11.211588 30.471842,11.205283 30.46722,11.202276 30.43935,11.187327 30.353994,11.140162 30.337154,11.132515 30.330088,11.128725 30.299557,11.115442 30.215538,11.077291 30.192554,11.068892 30.182817,11.064655 30.150961,11.053692 30.067844,11.023318 30.037981,11.014809 30.025372,11.010468 29.993032,11.002001 29.910881,10.978592 29.873358,10.970662 29.857708,10.966564 29.825527,10.960555 29.74461,10.943457 29.698608,10.936856 29.679783,10.933341 29.648289,10.929636 29.568995,10.918259 29.51363,10.913795 29.491558,10.911199 29.461212,10.90957 29.384001,10.903345 29.318321,10.901897 29.29299,10.900537 29.264221,10.900705z M0,7.5639992C0.98177493,8.1967942 1.4791508,9.2853696 2.1640472,10.15765 7.1249557,16.496105 13.531216,22.128778 20.325375,26.805771 28.197725,32.227549 37.267967,36.50605 48.431999,38.482605 47.054409,41.263844 36.877373,38.615301 46.48671,41.29504 46.572609,41.84713 46.934608,42.607513 46.702808,43.130997 40.976345,42.344418 35.682079,40.59446 30.702909,38.698601 25.864439,36.857643 21.439966,34.006107 17.622292,31.131273 12.023326,26.917667 5.9765229,21.839684 2.4869537,15.350332 1.289052,13.121082 0.015624903,10.514542 0,7.5639992z M63.947632,6.3748093C63.989277,6.3866326 63.996101,6.4339881 64,6.4827843 63.247414,13.415133 59.273479,19.318909 55.244949,23.34766 51.942905,26.649702 49.127853,29.54834 45.190422,32.428476 43.005558,34.027397 41.260788,35.839922 37.729649,34.699207 39.588917,33.108187 35.685387,35.134212 34.813,33.293089 40.445705,29.785143 46.094109,26.071495 50.919525,21.618439 55.708443,17.198981 60.294365,12.38912 63.677105,6.6988468 63.747406,6.576475 63.841202,6.5141542 63.893204,6.3760929 63.916004,6.3708749 63.933754,6.370868 63.947632,6.3748093z M34.293369,0.00031852722C35.717949,0.0097002983 37.062096,0.22708225 38.164078,0.75432968 39.132771,1.2177505 40.234364,2.5433278 41.080654,3.6734028 42.023346,4.9285426 43.400932,6.1524936 43.567631,7.4571323 43.903629,10.058688 42.018147,16.313538 42.486938,16.753719 42.520741,17.615486 41.835846,18.029568 41.762947,18.831535 40.817654,19.724901 39.789066,19.381216 38.703072,19.779499 37.21143,20.328758 36.925903,21.956128 36.072067,23.120839L35.903999,23.333492 35.903999,24.324133C35.903999,24.626369 35.659145,24.870998 35.359798,24.870998 35.057755,24.870998 34.813,24.626369 34.813,24.324133L34.813,22.914909 34.812508,22.914774C34.179714,23.474751,34.291714,23.47735,33.51302,22.862776L33.513,24.324133C33.513,24.626369 33.268131,24.870998 32.966049,24.870998 32.663868,24.870998 32.418999,24.626369 32.418999,24.324133L32.418999,22.877117 32.410095,22.878783C32.229324,22.925965,32.013386,23.053568,31.789759,23.143639L31.778999,23.1476 31.778999,24.441181C31.778999,24.743191 31.534056,24.987999 31.232,24.987999 30.929844,24.987999 30.684999,24.743191 30.684999,24.441181L30.684999,22.925112 30.592094,22.9037C30.496208,22.891219,30.392221,22.890066,30.285662,22.895967L30.153999,22.90709 30.153999,23.939116C30.153999,24.241207 29.909056,24.485998 29.607,24.485998 29.304844,24.485998 29.059999,24.241207 29.059999,23.939116L29.059999,22.737218 28.948416,22.628243C27.985916,21.582851 27.677134,19.800373 26.164185,19.672804 25.072994,19.581507 24.231901,20.690962 22.919413,19.995689 22.609514,19.22752 21.560024,16.665024 22.200619,15.881356 21.580824,15.678163 21.929823,13.649544 21.838621,12.321398 21.617325,9.0690067 22.158918,5.7410102 24.000103,3.5640373 24.448,3.0379381 25.802187,1.7204204 26.380281,1.5120583 28.560915,0.72257566 31.573715,-0.017593861 34.293369,0.00031852722z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Pirate's Cove" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="President_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid12" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect12" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M58.616001,31.524L58.616001,36.516998 61.611,36.516998 61.611,31.524z M53.017002,31.524L53.017002,36.516998 56.012001,36.516998 56.012001,31.524z M47.346001,31.524L47.346001,36.516998 50.341999,36.516998 50.341999,31.524z M13.469001,31.524L13.469001,36.516998 16.464998,36.516998 16.464998,31.524z M7.8700008,31.524L7.8700008,36.516998 10.866,36.516998 10.866,31.524z M2.1989994,31.524L2.1989994,36.516998 5.1949978,36.516998 5.1949978,31.524z M58.578999,23.608002L58.578999,28.6 61.575001,28.6 61.575001,23.608002z M52.98,23.608002L52.98,28.6 55.976002,28.6 55.976002,23.608002z M47.311001,23.608002L47.311001,28.6 50.306,28.6 50.306,23.608002z M2.1639996,23.608002L2.1639996,28.6 5.1599979,28.6 5.1599979,23.608002z M13.434001,23.608L13.434001,28.6 16.427999,28.6 16.427999,23.608z M7.8339977,23.608L7.8339977,28.6 10.829001,28.6 10.829001,23.608z M36.112999,19.399L36.112999,37.670002 36.409687,37.670002C36.804138,37.670002,37.123001,37.98872,37.123001,38.382393L37.123001,38.537346 39.000999,38.537346 39.000999,38.382393C39.000999,37.98872,39.321507,37.670002,39.714714,37.670002L39.857998,37.670002 39.857998,19.399z M29.302,19.399L29.302,37.670002 29.563372,37.670002C29.956587,37.670002,30.277,37.98872,30.277,38.382393L30.277,38.537346 32.154999,38.537346 32.154999,38.382393C32.154999,37.98872,32.473961,37.670002,32.868416,37.670002L33.011997,37.670002 33.011997,19.399z M22.453999,19.399L22.453999,37.670002 22.75267,37.670002C23.145887,37.670002,23.465,37.98872,23.465,38.382393L23.465,38.537346 25.307999,38.537346 25.307999,38.382393C25.307999,37.98872,25.627111,37.670002,26.021629,37.670002L26.198999,37.670002 26.198999,19.399z M37.183289,0L37.966999,4.20788 31.619318,5.5627689 32.031273,7.6207018 32.065212,7.6313629C32.302078,7.7178512,32.53849,7.8543968,32.76162,8.0594969L38.799973,12.587999 43.850998,12.587999 43.850998,16.128618 44.752903,16.759998 62.003799,16.759998C63.105499,16.759998,64,17.6539,64,18.757027L64,19.399 42.959999,19.399 42.959999,37.670002 43.257683,37.670002C43.65089,37.670002,43.969997,37.98872,43.969997,38.382393L43.969997,38.537346 44.314999,38.537346 44.314999,20.682999 64,20.682999 64,38.347351C64,39.450123,63.105499,40.344002,62.003799,40.344002L48.257347,40.344002 48.260998,40.416302C48.260998,41.348755,47.505814,42.104,46.573734,42.104L16.855665,42.104C15.923183,42.104,15.167999,41.348755,15.167999,40.416302L15.171647,40.344002 1.9973097,40.344002C0.89453125,40.344002,0,39.450123,0,38.347351L0,20.682999 18.258999,20.682999 18.258999,38.537346 18.496,38.537346 18.496,38.382393C18.495998,37.98872,18.816412,37.670002,19.209629,37.670002L19.352999,37.670002 19.352999,19.399 0,19.399 0,18.757027C0,17.6539,0.89453125,16.759998,1.9973097,16.759998L17.726034,16.759998 18.924,15.838376 18.924,12.587999 23.601574,12.587999 30.003784,7.8217583C30.003784,7.8217592,30.472673,7.5657148,31.092239,7.5125828L31.325102,7.50492 30.122,1.3548584z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="President's House" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Robinson_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid17" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect17" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M52.765,37.490002L52.765,41.404001 56.680001,41.404001 56.680001,37.490002z M7.3190002,37.490002L7.3190002,41.404001 11.234,41.404001 11.234,37.490002z M37.787003,37.489999L37.787003,41.574 41.872002,41.574 41.872002,37.489999z M29.957001,37.489999L29.957001,41.574 34.042002,41.574 34.042002,37.489999z M22.128001,37.489999L22.128001,41.574 26.212002,41.574 26.212002,37.489999z M48.169999,34.255001L61.276001,34.255001 61.276001,51.276001 48.169999,51.276001z M2.7229996,34.255001L15.829,34.255001 15.829,51.276001 2.7229996,51.276001z M37.787003,28.298001L37.787003,32.383001 41.872002,32.383001 41.872002,28.298001z M29.957001,28.298001L29.957001,32.383001 34.042002,32.383001 34.042002,28.298001z M22.128001,28.298001L22.128001,32.383001 26.212002,32.383001 26.212002,28.298001z M48.169999,27.788002L64,27.788002 64,31.362001 48.169999,31.362001z M0,27.788002L15.829,27.788002 15.829,31.362001 0,31.362001z M32.170098,15.703001L45.957001,24.723701 45.957001,51.446001 34.042002,51.446001 34.042002,46.000002 29.957001,46.000002 29.957001,51.446001 18.383,51.446001 18.383,24.723701z M31.021,0L33.064,0 33.064,1.48843 33.104409,1.5006828C34.123854,1.7944679,36.340107,2.0908051,40.085003,0.97900009L40.085003,6.2548065C40.085003,6.2548065,35.419613,7.3459492,33.194796,6.7662792L33.064,6.7268276 33.064,8.7389374 49.702,19.617363 47.319211,22.8518 31.9996,12.637983 16.510687,23.021002 14.298,19.617363 31.021,8.6828671z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Robinson Science Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
+                            <Grid x:Name="Recreation_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid15" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect15" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M0,11.898L7.9399986,11.898 7.9399986,15.103 0,15.103z M56.043999,11.883001L64,11.883001 64,15.103 56.043999,15.103z M22.934999,10.954001C23.0328,10.954001 40.984699,10.954001 41.080999,10.954001 41.080999,11.049304 41.080999,15.849996 41.080999,15.944 40.984699,15.944 23.0328,15.944 22.934999,15.944 22.935,15.849996 22.935,11.049304 22.934999,10.954001z M53.564999,9.3400005C53.656219,9.3400005 55.114777,9.3400005 55.206001,9.3400005 55.206001,9.4350895 55.206001,17.464901 55.206001,17.560002 55.114777,17.560002 53.656219,17.560002 53.564999,17.560002 53.564999,17.462403 53.564999,9.4350895 53.564999,9.3400005z M8.8119984,9.3400005C8.9018607,9.3400005 10.361977,9.3400005 10.452998,9.3400005 10.452999,9.4350895 10.452999,17.462403 10.452998,17.560002 10.361977,17.560002 8.9018607,17.558701 8.8119984,17.558701 8.8119988,17.474102 8.8119988,9.5808481 8.8119984,9.3400005z M48.862923,4.1300005C50.031601,4.1300005 52.614765,4.1300005 52.691002,4.1300014 52.691002,4.2277807 52.691002,22.671799 52.691002,22.768 52.595917,22.768 48.396183,22.768 48.300001,22.768 48.300001,22.671799 48.300001,4.2277807 48.300001,4.1300014 48.319357,4.130001 48.535692,4.130001 48.862923,4.1300005z M11.894249,4.1300005C13.064474,4.1300005 15.643847,4.1300005 15.718999,4.1300014 15.718999,4.2277807 15.718999,22.671799 15.718999,22.768 15.625204,22.768 11.421095,22.768 11.325999,22.768 11.325999,22.671799 11.328599,4.2277807 11.328598,4.1300014 11.349401,4.130001 11.566586,4.130001 11.894249,4.1300005z M42.016575,1.7105685E-07C42.120249,4.2942393E-07 42.348129,3.4708806E-07 42.654451,1.7105685E-07 44.113131,3.7553393E-07 47.350544,3.9565932E-07 47.425001,1.1247312E-06 47.425001,0.096192484 47.425001,26.851601 47.425001,26.900002 47.329697,26.900002 42.052204,26.900002 41.955999,26.900002 41.955999,26.8009 41.955999,0.097535295 41.955999,1.1247312E-06 41.961262,7.7951916E-07 41.982018,6.9885667E-07 42.016575,1.7105685E-07z M16.606556,1.7105685E-07C16.629017,4.5786597E-07 16.674822,3.7181476E-07 16.740608,1.7105685E-07 16.793237,2.00206E-07 16.858654,4.1149804E-08 16.935139,1.7105685E-07 16.964275,-2.2556975E-08 16.995018,-8.906909E-08 17.027272,1.7105685E-07 17.064134,3.4785444E-08 17.102969,-2.1603881E-08 17.143636,1.7105685E-07 17.190112,1.5324022E-07 17.23898,1.1555224E-07 17.290029,1.7105685E-07 18.748556,3.7347094E-07 21.986788,3.8622846E-07 22.059999,1.1247312E-06 22.059999,0.097535302 22.059999,26.800902 22.059999,26.900002 21.966289,26.900002 16.68831,26.900002 16.591999,26.900002 16.591999,26.836003 16.591999,0.096192491 16.591999,1.1247312E-06 16.594174,7.8666523E-07 16.599068,7.1163635E-07 16.606556,1.7105685E-07z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="University Recreation Center" Height="25" Margin="75,15,0,0"/>
+                            </Grid>
                             <Grid x:Name="Schumacher_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid40" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect40" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M7.4166234,16.197001L13.497334,16.345396 13.322834,23.436422 20.413999,23.61352 20.262901,29.691471 13.171835,29.516974 12.997336,36.608002 6.9166257,36.456905 7.0910952,29.363379 0,29.191483 0.1484375,23.11223 7.2421548,23.284727z M11.898108,2.8243951E-06C12.047457,-8.1059967E-05 12.194343,0.0017042016 12.338866,0.0052749978 16.963824,0.1159917 19.130506,2.1726163 21.594083,5.2591434 24.20856,2.2982254 26.475539,0.35292793 31.099097,0.46883325 31.674691,0.48317698 32.289287,0.52742664 32.948079,0.60817621 36.937644,1.0977344 41.474006,4.8737665 41.866,11.910204L41.807403,14.247387C41.119907,20.953037 35.841254,29.115776 20.75809,39.146999 19.094106,37.917812 17.565419,36.723721 16.144833,35.553227L16.221631,32.535049 19.617501,32.615749C20.039397,32.958145 20.455993,33.295445 20.893489,33.639141 31.127797,26.420496 36.658946,19.803345 37.346439,13.946589L37.395942,11.990903C37.070445,7.3073483 34.244972,5.2682934 32.403785,5.043015 31.898589,4.9831453 31.420797,4.9466458 30.989799,4.9349261 28.333522,4.8711462 27.202031,5.6523905 24.945552,8.2174912L21.423486,12.209702 18.101915,8.0456229C15.974234,5.3789525 14.883144,4.5378385 12.229568,4.4727092 11.792072,4.4622693 11.318076,4.475339 10.808981,4.5085388 8.9587071,4.6458679 6.0368631,6.5430041 5.4821784,11.204409L5.4483378,13.269493 5.0915616,17.82156 1.846801,17.74086C1.3207757,16.161371,1.0395283,14.662783,0.96399985,13.238295L1.0239084,10.901112C1.7556518,3.8965435 6.4756691,0.345116 10.484783,0.053491898 10.979854,0.017329086 11.450062,0.0002546377 11.898108,2.8243951E-06z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Schumacher Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Conditioning_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid13" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect13" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M0,11.898L7.9399986,11.898 7.9399986,15.103 0,15.103z M56.043999,11.883001L64,11.883001 64,15.103 56.043999,15.103z M22.934999,10.954001C23.0328,10.954001 40.984699,10.954001 41.080999,10.954001 41.080999,11.049304 41.080999,15.849996 41.080999,15.944 40.984699,15.944 23.0328,15.944 22.934999,15.944 22.935,15.849996 22.935,11.049304 22.934999,10.954001z M53.564999,9.3400005C53.656219,9.3400005 55.114777,9.3400005 55.206001,9.3400005 55.206001,9.4350895 55.206001,17.464901 55.206001,17.560002 55.114777,17.560002 53.656219,17.560002 53.564999,17.560002 53.564999,17.462403 53.564999,9.4350895 53.564999,9.3400005z M8.8119984,9.3400005C8.9018607,9.3400005 10.361977,9.3400005 10.452998,9.3400005 10.452999,9.4350895 10.452999,17.462403 10.452998,17.560002 10.361977,17.560002 8.9018607,17.558701 8.8119984,17.558701 8.8119988,17.474102 8.8119988,9.5808481 8.8119984,9.3400005z M48.862923,4.1300005C50.031601,4.1300005 52.614765,4.1300005 52.691002,4.1300014 52.691002,4.2277807 52.691002,22.671799 52.691002,22.768 52.595917,22.768 48.396183,22.768 48.300001,22.768 48.300001,22.671799 48.300001,4.2277807 48.300001,4.1300014 48.319357,4.130001 48.535692,4.130001 48.862923,4.1300005z M11.894249,4.1300005C13.064474,4.1300005 15.643847,4.1300005 15.718999,4.1300014 15.718999,4.2277807 15.718999,22.671799 15.718999,22.768 15.625204,22.768 11.421095,22.768 11.325999,22.768 11.325999,22.671799 11.328599,4.2277807 11.328598,4.1300014 11.349401,4.130001 11.566586,4.130001 11.894249,4.1300005z M42.016575,1.7105685E-07C42.120249,4.2942393E-07 42.348129,3.4708806E-07 42.654451,1.7105685E-07 44.113131,3.7553393E-07 47.350544,3.9565932E-07 47.425001,1.1247312E-06 47.425001,0.096192484 47.425001,26.851601 47.425001,26.900002 47.329697,26.900002 42.052204,26.900002 41.955999,26.900002 41.955999,26.8009 41.955999,0.097535295 41.955999,1.1247312E-06 41.961262,7.7951916E-07 41.982018,6.9885667E-07 42.016575,1.7105685E-07z M16.606556,1.7105685E-07C16.629017,4.5786597E-07 16.674822,3.7181476E-07 16.740608,1.7105685E-07 16.793237,2.00206E-07 16.858654,4.1149804E-08 16.935139,1.7105685E-07 16.964275,-2.2556975E-08 16.995018,-8.906909E-08 17.027272,1.7105685E-07 17.064134,3.4785444E-08 17.102969,-2.1603881E-08 17.143636,1.7105685E-07 17.190112,1.5324022E-07 17.23898,1.1555224E-07 17.290029,1.7105685E-07 18.748556,3.7347094E-07 21.986788,3.8622846E-07 22.059999,1.1247312E-06 22.059999,0.097535302 22.059999,26.800902 22.059999,26.900002 21.966289,26.900002 16.68831,26.900002 16.591999,26.900002 16.591999,26.836003 16.591999,0.096192491 16.591999,1.1247312E-06 16.594174,7.8666523E-07 16.599068,7.1163635E-07 16.606556,1.7105685E-07z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Scotford Center" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Seeley_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid47" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect47" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M20.235,34.834999C25.537749,36.67613,30.619,40.21129,30.619,40.21129L29.960393,52.436998 30.951,52.436998 30.951,53.836 32.019,53.836 32.019,54.794001 33.087001,54.794001 33.087001,63.999998 16.516,63.999998 16.516,54.794001 17.584001,54.794001 17.584001,53.836 18.652001,53.836 18.652001,52.436998 20.235,52.436998z M35.627455,10.163C38.499163,11.635824 48.736195,12.004455 48.736195,12.004454 50.503801,12.519998 50.283199,13.25656 50.283199,13.256559 50.0623,13.845809 46.232286,13.25656 46.232286,13.256559L44.244081,13.256559C43.065577,15.760571 42.034275,16.055595 42.034275,16.055596 41.15097,16.644745 39.898968,16.276314 39.898968,16.276313L37.983662,16.129202C35.249649,17.620571,32.253297,17.905998,31.383684,17.958784L31.301947,17.963401 31.798,36.382372C31.5772,40.064568 30.840906,39.47537 30.840906,39.47537 30.325211,38.370571 22.59217,35.130375 22.59217,35.130375 18.762298,33.878477 18.468,30.784681 18.468001,30.784681L18.894954,18.477426 18.688001,18.485999 13.238083,16.791857C11.470478,16.055595 10.439275,16.202608 10.439275,16.202608 7.6410055,17.676132 6.0205803,13.109347 6.0205803,13.109348L0.20220184,13.109348C-0.46046066,12.814322,0.71782303,11.857342,0.71782303,11.857342L8.1565676,11.488811C14.342887,17.160488 23.180815,16.276314 23.180815,16.276313 31.28174,15.024309 35.627455,10.163 35.627455,10.163z M30.177038,9.0589991L35.112,9.6481643C30.177038,13.992972 25.684873,14.877006 25.684873,14.877006 14.858757,17.160037 9.1140013,11.342069 9.1140013,11.342069 10.955187,11.415664 14.343161,10.310846 14.343161,10.310844 21.929002,15.760341 30.177038,9.0589991 30.177038,9.0589991z M24.800649,0C26.305827,0,27.525909,1.2199707,27.525909,2.7250891L28.102041,9.0868979 29.441001,9.0589991C29.441001,9.0589991 21.561065,14.508326 15.08,9.8689523 15.08,9.8689528 18.762323,8.9607477 21.192572,9.2308626L21.233996,9.2299995 21.192,9.2299995 22.076087,2.7250891C22.076088,1.2199707,23.29607,0,24.800649,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Seeley Chapel" Height="25" Margin="75,15,0,0"/>
                             </Grid>
+                            <Grid x:Name="TennisCourts_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid28" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect28" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M37.501449,22.938627C38.200641,22.938627 38.741035,23.171777 39.125232,23.639188 39.508026,24.105367 39.700622,24.753806 39.700622,25.583158 39.700622,26.337097 39.500225,26.960798 39.09653,27.451698 38.695533,27.943897 38.169441,28.190097 37.521049,28.190097 36.833557,28.190097 36.282762,27.907398 35.868667,27.340997 35.453372,26.774597 35.246376,26.092307 35.246376,25.295556 35.246376,24.657377 35.455972,24.105367 35.873968,23.639188 36.290563,23.171777 36.833557,22.938627 37.501449,22.938627z M26.794059,17.863187C28.321399,17.863187 29.085796,19.613187 29.085796,23.114408 29.085796,26.498597 28.30577,28.190097 26.74719,28.190097 25.163951,28.190097 24.372205,26.525897 24.372205,23.197778 24.372205,19.641748 25.179571,17.863187 26.794059,17.863187z M38.679935,16.146997C36.961154,16.146997 35.579671,16.842311 34.536684,18.234397 33.495094,19.626127 32.973001,21.488187 32.973001,23.820218 32.973001,25.743306 33.372596,27.236797 34.170787,28.300798 34.967678,29.365796 36.070566,29.896997 37.47295,29.896997 38.741035,29.896997 39.789321,29.479198 40.614715,28.644397 41.440303,27.809697 41.853,26.730398 41.853,25.406158 41.853,24.144437 41.518402,23.136617 40.85041,22.381378 40.183818,21.627467 39.28273,21.249908 38.151241,21.249908 36.772357,21.249908 35.781568,21.805808 35.182575,22.919088L35.144777,22.919088C35.144777,21.380027 35.484672,20.152248 36.165565,19.236837 36.845256,18.321437 37.751447,17.863187 38.884231,17.863187 39.613525,17.863187 40.310016,18.038968 40.971511,18.391748L40.971511,16.527246C40.409015,16.273462,39.644725,16.146997,38.679935,16.146997z M26.895629,16.146997C25.368289,16.146997 24.199108,16.749902 23.389183,17.955587 22.578027,19.162748 22.173,20.940088 22.173,23.290428 22.173,25.430806 22.562402,27.067798 23.338403,28.199098 24.113178,29.330598 25.195201,29.896997 26.580562,29.896997 28.064931,29.896997 29.221174,29.304597 30.045389,28.119697 30.872163,26.936097 31.285001,25.217428 31.285001,22.965968 31.285001,18.419088 29.822731,16.146997 26.895629,16.146997z M4.0401535,10.473999L12.734,19.544988 7.5622625,22.873 0,14.783456z M59.958362,10.298L64,14.607656 56.438819,22.696998 51.267002,19.369087z M20.510239,0.00097340596C23.72974,0.041433396,25.765371,1.3297349,25.765371,1.3297345L25.839569,1.3271749C25.790071,1.614897 25.765371,1.9078588 25.765371,2.2086511 25.765371,5.3649243 28.599964,7.9235228 32.094759,7.9235228 35.593549,7.9235228 38.428043,5.3649243 38.428043,2.2086511 38.428043,1.7881079 38.374744,1.3805151 38.279644,0.98598166L38.603843,0.97682257C49.156021,-3.0673975,57.596,8.0120233,57.596,8.0120233L48.62862,17.861196 48.62862,45.471999 15.211992,45.471999 15.211992,17.685293 6.2419996,8.3636258C11.692087,1.5120447,16.861471,-0.044882392,20.510239,0.00097340596z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Tennis Courts" Height="25" Margin="75,15,0,0"/>
+                            </Grid>
+                            <Grid x:Name="ScotfordTennisCenter_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid29" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect29" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M37.501449,22.938627C38.200641,22.938627 38.741035,23.171777 39.125232,23.639188 39.508026,24.105367 39.700622,24.753806 39.700622,25.583158 39.700622,26.337097 39.500225,26.960798 39.09653,27.451698 38.695533,27.943897 38.169441,28.190097 37.521049,28.190097 36.833557,28.190097 36.282762,27.907398 35.868667,27.340997 35.453372,26.774597 35.246376,26.092307 35.246376,25.295556 35.246376,24.657377 35.455972,24.105367 35.873968,23.639188 36.290563,23.171777 36.833557,22.938627 37.501449,22.938627z M26.794059,17.863187C28.321399,17.863187 29.085796,19.613187 29.085796,23.114408 29.085796,26.498597 28.30577,28.190097 26.74719,28.190097 25.163951,28.190097 24.372205,26.525897 24.372205,23.197778 24.372205,19.641748 25.179571,17.863187 26.794059,17.863187z M38.679935,16.146997C36.961154,16.146997 35.579671,16.842311 34.536684,18.234397 33.495094,19.626127 32.973001,21.488187 32.973001,23.820218 32.973001,25.743306 33.372596,27.236797 34.170787,28.300798 34.967678,29.365796 36.070566,29.896997 37.47295,29.896997 38.741035,29.896997 39.789321,29.479198 40.614715,28.644397 41.440303,27.809697 41.853,26.730398 41.853,25.406158 41.853,24.144437 41.518402,23.136617 40.85041,22.381378 40.183818,21.627467 39.28273,21.249908 38.151241,21.249908 36.772357,21.249908 35.781568,21.805808 35.182575,22.919088L35.144777,22.919088C35.144777,21.380027 35.484672,20.152248 36.165565,19.236837 36.845256,18.321437 37.751447,17.863187 38.884231,17.863187 39.613525,17.863187 40.310016,18.038968 40.971511,18.391748L40.971511,16.527246C40.409015,16.273462,39.644725,16.146997,38.679935,16.146997z M26.895629,16.146997C25.368289,16.146997 24.199108,16.749902 23.389183,17.955587 22.578027,19.162748 22.173,20.940088 22.173,23.290428 22.173,25.430806 22.562402,27.067798 23.338403,28.199098 24.113178,29.330598 25.195201,29.896997 26.580562,29.896997 28.064931,29.896997 29.221174,29.304597 30.045389,28.119697 30.872163,26.936097 31.285001,25.217428 31.285001,22.965968 31.285001,18.419088 29.822731,16.146997 26.895629,16.146997z M4.0401535,10.473999L12.734,19.544988 7.5622625,22.873 0,14.783456z M59.958362,10.298L64,14.607656 56.438819,22.696998 51.267002,19.369087z M20.510239,0.00097340596C23.72974,0.041433396,25.765371,1.3297349,25.765371,1.3297345L25.839569,1.3271749C25.790071,1.614897 25.765371,1.9078588 25.765371,2.2086511 25.765371,5.3649243 28.599964,7.9235228 32.094759,7.9235228 35.593549,7.9235228 38.428043,5.3649243 38.428043,2.2086511 38.428043,1.7881079 38.374744,1.3805151 38.279644,0.98598166L38.603843,0.97682257C49.156021,-3.0673975,57.596,8.0120233,57.596,8.0120233L48.62862,17.861196 48.62862,45.471999 15.211992,45.471999 15.211992,17.685293 6.2419996,8.3636258C11.692087,1.5120447,16.861471,-0.044882392,20.510239,0.00097340596z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Scotford Tennis Center" Height="25" Margin="75,15,0,0"/>
+                            </Grid>
+                            <Grid x:Name="SoccerField_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid30" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect30" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M37.501449,22.938627C38.200641,22.938627 38.741035,23.171777 39.125232,23.639188 39.508026,24.105367 39.700622,24.753806 39.700622,25.583158 39.700622,26.337097 39.500225,26.960798 39.09653,27.451698 38.695533,27.943897 38.169441,28.190097 37.521049,28.190097 36.833557,28.190097 36.282762,27.907398 35.868667,27.340997 35.453372,26.774597 35.246376,26.092307 35.246376,25.295556 35.246376,24.657377 35.455972,24.105367 35.873968,23.639188 36.290563,23.171777 36.833557,22.938627 37.501449,22.938627z M26.794059,17.863187C28.321399,17.863187 29.085796,19.613187 29.085796,23.114408 29.085796,26.498597 28.30577,28.190097 26.74719,28.190097 25.163951,28.190097 24.372205,26.525897 24.372205,23.197778 24.372205,19.641748 25.179571,17.863187 26.794059,17.863187z M38.679935,16.146997C36.961154,16.146997 35.579671,16.842311 34.536684,18.234397 33.495094,19.626127 32.973001,21.488187 32.973001,23.820218 32.973001,25.743306 33.372596,27.236797 34.170787,28.300798 34.967678,29.365796 36.070566,29.896997 37.47295,29.896997 38.741035,29.896997 39.789321,29.479198 40.614715,28.644397 41.440303,27.809697 41.853,26.730398 41.853,25.406158 41.853,24.144437 41.518402,23.136617 40.85041,22.381378 40.183818,21.627467 39.28273,21.249908 38.151241,21.249908 36.772357,21.249908 35.781568,21.805808 35.182575,22.919088L35.144777,22.919088C35.144777,21.380027 35.484672,20.152248 36.165565,19.236837 36.845256,18.321437 37.751447,17.863187 38.884231,17.863187 39.613525,17.863187 40.310016,18.038968 40.971511,18.391748L40.971511,16.527246C40.409015,16.273462,39.644725,16.146997,38.679935,16.146997z M26.895629,16.146997C25.368289,16.146997 24.199108,16.749902 23.389183,17.955587 22.578027,19.162748 22.173,20.940088 22.173,23.290428 22.173,25.430806 22.562402,27.067798 23.338403,28.199098 24.113178,29.330598 25.195201,29.896997 26.580562,29.896997 28.064931,29.896997 29.221174,29.304597 30.045389,28.119697 30.872163,26.936097 31.285001,25.217428 31.285001,22.965968 31.285001,18.419088 29.822731,16.146997 26.895629,16.146997z M4.0401535,10.473999L12.734,19.544988 7.5622625,22.873 0,14.783456z M59.958362,10.298L64,14.607656 56.438819,22.696998 51.267002,19.369087z M20.510239,0.00097340596C23.72974,0.041433396,25.765371,1.3297349,25.765371,1.3297345L25.839569,1.3271749C25.790071,1.614897 25.765371,1.9078588 25.765371,2.2086511 25.765371,5.3649243 28.599964,7.9235228 32.094759,7.9235228 35.593549,7.9235228 38.428043,5.3649243 38.428043,2.2086511 38.428043,1.7881079 38.374744,1.3805151 38.279644,0.98598166L38.603843,0.97682257C49.156021,-3.0673975,57.596,8.0120233,57.596,8.0120233L48.62862,17.861196 48.62862,45.471999 15.211992,45.471999 15.211992,17.685293 6.2419996,8.3636258C11.692087,1.5120447,16.861471,-0.044882392,20.510239,0.00097340596z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Soccer Field" Height="25" Margin="75,15,0,0"/>
+                            </Grid>
+                            <Grid x:Name="Omache_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid31" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect31" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M37.501449,22.938627C38.200641,22.938627 38.741035,23.171777 39.125232,23.639188 39.508026,24.105367 39.700622,24.753806 39.700622,25.583158 39.700622,26.337097 39.500225,26.960798 39.09653,27.451698 38.695533,27.943897 38.169441,28.190097 37.521049,28.190097 36.833557,28.190097 36.282762,27.907398 35.868667,27.340997 35.453372,26.774597 35.246376,26.092307 35.246376,25.295556 35.246376,24.657377 35.455972,24.105367 35.873968,23.639188 36.290563,23.171777 36.833557,22.938627 37.501449,22.938627z M26.794059,17.863187C28.321399,17.863187 29.085796,19.613187 29.085796,23.114408 29.085796,26.498597 28.30577,28.190097 26.74719,28.190097 25.163951,28.190097 24.372205,26.525897 24.372205,23.197778 24.372205,19.641748 25.179571,17.863187 26.794059,17.863187z M38.679935,16.146997C36.961154,16.146997 35.579671,16.842311 34.536684,18.234397 33.495094,19.626127 32.973001,21.488187 32.973001,23.820218 32.973001,25.743306 33.372596,27.236797 34.170787,28.300798 34.967678,29.365796 36.070566,29.896997 37.47295,29.896997 38.741035,29.896997 39.789321,29.479198 40.614715,28.644397 41.440303,27.809697 41.853,26.730398 41.853,25.406158 41.853,24.144437 41.518402,23.136617 40.85041,22.381378 40.183818,21.627467 39.28273,21.249908 38.151241,21.249908 36.772357,21.249908 35.781568,21.805808 35.182575,22.919088L35.144777,22.919088C35.144777,21.380027 35.484672,20.152248 36.165565,19.236837 36.845256,18.321437 37.751447,17.863187 38.884231,17.863187 39.613525,17.863187 40.310016,18.038968 40.971511,18.391748L40.971511,16.527246C40.409015,16.273462,39.644725,16.146997,38.679935,16.146997z M26.895629,16.146997C25.368289,16.146997 24.199108,16.749902 23.389183,17.955587 22.578027,19.162748 22.173,20.940088 22.173,23.290428 22.173,25.430806 22.562402,27.067798 23.338403,28.199098 24.113178,29.330598 25.195201,29.896997 26.580562,29.896997 28.064931,29.896997 29.221174,29.304597 30.045389,28.119697 30.872163,26.936097 31.285001,25.217428 31.285001,22.965968 31.285001,18.419088 29.822731,16.146997 26.895629,16.146997z M4.0401535,10.473999L12.734,19.544988 7.5622625,22.873 0,14.783456z M59.958362,10.298L64,14.607656 56.438819,22.696998 51.267002,19.369087z M20.510239,0.00097340596C23.72974,0.041433396,25.765371,1.3297349,25.765371,1.3297345L25.839569,1.3271749C25.790071,1.614897 25.765371,1.9078588 25.765371,2.2086511 25.765371,5.3649243 28.599964,7.9235228 32.094759,7.9235228 35.593549,7.9235228 38.428043,5.3649243 38.428043,2.2086511 38.428043,1.7881079 38.374744,1.3805151 38.279644,0.98598166L38.603843,0.97682257C49.156021,-3.0673975,57.596,8.0120233,57.596,8.0120233L48.62862,17.861196 48.62862,45.471999 15.211992,45.471999 15.211992,17.685293 6.2419996,8.3636258C11.692087,1.5120447,16.861471,-0.044882392,20.510239,0.00097340596z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Omache Field" Height="25" Margin="75,15,0,0"/>
+                            </Grid>
+                            <Grid x:Name="Marks_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid32" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect32" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M37.501449,22.938627C38.200641,22.938627 38.741035,23.171777 39.125232,23.639188 39.508026,24.105367 39.700622,24.753806 39.700622,25.583158 39.700622,26.337097 39.500225,26.960798 39.09653,27.451698 38.695533,27.943897 38.169441,28.190097 37.521049,28.190097 36.833557,28.190097 36.282762,27.907398 35.868667,27.340997 35.453372,26.774597 35.246376,26.092307 35.246376,25.295556 35.246376,24.657377 35.455972,24.105367 35.873968,23.639188 36.290563,23.171777 36.833557,22.938627 37.501449,22.938627z M26.794059,17.863187C28.321399,17.863187 29.085796,19.613187 29.085796,23.114408 29.085796,26.498597 28.30577,28.190097 26.74719,28.190097 25.163951,28.190097 24.372205,26.525897 24.372205,23.197778 24.372205,19.641748 25.179571,17.863187 26.794059,17.863187z M38.679935,16.146997C36.961154,16.146997 35.579671,16.842311 34.536684,18.234397 33.495094,19.626127 32.973001,21.488187 32.973001,23.820218 32.973001,25.743306 33.372596,27.236797 34.170787,28.300798 34.967678,29.365796 36.070566,29.896997 37.47295,29.896997 38.741035,29.896997 39.789321,29.479198 40.614715,28.644397 41.440303,27.809697 41.853,26.730398 41.853,25.406158 41.853,24.144437 41.518402,23.136617 40.85041,22.381378 40.183818,21.627467 39.28273,21.249908 38.151241,21.249908 36.772357,21.249908 35.781568,21.805808 35.182575,22.919088L35.144777,22.919088C35.144777,21.380027 35.484672,20.152248 36.165565,19.236837 36.845256,18.321437 37.751447,17.863187 38.884231,17.863187 39.613525,17.863187 40.310016,18.038968 40.971511,18.391748L40.971511,16.527246C40.409015,16.273462,39.644725,16.146997,38.679935,16.146997z M26.895629,16.146997C25.368289,16.146997 24.199108,16.749902 23.389183,17.955587 22.578027,19.162748 22.173,20.940088 22.173,23.290428 22.173,25.430806 22.562402,27.067798 23.338403,28.199098 24.113178,29.330598 25.195201,29.896997 26.580562,29.896997 28.064931,29.896997 29.221174,29.304597 30.045389,28.119697 30.872163,26.936097 31.285001,25.217428 31.285001,22.965968 31.285001,18.419088 29.822731,16.146997 26.895629,16.146997z M4.0401535,10.473999L12.734,19.544988 7.5622625,22.873 0,14.783456z M59.958362,10.298L64,14.607656 56.438819,22.696998 51.267002,19.369087z M20.510239,0.00097340596C23.72974,0.041433396,25.765371,1.3297349,25.765371,1.3297345L25.839569,1.3271749C25.790071,1.614897 25.765371,1.9078588 25.765371,2.2086511 25.765371,5.3649243 28.599964,7.9235228 32.094759,7.9235228 35.593549,7.9235228 38.428043,5.3649243 38.428043,2.2086511 38.428043,1.7881079 38.374744,1.3805151 38.279644,0.98598166L38.603843,0.97682257C49.156021,-3.0673975,57.596,8.0120233,57.596,8.0120233L48.62862,17.861196 48.62862,45.471999 15.211992,45.471999 15.211992,17.685293 6.2419996,8.3636258C11.692087,1.5120447,16.861471,-0.044882392,20.510239,0.00097340596z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Marks Field" Height="25" Margin="75,15,0,0"/>
+                            </Grid>
+                            <Grid x:Name="PineBowl_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid33" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect33" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M37.501449,22.938627C38.200641,22.938627 38.741035,23.171777 39.125232,23.639188 39.508026,24.105367 39.700622,24.753806 39.700622,25.583158 39.700622,26.337097 39.500225,26.960798 39.09653,27.451698 38.695533,27.943897 38.169441,28.190097 37.521049,28.190097 36.833557,28.190097 36.282762,27.907398 35.868667,27.340997 35.453372,26.774597 35.246376,26.092307 35.246376,25.295556 35.246376,24.657377 35.455972,24.105367 35.873968,23.639188 36.290563,23.171777 36.833557,22.938627 37.501449,22.938627z M26.794059,17.863187C28.321399,17.863187 29.085796,19.613187 29.085796,23.114408 29.085796,26.498597 28.30577,28.190097 26.74719,28.190097 25.163951,28.190097 24.372205,26.525897 24.372205,23.197778 24.372205,19.641748 25.179571,17.863187 26.794059,17.863187z M38.679935,16.146997C36.961154,16.146997 35.579671,16.842311 34.536684,18.234397 33.495094,19.626127 32.973001,21.488187 32.973001,23.820218 32.973001,25.743306 33.372596,27.236797 34.170787,28.300798 34.967678,29.365796 36.070566,29.896997 37.47295,29.896997 38.741035,29.896997 39.789321,29.479198 40.614715,28.644397 41.440303,27.809697 41.853,26.730398 41.853,25.406158 41.853,24.144437 41.518402,23.136617 40.85041,22.381378 40.183818,21.627467 39.28273,21.249908 38.151241,21.249908 36.772357,21.249908 35.781568,21.805808 35.182575,22.919088L35.144777,22.919088C35.144777,21.380027 35.484672,20.152248 36.165565,19.236837 36.845256,18.321437 37.751447,17.863187 38.884231,17.863187 39.613525,17.863187 40.310016,18.038968 40.971511,18.391748L40.971511,16.527246C40.409015,16.273462,39.644725,16.146997,38.679935,16.146997z M26.895629,16.146997C25.368289,16.146997 24.199108,16.749902 23.389183,17.955587 22.578027,19.162748 22.173,20.940088 22.173,23.290428 22.173,25.430806 22.562402,27.067798 23.338403,28.199098 24.113178,29.330598 25.195201,29.896997 26.580562,29.896997 28.064931,29.896997 29.221174,29.304597 30.045389,28.119697 30.872163,26.936097 31.285001,25.217428 31.285001,22.965968 31.285001,18.419088 29.822731,16.146997 26.895629,16.146997z M4.0401535,10.473999L12.734,19.544988 7.5622625,22.873 0,14.783456z M59.958362,10.298L64,14.607656 56.438819,22.696998 51.267002,19.369087z M20.510239,0.00097340596C23.72974,0.041433396,25.765371,1.3297349,25.765371,1.3297345L25.839569,1.3271749C25.790071,1.614897 25.765371,1.9078588 25.765371,2.2086511 25.765371,5.3649243 28.599964,7.9235228 32.094759,7.9235228 35.593549,7.9235228 38.428043,5.3649243 38.428043,2.2086511 38.428043,1.7881079 38.374744,1.3805151 38.279644,0.98598166L38.603843,0.97682257C49.156021,-3.0673975,57.596,8.0120233,57.596,8.0120233L48.62862,17.861196 48.62862,45.471999 15.211992,45.471999 15.211992,17.685293 6.2419996,8.3636258C11.692087,1.5120447,16.861471,-0.044882392,20.510239,0.00097340596z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Pine Bowl" Height="25" Margin="75,15,0,0"/>
+                            </Grid>
                             <Grid x:Name="Stewart_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid10" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect10" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M30.665044,29.43524C32.627258,29.510739,37.909897,33.510706,38.363001,46.038002L0.022914886,46.339998C0.022914886,46.339998 -1.0330925,30.340132 11.192898,29.585039 16.023035,28.831045 20.851871,33.660504 23.569891,33.207309 26.288011,32.755512 28.702229,29.35974 30.665044,29.43524z M38.318982,23.924138C39.961614,23.855138 41.984453,26.947552 44.259894,27.359052 46.536636,27.771854 50.580315,23.373336 54.62529,24.060839 64.864386,24.748342 63.980869,39.320003 63.980869,39.320003L40.691429,39.119501C39.285801,31.718471 35.915338,28.750959 34.093004,28.239255 35.56763,25.150744 37.388667,23.96184 38.318982,23.924138z M21.908853,4.0760002C27.411691,4.0760002 31.872003,9.144783 31.872004,15.395785 31.872003,21.649417 27.411691,26.717 21.908853,26.717 16.407515,26.717 11.947002,21.649417 11.947002,15.395785 11.947002,9.144783 16.407515,4.0760002 21.908853,4.0760002z M45.455803,0C50.541592,0 54.664001,4.5950603 54.664001,10.2643 54.664001,15.9336 50.541592,20.53 45.455803,20.53 40.371314,20.53 36.249004,15.9336 36.249004,10.2643 36.249004,4.5950603 40.371314,0 45.455803,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Stewart Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Village_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid8" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect8" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M30.665044,29.43524C32.627258,29.510739,37.909897,33.510706,38.363001,46.038002L0.022914886,46.339998C0.022914886,46.339998 -1.0330925,30.340132 11.192898,29.585039 16.023035,28.831045 20.851871,33.660504 23.569891,33.207309 26.288011,32.755512 28.702229,29.35974 30.665044,29.43524z M38.318982,23.924138C39.961614,23.855138 41.984453,26.947552 44.259894,27.359052 46.536636,27.771854 50.580315,23.373336 54.62529,24.060839 64.864386,24.748342 63.980869,39.320003 63.980869,39.320003L40.691429,39.119501C39.285801,31.718471 35.915338,28.750959 34.093004,28.239255 35.56763,25.150744 37.388667,23.96184 38.318982,23.924138z M21.908853,4.0760002C27.411691,4.0760002 31.872003,9.144783 31.872004,15.395785 31.872003,21.649417 27.411691,26.717 21.908853,26.717 16.407515,26.717 11.947002,21.649417 11.947002,15.395785 11.947002,9.144783 16.407515,4.0760002 21.908853,4.0760002z M45.455803,0C50.541592,0 54.664001,4.5950603 54.664001,10.2643 54.664001,15.9336 50.541592,20.53 45.455803,20.53 40.371314,20.53 36.249004,15.9336 36.249004,10.2643 36.249004,4.5950603 40.371314,0 45.455803,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="The Village" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Warren_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid9" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect9" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M30.665044,29.43524C32.627258,29.510739,37.909897,33.510706,38.363001,46.038002L0.022914886,46.339998C0.022914886,46.339998 -1.0330925,30.340132 11.192898,29.585039 16.023035,28.831045 20.851871,33.660504 23.569891,33.207309 26.288011,32.755512 28.702229,29.35974 30.665044,29.43524z M38.318982,23.924138C39.961614,23.855138 41.984453,26.947552 44.259894,27.359052 46.536636,27.771854 50.580315,23.373336 54.62529,24.060839 64.864386,24.748342 63.980869,39.320003 63.980869,39.320003L40.691429,39.119501C39.285801,31.718471 35.915338,28.750959 34.093004,28.239255 35.56763,25.150744 37.388667,23.96184 38.318982,23.924138z M21.908853,4.0760002C27.411691,4.0760002 31.872003,9.144783 31.872004,15.395785 31.872003,21.649417 27.411691,26.717 21.908853,26.717 16.407515,26.717 11.947002,21.649417 11.947002,15.395785 11.947002,9.144783 16.407515,4.0760002 21.908853,4.0760002z M45.455803,0C50.541592,0 54.664001,4.5950603 54.664001,10.2643 54.664001,15.9336 50.541592,20.53 45.455803,20.53 40.371314,20.53 36.249004,15.9336 36.249004,10.2643 36.249004,4.5950603 40.371314,0 45.455803,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Warren Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Westminister_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid20" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect20" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M52.765,37.490002L52.765,41.404001 56.680001,41.404001 56.680001,37.490002z M7.3190002,37.490002L7.3190002,41.404001 11.234,41.404001 11.234,37.490002z M37.787003,37.489999L37.787003,41.574 41.872002,41.574 41.872002,37.489999z M29.957001,37.489999L29.957001,41.574 34.042002,41.574 34.042002,37.489999z M22.128001,37.489999L22.128001,41.574 26.212002,41.574 26.212002,37.489999z M48.169999,34.255001L61.276001,34.255001 61.276001,51.276001 48.169999,51.276001z M2.7229996,34.255001L15.829,34.255001 15.829,51.276001 2.7229996,51.276001z M37.787003,28.298001L37.787003,32.383001 41.872002,32.383001 41.872002,28.298001z M29.957001,28.298001L29.957001,32.383001 34.042002,32.383001 34.042002,28.298001z M22.128001,28.298001L22.128001,32.383001 26.212002,32.383001 26.212002,28.298001z M48.169999,27.788002L64,27.788002 64,31.362001 48.169999,31.362001z M0,27.788002L15.829,27.788002 15.829,31.362001 0,31.362001z M32.170098,15.703001L45.957001,24.723701 45.957001,51.446001 34.042002,51.446001 34.042002,46.000002 29.957001,46.000002 29.957001,51.446001 18.383,51.446001 18.383,24.723701z M31.021,0L33.064,0 33.064,1.48843 33.104409,1.5006828C34.123854,1.7944679,36.340107,2.0908051,40.085003,0.97900009L40.085003,6.2548065C40.085003,6.2548065,35.419613,7.3459492,33.194796,6.7662792L33.064,6.7268276 33.064,8.7389374 49.702,19.617363 47.319211,22.8518 31.9996,12.637983 16.510687,23.021002 14.298,19.617363 31.021,8.6828671z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Westminster Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Weyerhaeuser_ListButton" Height="50" Margin="0,0,10,5"  Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid21" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect21" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M52.765,37.490002L52.765,41.404001 56.680001,41.404001 56.680001,37.490002z M7.3190002,37.490002L7.3190002,41.404001 11.234,41.404001 11.234,37.490002z M37.787003,37.489999L37.787003,41.574 41.872002,41.574 41.872002,37.489999z M29.957001,37.489999L29.957001,41.574 34.042002,41.574 34.042002,37.489999z M22.128001,37.489999L22.128001,41.574 26.212002,41.574 26.212002,37.489999z M48.169999,34.255001L61.276001,34.255001 61.276001,51.276001 48.169999,51.276001z M2.7229996,34.255001L15.829,34.255001 15.829,51.276001 2.7229996,51.276001z M37.787003,28.298001L37.787003,32.383001 41.872002,32.383001 41.872002,28.298001z M29.957001,28.298001L29.957001,32.383001 34.042002,32.383001 34.042002,28.298001z M22.128001,28.298001L22.128001,32.383001 26.212002,32.383001 26.212002,28.298001z M48.169999,27.788002L64,27.788002 64,31.362001 48.169999,31.362001z M0,27.788002L15.829,27.788002 15.829,31.362001 0,31.362001z M32.170098,15.703001L45.957001,24.723701 45.957001,51.446001 34.042002,51.446001 34.042002,46.000002 29.957001,46.000002 29.957001,51.446001 18.383,51.446001 18.383,24.723701z M31.021,0L33.064,0 33.064,1.48843 33.104409,1.5006828C34.123854,1.7944679,36.340107,2.0908051,40.085003,0.97900009L40.085003,6.2548065C40.085003,6.2548065,35.419613,7.3459492,33.194796,6.7662792L33.064,6.7268276 33.064,8.7389374 49.702,19.617363 47.319211,22.8518 31.9996,12.637983 16.510687,23.021002 14.298,19.617363 31.021,8.6828671z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Weyerhauser Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
                             <Grid x:Name="Quall_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
-                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Whitworth Pres." Height="25" Margin="75,15,0,0"/>
-                            </Grid>                  
+                                <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF818181">
+                                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                                        <Grid>
+                                            <Grid Name="backgroundGrid48" Width="48" Height="48" Visibility="Visible">
+                                                <Rectangle Name="Rect48" Visibility="Visible" />
+                                            </Grid>
+                                            <Path Data="M20.235,34.834999C25.537749,36.67613,30.619,40.21129,30.619,40.21129L29.960393,52.436998 30.951,52.436998 30.951,53.836 32.019,53.836 32.019,54.794001 33.087001,54.794001 33.087001,63.999998 16.516,63.999998 16.516,54.794001 17.584001,54.794001 17.584001,53.836 18.652001,53.836 18.652001,52.436998 20.235,52.436998z M35.627455,10.163C38.499163,11.635824 48.736195,12.004455 48.736195,12.004454 50.503801,12.519998 50.283199,13.25656 50.283199,13.256559 50.0623,13.845809 46.232286,13.25656 46.232286,13.256559L44.244081,13.256559C43.065577,15.760571 42.034275,16.055595 42.034275,16.055596 41.15097,16.644745 39.898968,16.276314 39.898968,16.276313L37.983662,16.129202C35.249649,17.620571,32.253297,17.905998,31.383684,17.958784L31.301947,17.963401 31.798,36.382372C31.5772,40.064568 30.840906,39.47537 30.840906,39.47537 30.325211,38.370571 22.59217,35.130375 22.59217,35.130375 18.762298,33.878477 18.468,30.784681 18.468001,30.784681L18.894954,18.477426 18.688001,18.485999 13.238083,16.791857C11.470478,16.055595 10.439275,16.202608 10.439275,16.202608 7.6410055,17.676132 6.0205803,13.109347 6.0205803,13.109348L0.20220184,13.109348C-0.46046066,12.814322,0.71782303,11.857342,0.71782303,11.857342L8.1565676,11.488811C14.342887,17.160488 23.180815,16.276314 23.180815,16.276313 31.28174,15.024309 35.627455,10.163 35.627455,10.163z M30.177038,9.0589991L35.112,9.6481643C30.177038,13.992972 25.684873,14.877006 25.684873,14.877006 14.858757,17.160037 9.1140013,11.342069 9.1140013,11.342069 10.955187,11.415664 14.343161,10.310846 14.343161,10.310844 21.929002,15.760341 30.177038,9.0589991 30.177038,9.0589991z M24.800649,0C26.305827,0,27.525909,1.2199707,27.525909,2.7250891L28.102041,9.0868979 29.441001,9.0589991C29.441001,9.0589991 21.561065,14.508326 15.08,9.8689523 15.08,9.8689528 18.762323,8.9607477 21.192572,9.2308626L21.233996,9.2299995 21.192,9.2299995 22.076087,2.7250891C22.076088,1.2199707,23.29607,0,24.800649,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                                <Path.RenderTransform>
+                                                    <TransformGroup>
+                                                        <TransformGroup.Children>
+                                                            <RotateTransform Angle="0" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                        </TransformGroup.Children>
+                                                    </TransformGroup>
+                                                </Path.RenderTransform>
+                                            </Path>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Whitworth Presbyterian Church" Height="25" Margin="75,15,0,0"/>
+                            </Grid>
                         </StackPanel>
                     </ScrollViewer>
                 </Grid>
@@ -2097,6 +2978,7 @@
                 <Button x:Name="BackButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="52" Margin="10,4,0,0" Width="48" Style="{StaticResource BackButtonStyle}" Tapped="BackButton_Tapped"/>
                 <Grid x:Name="EventHeader" HorizontalAlignment="Left" VerticalAlignment="Top" Height="128" Canvas.ZIndex="2" Margin="0,50,0,0">
                     <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Background="Gray" Margin="10">
+
                     </Grid>
                     <TextBlock x:Name="BuildingTitle" Text="" Margin="125,6,0,4" FontSize="35" TextWrapping="Wrap"/>
                 </Grid>
@@ -2107,13 +2989,13 @@
                         </ListBoxItem>
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-								<Grid>
-									<Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Background="Gray" Margin="5"></Grid>
-									<TextBlock Text="{Binding Title}" Margin="60,0,82,57" FontSize="14"/>
-									<TextBlock Text="{Binding Date}" Margin="60,20,82,37" FontSize="14"/>
-									<TextBlock Text="{Binding Time}" Margin="60,40,82,19" FontSize="14"/>
-									<TextBlock Text="{Binding Description}" Margin="5,58,5,0" FontSize="14" TextWrapping="Wrap"/>
-								</Grid>
+                                <Grid>
+                                    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Background="Gray" Margin="5"></Grid>
+                                    <TextBlock Text="{Binding Title}" Margin="60,0,82,57" FontSize="14"/>
+                                    <TextBlock Text="{Binding Date}" Margin="60,20,82,37" FontSize="14"/>
+                                    <TextBlock Text="{Binding Time}" Margin="60,40,82,19" FontSize="14"/>
+                                    <TextBlock Text="{Binding Description}" Margin="5,58,5,0" FontSize="14" TextWrapping="Wrap"/>
+                                </Grid>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
@@ -2182,10 +3064,10 @@
             			</Path>
                         
             			<Path x:Name="locationPing" Visibility="Collapsed" Data="M27.2886,66.9624 L28.5131,69.041 L29.4927,69.041 L29.9825,68.1851 L24.8396,55.3468 C23.7256,49.0401 24.8924,43.4749 30.8397,40.7967 C35.713,38.9437 41.3407,38.2364 48.1054,39.6962 C50.1312,39.5974 51.1182,40.9023 52.7586,41.2857 C60.1213,44.8492 65.8599,45.4111 69.6569,42.3862 C75.7741,40.1389 80.5879,40.7248 84.2286,42.1416 C87.4579,42.4683 86.6556,40.7844 84.596,38.4735 C82.0877,37.0935 79.286,36.5616 76.1468,37.0063 C73.5685,36.7388 73.4147,35.5323 75.1672,33.5827 C76.835,31.791 75.9352,30.8872 73.8202,30.4037 C61.2077,31.871 65.1262,20.3777 74.555,24.0457 L76.2693,25.0239 C79.4148,25.7542 80.1848,24.338 79.0857,21.2335 C78.2564,19.7102 77.3846,18.5182 76.8815,17.3209 C75.4121,15.395 75.5919,13.4548 77.2489,11.4519 C77.602,8.46246 76.3339,6.69141 72.7182,6.68339 C67.5679,8.38401 61.9331,7.54416 55.9423,5.70523 L43.5747,1.42578 C24.8806,-1.20678 11.9702,1.62865 6.83918,11.8187 C5.42212,9.60847 3.40674,9.37386 0.839051,10.9628 C-0.050286,13.9636 0.783296,15.6344 3.65544,15.7314 z M14.636,12.3153 L17.6764,16.9114 C17.6764,16.9114 19.8655,14.8552 19.7439,15.46 C19.6222,16.0648 32.5136,34.4494 32.5136,34.4494 L39.0808,33.7237 L38.4728,23.08 L43.8239,33.8447 L50.3909,35.538 L51.2422,16.1857 L54.0394,16.6695 L54.161,11.8315 C50.7913,10.0553 47.1423,9.17787 43.7021,8.92861 L43.4589,13.6457 L45.6479,14.2505 L45.0399,22.7171 L39.5672,10.6219 L31.4189,10.38 L31.9054,22.2333 L25.703,13.4038 L28.3785,12.6781 L25.5814,7.961 C21.8394,8.62444 18.1875,10.0472 14.636,12.3153 z M16.361,12.8282 L18.1836,15.7244 L20.3707,14.5176 L33.4934,33.3429 L38.1107,33.1016 L37.3816,18.2586 L44.7935,33.3429 L49.1678,34.429 L50.5044,15.0003 L52.813,15.8451 L53.299,12.9489 C51.3739,11.7833 48.3615,10.9388 44.672,10.294 L44.672,13.1902 L46.9807,13.7936 L46.2516,26.9472 L39.2042,12.3455 C36.8772,11.7473 34.7419,11.6994 32.7644,12.1042 L33.3719,26.2231 L24.5019,13.4316 L26.5676,12.4662 L25.1095,9.932 C21.9515,10.1769 19.0584,11.2109 16.361,12.8282 z M21.52,48.43 L7.903,18.061 C11.7663,21.1469 14.7798,25.299 17.0866,30.3377 C19.6951,36.3437 21.2297,42.3733 21.52,48.43 z" Fill="#FF060606" HorizontalAlignment="Left" Height="35.781" Stretch="Fill" Stroke="White" UseLayoutRounding="False" VerticalAlignment="Top" Width="43.875" Canvas.Left="38.542"/>
-
             		</Canvas>
             	</Grid>
             </ScrollViewer>
         </Viewbox>
     </Grid>
 </Page>
+
