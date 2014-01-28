@@ -3091,6 +3091,113 @@
                         
             			<Path x:Name="locationPing" Visibility="Collapsed" Data="M27.2886,66.9624 L28.5131,69.041 L29.4927,69.041 L29.9825,68.1851 L24.8396,55.3468 C23.7256,49.0401 24.8924,43.4749 30.8397,40.7967 C35.713,38.9437 41.3407,38.2364 48.1054,39.6962 C50.1312,39.5974 51.1182,40.9023 52.7586,41.2857 C60.1213,44.8492 65.8599,45.4111 69.6569,42.3862 C75.7741,40.1389 80.5879,40.7248 84.2286,42.1416 C87.4579,42.4683 86.6556,40.7844 84.596,38.4735 C82.0877,37.0935 79.286,36.5616 76.1468,37.0063 C73.5685,36.7388 73.4147,35.5323 75.1672,33.5827 C76.835,31.791 75.9352,30.8872 73.8202,30.4037 C61.2077,31.871 65.1262,20.3777 74.555,24.0457 L76.2693,25.0239 C79.4148,25.7542 80.1848,24.338 79.0857,21.2335 C78.2564,19.7102 77.3846,18.5182 76.8815,17.3209 C75.4121,15.395 75.5919,13.4548 77.2489,11.4519 C77.602,8.46246 76.3339,6.69141 72.7182,6.68339 C67.5679,8.38401 61.9331,7.54416 55.9423,5.70523 L43.5747,1.42578 C24.8806,-1.20678 11.9702,1.62865 6.83918,11.8187 C5.42212,9.60847 3.40674,9.37386 0.839051,10.9628 C-0.050286,13.9636 0.783296,15.6344 3.65544,15.7314 z M14.636,12.3153 L17.6764,16.9114 C17.6764,16.9114 19.8655,14.8552 19.7439,15.46 C19.6222,16.0648 32.5136,34.4494 32.5136,34.4494 L39.0808,33.7237 L38.4728,23.08 L43.8239,33.8447 L50.3909,35.538 L51.2422,16.1857 L54.0394,16.6695 L54.161,11.8315 C50.7913,10.0553 47.1423,9.17787 43.7021,8.92861 L43.4589,13.6457 L45.6479,14.2505 L45.0399,22.7171 L39.5672,10.6219 L31.4189,10.38 L31.9054,22.2333 L25.703,13.4038 L28.3785,12.6781 L25.5814,7.961 C21.8394,8.62444 18.1875,10.0472 14.636,12.3153 z M16.361,12.8282 L18.1836,15.7244 L20.3707,14.5176 L33.4934,33.3429 L38.1107,33.1016 L37.3816,18.2586 L44.7935,33.3429 L49.1678,34.429 L50.5044,15.0003 L52.813,15.8451 L53.299,12.9489 C51.3739,11.7833 48.3615,10.9388 44.672,10.294 L44.672,13.1902 L46.9807,13.7936 L46.2516,26.9472 L39.2042,12.3455 C36.8772,11.7473 34.7419,11.6994 32.7644,12.1042 L33.3719,26.2231 L24.5019,13.4316 L26.5676,12.4662 L25.1095,9.932 C21.9515,10.1769 19.0584,11.2109 16.361,12.8282 z M21.52,48.43 L7.903,18.061 C11.7663,21.1469 14.7798,25.299 17.0866,30.3377 C19.6951,36.3437 21.2297,42.3733 21.52,48.43 z" Fill="#FF060606" HorizontalAlignment="Left" Height="35.781" Stretch="Fill" Stroke="White" UseLayoutRounding="False" VerticalAlignment="Top" Width="43.875" Canvas.Left="38.542"/>
             		</Canvas>
+            		<Grid x:Name="TextLayer" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="1322">
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Hawthorne Hall" VerticalAlignment="Top" Margin="1207,644,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Pirate's Cove Shleter" VerticalAlignment="Top" Margin="1040,155,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="East Hall" VerticalAlignment="Top" Margin="1104,274,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Boppell Hall" VerticalAlignment="Top" Margin="1072,460,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="MacKay Hall" VerticalAlignment="Top" Margin="713,745,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Stewart Hall" VerticalAlignment="Top" Margin="947,328,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Hill House" VerticalAlignment="Top" Margin="540,758,0,-4"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="President's House" VerticalAlignment="Top" Margin="900,735,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="499,703,0,0" TextAlignment="Center">
+            				<Run Text="Auld House "/>
+            				<LineBreak/>
+            				<Run Text="(Human Resources Center)"/>
+            			</TextBlock>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Cornerstone Building" VerticalAlignment="Top" Margin="182,707,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Village" VerticalAlignment="Top" Margin="1017,303,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="829,611,0,0" TextAlignment="Center">
+            				<Run Text="Whitworth Presbyterian"/>
+            				<LineBreak/>
+            				<Run Text=" Church"/>
+            			</TextBlock>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="705,644,0,0" TextAlignment="Center">
+            				<Run Text="McEachran Hall "/>
+            				<LineBreak/>
+            				<Run Text="(Administration)"/>
+            			</TextBlock>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Dixon Hall" VerticalAlignment="Top" Margin="619,562,0,0" RenderTransformOrigin="-0.116,0.807"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Cowles Auditorium" VerticalAlignment="Top" Margin="608,634,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Arend Hall" VerticalAlignment="Top" Margin="877,424,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="900,378,0,0" TextAlignment="Center">
+            				<Run Text="Hendrick "/>
+            				<LineBreak/>
+            				<Run Text="Hall"/>
+            			</TextBlock>
+            			<TextBlock TextWrapping="Wrap" VerticalAlignment="Top" Margin="843,503,0,0" HorizontalAlignment="Left" TextAlignment="Center">
+            				<Run Text="Hixson Union Building"/>
+            				<LineBreak/>
+            				<Run Text="(HUB)"/>
+            			</TextBlock>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Music Buildign" VerticalAlignment="Top" Margin="539,678,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="807,357,0,0" TextAlignment="Center">
+            				<Run Text="Johnston "/>
+            				<LineBreak/>
+            				<Run Text="Science Center"/>
+            			</TextBlock>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Baldwin-Jenkins Hall" VerticalAlignment="Top" Margin="889,258,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="720,418,0,0" TextAlignment="Center">
+            				<Run FontFamily="Segoe UI, Tahoma, Arial, Arial Unicode MS, Microsoft Sans Serif, Lucida Sans Unicode" Text="H.C. Cowles "/>
+            				<LineBreak/>
+            				<Run FontFamily="Segoe UI, Tahoma, Arial, Arial Unicode MS, Microsoft Sans Serif, Lucida Sans Unicode" Text="Memorial Library"/>
+            			</TextBlock>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="639,371,0,0" TextAlignment="Center">
+            				<Run Text="Lindaman "/>
+            				<LineBreak/>
+            				<Run Text="Center"/>
+            			</TextBlock>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Warren Hall" VerticalAlignment="Top" Margin="557,519,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Robinson Science Hall" VerticalAlignment="Top" Margin="705,300,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Omache Field" VerticalAlignment="Top" Margin="201,621,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="504,438,0,0" TextAlignment="Center">
+            				<Run Text="Seeley G. Mudd"/>
+            				<LineBreak/>
+            				<Run Text=" Chapel"/>
+            			</TextBlock>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ballard Hall" VerticalAlignment="Top" Margin="461,418,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="602,261,0,0" TextAlignment="Center">
+            				<Run Text="Schumacher Hall "/>
+            				<LineBreak/>
+            				<Run Text="(Health/Counseling Center)"/>
+            			</TextBlock>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="571,328,0,0" TextAlignment="Center">
+            				<Run Text="Weyerhaeuser "/>
+            				<LineBreak/>
+            				<Run Text="Hall"/>
+            			</TextBlock>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="McMillan Hall" VerticalAlignment="Top" Margin="476,341,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Facilities Services" VerticalAlignment="Top" Margin="713,214,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="582,201,0,0" TextAlignment="Center">
+            				<Run Text="Lied Center "/>
+            				<LineBreak/>
+            				<Run Text="for the Visual Arts"/>
+            			</TextBlock>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Westminster Hall" VerticalAlignment="Top" Margin="491,224,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Graves Gym" VerticalAlignment="Top" Margin="387,375,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Pine Bowl" VerticalAlignment="Top" Margin="398,540,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Soccer Field" VerticalAlignment="Top" Margin="162,493,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Marks Field" VerticalAlignment="Top" Margin="256,516,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Tennis Courts" VerticalAlignment="Top" Margin="338,357,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="368,178,0,0" TextAlignment="Center">
+            				<Run Text="Aquatics "/>
+            				<LineBreak/>
+            				<Run Text="Center"/>
+            			</TextBlock>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="310,204,0,0" TextAlignment="Center">
+            				<Run Text="Scotford Conditioning  "/>
+            				<LineBreak/>
+            				<Run Text="Center"/>
+            			</TextBlock>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Fieldhouse" VerticalAlignment="Top" Margin="275,224,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="317,98,0,0" TextAlignment="Center">
+            				<Run Text="Scotford Tennis Center, Ross Cutter Courts &amp;"/>
+            				<LineBreak/>
+            				<Run Text="Beeksma Tennis Bubble"/>
+            			</TextBlock>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Merkel Field" VerticalAlignment="Top" Margin="79,75,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Duvall Hall" VerticalAlignment="Top" Margin="1133,371,0,0"/>
+            		</Grid>
             	</Grid>
             </ScrollViewer>
         </Viewbox>
