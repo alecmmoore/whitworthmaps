@@ -5,7 +5,6 @@
     xmlns:local="using:WhitworthMap"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:xtk="using:WinRTXamlToolkit.Controls"
     mc:Ignorable="d">
     <Page.Resources>
         <Style x:Key="EventListStyle" TargetType="ListBox">
@@ -79,12 +78,12 @@
         </Style>
         <Storyboard x:Name="ViewEvents">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="BuildingEventsContainer">
-                <EasingDoubleKeyFrame KeyTime="0" Value="350">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
                         <ExponentialEase EasingMode="EaseInOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-350">
                     <EasingDoubleKeyFrame.EasingFunction>
                         <ExponentialEase EasingMode="EaseInOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
@@ -102,10 +101,22 @@
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsHoldingEnabled)" Storyboard.TargetName="BuildingEventsContainer">
+            	<DiscreteObjectKeyFrame KeyTime="0">
+            		<DiscreteObjectKeyFrame.Value>
+            			<x:Boolean>False</x:Boolean>
+            		</DiscreteObjectKeyFrame.Value>
+            	</DiscreteObjectKeyFrame>
+            	<DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+            		<DiscreteObjectKeyFrame.Value>
+            			<x:Boolean>True</x:Boolean>
+            		</DiscreteObjectKeyFrame.Value>
+            	</DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Name="ViewBuildings">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="BuildingEventsContainer">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-350">
                     <EasingDoubleKeyFrame.EasingFunction>
                         <ExponentialEase EasingMode="EaseInOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
@@ -1951,7 +1962,7 @@
                     <CompositeTransform/>
                 </Grid.RenderTransform>
                 <TextBlock x:Name="Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Whitworth University" VerticalAlignment="Top" FontSize="35" Margin="0,10,0,0" Tapped="Title_Tapped" Grid.ColumnSpan="2"/>
-                <xtk:WatermarkTextBox WatermarkText="Search"  x:Name="Search" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,60,20,0" InputScope="Search" Padding="9,3,10,5" Grid.ColumnSpan="2" TextChanged="Search_TextChanged"/>
+                <TextBox x:Name="Search" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,60,20,0" InputScope="Search" Padding="9,3,10,5" Text="Search" Grid.ColumnSpan="2" TextChanged="Search_TextChanged"/>
                 <Grid Grid.ColumnSpan="2" Margin="0,103,0,0">
                     <ScrollViewer Margin="0">
                         <StackPanel x:Name="BuildingsList">
@@ -2996,9 +3007,12 @@
                     </ScrollViewer>
                 </Grid>
             </Grid>
-            <Grid x:Name="BuildingEventsContainer" HorizontalAlignment="Left">
+            <Grid x:Name="BuildingEventsContainer" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+            	<Grid.Projection>
+            		<PlaneProjection GlobalOffsetX="350"/>
+            	</Grid.Projection>
                 <Grid.RenderTransform>
-                    <CompositeTransform TranslateX="350"/>
+                    <CompositeTransform/>
                 </Grid.RenderTransform>
                 <Button x:Name="BackButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="52" Margin="10,4,0,0" Width="48" Style="{StaticResource BackButtonStyle}" Tapped="BackButton_Tapped"/>
                 <Grid x:Name="EventHeader" HorizontalAlignment="Left" VerticalAlignment="Top" Height="128" Canvas.ZIndex="2" Margin="0,50,0,0">
@@ -3035,50 +3049,50 @@
                     </Grid>
             		<Grid x:Name="ButtonLayer" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1366" Height="768">
             			<Button x:Name="Invisible" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0"/>
-            			<Button x:Name="Pine_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="181" Margin="342,465,-391,-546" Style="{StaticResource BS3}" VerticalAlignment="Top" Width="149"/>
-            			<Button x:Name="Merkel_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="84" Margin="65,47,-69,-31" Style="{StaticResource BS4}" VerticalAlignment="Top" Width="104"/>
-            			<Button x:Name="Omache_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="81.666" Margin="154,589,-217,-571" Style="{StaticResource BS1}" VerticalAlignment="Top" Width="163.333"/>
-            			<Button x:Name="Soccer_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="148.633" Margin="136,431,-145,-480" Style="{StaticResource ChangingColor}" VerticalAlignment="Top" Width="108.905"/>
-            			<Button x:Name="Marks_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="64" Margin="242,497,-226,-461" Style="{StaticResource BS2}" VerticalAlignment="Top" Width="84"/>
-            			<Button x:Name="HUB_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="95" Margin="839,470,-857,-465" Style="{StaticResource BS5}" VerticalAlignment="Top" Width="118.083"/>
-            			<Button x:Name="Boppell_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="54.752" Margin="1072,443,-1029,-398" Style="{StaticResource BS14}" VerticalAlignment="Top" Width="56.744"/>
-            			<Button x:Name="Hawthorne_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="78.667" Margin="1190,580,-1185,-559" Style="{StaticResource BS15}" VerticalAlignment="Top" Width="95"/>
-            			<Button x:Name="Hill_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="18" Margin="555,750,-482,-668" Style="{StaticResource BS25}" VerticalAlignment="Top" Width="27"/>
-            			<Button x:Name="Auld_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="17.667" Margin="516,714,-441,-632" Style="{StaticResource BS26}" VerticalAlignment="Top" Width="25.167"/>
-            			<Button x:Name="Warren_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="81.25" Margin="542,497,-521,-478" Style="{StaticResource BS31}" VerticalAlignment="Top" Width="78.5"/>
-            			<Button x:Name="Music_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="33.25" Margin="535,643,-495,-576" Style="{StaticResource BS27}" VerticalAlignment="Top" Width="60.375"/>
-            			<Button x:Name="Graves_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="36" Margin="388,365,-348,-301" Style="{StaticResource BS12}" VerticalAlignment="Top" Width="60"/>
-            			<Button x:Name="Auditorium_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="58.5" Margin="623,611,-593,-570" Style="{StaticResource BS29}" VerticalAlignment="Top" Width="70.375"/>
-            			<Button x:Name="Dixon_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="49.375" Margin="617,547,-572,-496" Style="{StaticResource BS30}" VerticalAlignment="Top" Width="55.375"/>
-            			<Button x:Name="McEachran_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="17.366" Margin="712,626,-647,-543" Style="{StaticResource BS28}" VerticalAlignment="Top" Width="35.487"/>
-            			<Button x:Name="Fieldhouse_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="108.585" Margin="240,166,-259,-175" Style="{StaticResource BS8}" VerticalAlignment="Top" Width="118.728"/>
-            			<Button x:Name="Conditioning_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="61" Margin="334,181,-294,-142" Style="{StaticResource BS9}" VerticalAlignment="Top" Width="59.834"/>
-            			<Button x:Name="Aquatic_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="56.313" Margin="363,166,-328,-122" Style="{StaticResource BS10}" VerticalAlignment="Top" Width="64.75"/>
-            			<Button x:Name="Complex_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="35.593" Margin="369,114,-387,-50" Style="{StaticResource BS7}" VerticalAlignment="Top" Width="117.89"/>
-            			<Button x:Name="Ballard_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="35.75" Margin="470,406,-410,-342" Style="{StaticResource BS33}" VerticalAlignment="Top" Width="39.5"/>
-            			<Button x:Name="Seeley_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="51.901" Margin="509,424,-466,-376" Style="{StaticResource BS32}" VerticalAlignment="Top" Width="57.493"/>
-            			<Button x:Name="Tennis_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="45.415" Margin="342,341,-301,-286" Style="{StaticResource BS11}" VerticalAlignment="Top" Width="58.799"/>
-            			<Button x:Name="Arend_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="29.593" Margin="854,415,-845,-345" Style="{StaticResource BS6}" VerticalAlignment="Top" Width="91.084"/>
-            			<Button x:Name="Lindaman_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="37" Margin="644,369,-587,-306" Style="{StaticResource BS40}" VerticalAlignment="Top" Width="43.166"/>
-            			<Button x:Name="Library_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="66.5" Margin="719,397,-699,-364" Style="{StaticResource BS41}" VerticalAlignment="Top" Width="79.501"/>
-            			<Button x:Name="Hendrick_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="45.834" Margin="901,363,-819,-309" Style="{StaticResource BS13}" VerticalAlignment="Top" Width="17.833"/>
-            			<Button x:Name="Duvall_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="60.875" Margin="1141,351,-1084,-312" Style="{StaticResource BS17}" VerticalAlignment="Top" Width="43.375"/>
-            			<Button x:Name="MacKay_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="32.75" Margin="725,719,-658,-652" Style="{StaticResource BS24}" VerticalAlignment="Top" Width="33.292"/>
-            			<Button x:Name="BaldwinJenkins_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="42.937" Margin="900,246,-872,-189" Style="{StaticResource BS22}" VerticalAlignment="Top" Width="72.423"/>
-            			<Button x:Name="McMillan_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="50.937" Margin="481,333,-427,-284" Style="{StaticResource BS34}" VerticalAlignment="Top" Width="46.437"/>
-            			<Button x:Name="Village_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="55.124" Margin="997,284,-962,-239" Style="{StaticResource BS19}" VerticalAlignment="Top" Width="64.625"/>
-            			<Button x:Name="Cove_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="27.279" Margin="1082,168,-1006,-95" Style="{StaticResource BS21}" VerticalAlignment="Top" Width="24.441"/>
-            			<Button x:Name="East_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="68.125" Margin="1081,257,-1057,-225" Style="{StaticResource BS18}" VerticalAlignment="Top" Width="76.25"/>
-            			<Button x:Name="Quall_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="84" Margin="849,594,-831,-578" Style="{StaticResource BS16}" VerticalAlignment="Top" Width="81.834"/>
-            			<Button x:Name="Stewart_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="20.93" Margin="943,326,-904,-247" Style="{StaticResource BS20}" VerticalAlignment="Top" Width="61.237"/>
-            			<Button x:Name="Weyerhaeuser_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="55.584" Margin="573,309,-537,-265" Style="{StaticResource BS38}" VerticalAlignment="Top" Width="63.667"/>
-            			<Button x:Name="Schumacher_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="25.293" Margin="648,276,-586,-201" Style="{StaticResource BS36}" VerticalAlignment="Top" Width="38.236"/>
-            			<Button x:Name="President_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="23.417" Margin="926,741,-847,-664" Style="{StaticResource BS23}" VerticalAlignment="Top" Width="20.542"/>
-            			<Button x:Name="Johnston_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="61" Margin="814,322,-774,-283" Style="{StaticResource BS43}" VerticalAlignment="Top" Width="59.5"/>
-            			<Button x:Name="Robinson_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="38" Margin="714,298,-698,-236" Style="{StaticResource BS42}" VerticalAlignment="Top" Width="83.833"/>
-            			<Button x:Name="Westminster_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="37.334" Margin="494,204,-467,-141" Style="{StaticResource BS35}" VerticalAlignment="Top" Width="72.833"/>
-            			<Button x:Name="Facilities_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="41.667" Margin="696,197,-685,-139" Style="{StaticResource BS39}" VerticalAlignment="Top" Width="89.166"/>
-            			<Button x:Name="Lied_CanvasButton" Tapped="Building_Tapped" Content="" HorizontalAlignment="Left" Height="45.75" Margin="584,193,-554,-139" Style="{StaticResource BS37}" VerticalAlignment="Top" Width="69.562"/>
+            			<Button x:Name="Pine_CanvasButton" Content="" HorizontalAlignment="Left" Height="181" Margin="342,465,-391,-546" Style="{StaticResource BS3}" VerticalAlignment="Top" Width="149"/>
+            			<Button x:Name="Merkel_CanvasButton" Content="" HorizontalAlignment="Left" Height="84" Margin="65,47,-69,-31" Style="{StaticResource BS4}" VerticalAlignment="Top" Width="104"/>
+            			<Button x:Name="Omache_CanvasButton" Content="" HorizontalAlignment="Left" Height="81.666" Margin="154,589,-217,-571" Style="{StaticResource BS1}" VerticalAlignment="Top" Width="163.333"/>
+            			<Button x:Name="Soccer_CanvasButton" Content="" HorizontalAlignment="Left" Height="148.633" Margin="136,431,-145,-480" Style="{StaticResource ChangingColor}" VerticalAlignment="Top" Width="108.905"/>
+            			<Button x:Name="Marks_CanvasButton" Content="" HorizontalAlignment="Left" Height="64" Margin="242,497,-226,-461" Style="{StaticResource BS2}" VerticalAlignment="Top" Width="84"/>
+            			<Button x:Name="HUB_CanvasButton" Content="" HorizontalAlignment="Left" Height="95" Margin="839,470,-857,-465" Style="{StaticResource BS5}" VerticalAlignment="Top" Width="118.083"/>
+            			<Button x:Name="Boppell_CanvasButton" Content="" HorizontalAlignment="Left" Height="54.752" Margin="1072,443,-1029,-398" Style="{StaticResource BS14}" VerticalAlignment="Top" Width="56.744"/>
+            			<Button x:Name="Hawthorne_CanvasButton" Content="" HorizontalAlignment="Left" Height="78.667" Margin="1190,580,-1185,-559" Style="{StaticResource BS15}" VerticalAlignment="Top" Width="95"/>
+            			<Button x:Name="Hill_CanvasButton" Content="" HorizontalAlignment="Left" Height="18" Margin="555,750,-482,-668" Style="{StaticResource BS25}" VerticalAlignment="Top" Width="27"/>
+            			<Button x:Name="Auld_CanvasButton" Content="" HorizontalAlignment="Left" Height="17.667" Margin="516,714,-441,-632" Style="{StaticResource BS26}" VerticalAlignment="Top" Width="25.167"/>
+            			<Button x:Name="Warren_CanvasButton" Content="" HorizontalAlignment="Left" Height="81.25" Margin="542,497,-521,-478" Style="{StaticResource BS31}" VerticalAlignment="Top" Width="78.5"/>
+            			<Button x:Name="Music_CanvasButton" Content="" HorizontalAlignment="Left" Height="33.25" Margin="535,643,-495,-576" Style="{StaticResource BS27}" VerticalAlignment="Top" Width="60.375"/>
+            			<Button x:Name="Graves_CanvasButton" Content="" HorizontalAlignment="Left" Height="36" Margin="388,365,-348,-301" Style="{StaticResource BS12}" VerticalAlignment="Top" Width="60"/>
+            			<Button x:Name="Auditorium_CanvasButton" Content="" HorizontalAlignment="Left" Height="58.5" Margin="623,611,-593,-570" Style="{StaticResource BS29}" VerticalAlignment="Top" Width="70.375"/>
+            			<Button x:Name="Dixon_CanvasButton" Content="" HorizontalAlignment="Left" Height="49.375" Margin="617,547,-572,-496" Style="{StaticResource BS30}" VerticalAlignment="Top" Width="55.375"/>
+            			<Button x:Name="McEachran_CanvasButton" Content="" HorizontalAlignment="Left" Height="17.366" Margin="712,626,-647,-543" Style="{StaticResource BS28}" VerticalAlignment="Top" Width="35.487"/>
+            			<Button x:Name="Fieldhouse_CanvasButton" Content="" HorizontalAlignment="Left" Height="108.585" Margin="240,166,-259,-175" Style="{StaticResource BS8}" VerticalAlignment="Top" Width="118.728"/>
+            			<Button x:Name="Conditioning_CanvasButton" Content="" HorizontalAlignment="Left" Height="61" Margin="334,181,-294,-142" Style="{StaticResource BS9}" VerticalAlignment="Top" Width="59.834"/>
+            			<Button x:Name="Aquatic_CanvasButton" Content="" HorizontalAlignment="Left" Height="56.313" Margin="363,166,-328,-122" Style="{StaticResource BS10}" VerticalAlignment="Top" Width="64.75"/>
+            			<Button x:Name="Complex_CanvasButton" Content="" HorizontalAlignment="Left" Height="35.593" Margin="369,114,-387,-50" Style="{StaticResource BS7}" VerticalAlignment="Top" Width="117.89"/>
+            			<Button x:Name="Ballard_CanvasButton" Content="" HorizontalAlignment="Left" Height="35.75" Margin="470,406,-410,-342" Style="{StaticResource BS33}" VerticalAlignment="Top" Width="39.5"/>
+            			<Button x:Name="Seeley_CanvasButton" Content="" HorizontalAlignment="Left" Height="51.901" Margin="509,424,-466,-376" Style="{StaticResource BS32}" VerticalAlignment="Top" Width="57.493"/>
+            			<Button x:Name="Tennis_CanvasButton" Content="" HorizontalAlignment="Left" Height="45.415" Margin="342,341,-301,-286" Style="{StaticResource BS11}" VerticalAlignment="Top" Width="58.799"/>
+            			<Button x:Name="Arend_CanvasButton" Content="" HorizontalAlignment="Left" Height="29.593" Margin="854,415,-845,-345" Style="{StaticResource BS6}" VerticalAlignment="Top" Width="91.084"/>
+            			<Button x:Name="Lindaman_CanvasButton" Content="" HorizontalAlignment="Left" Height="37" Margin="644,369,-587,-306" Style="{StaticResource BS40}" VerticalAlignment="Top" Width="43.166"/>
+            			<Button x:Name="Library_CanvasButton" Content="" HorizontalAlignment="Left" Height="66.5" Margin="719,397,-699,-364" Style="{StaticResource BS41}" VerticalAlignment="Top" Width="79.501"/>
+            			<Button x:Name="Hendrick_CanvasButton" Content="" HorizontalAlignment="Left" Height="45.834" Margin="901,363,-819,-309" Style="{StaticResource BS13}" VerticalAlignment="Top" Width="17.833"/>
+            			<Button x:Name="Duvall_CanvasButton" Content="" HorizontalAlignment="Left" Height="60.875" Margin="1141,351,-1084,-312" Style="{StaticResource BS17}" VerticalAlignment="Top" Width="43.375"/>
+            			<Button x:Name="MacKay_CanvasButton" Content="" HorizontalAlignment="Left" Height="32.75" Margin="725,719,-658,-652" Style="{StaticResource BS24}" VerticalAlignment="Top" Width="33.292"/>
+            			<Button x:Name="BaldwinJenkins_CanvasButton" Content="" HorizontalAlignment="Left" Height="42.937" Margin="900,246,-872,-189" Style="{StaticResource BS22}" VerticalAlignment="Top" Width="72.423"/>
+            			<Button x:Name="McMillan_CanvasButton" Content="" HorizontalAlignment="Left" Height="50.937" Margin="481,333,-427,-284" Style="{StaticResource BS34}" VerticalAlignment="Top" Width="46.437"/>
+            			<Button x:Name="Village_CanvasButton" Content="" HorizontalAlignment="Left" Height="55.124" Margin="997,284,-962,-239" Style="{StaticResource BS19}" VerticalAlignment="Top" Width="64.625"/>
+            			<Button x:Name="Cove_CanvasButton" Content="" HorizontalAlignment="Left" Height="27.279" Margin="1082,168,-1006,-95" Style="{StaticResource BS21}" VerticalAlignment="Top" Width="24.441"/>
+            			<Button x:Name="East_CanvasButton" Content="" HorizontalAlignment="Left" Height="68.125" Margin="1081,257,-1057,-225" Style="{StaticResource BS18}" VerticalAlignment="Top" Width="76.25"/>
+            			<Button x:Name="Quall_CanvasButton" Content="" HorizontalAlignment="Left" Height="84" Margin="849,594,-831,-578" Style="{StaticResource BS16}" VerticalAlignment="Top" Width="81.834"/>
+            			<Button x:Name="Stewart_CanvasButton" Content="" HorizontalAlignment="Left" Height="20.93" Margin="943,326,-904,-247" Style="{StaticResource BS20}" VerticalAlignment="Top" Width="61.237"/>
+            			<Button x:Name="Weyerhaeuser_CanvasButton" Content="" HorizontalAlignment="Left" Height="55.584" Margin="573,309,-537,-265" Style="{StaticResource BS38}" VerticalAlignment="Top" Width="63.667"/>
+            			<Button x:Name="Schumacher_CanvasButton" Content="" HorizontalAlignment="Left" Height="25.293" Margin="648,276,-586,-201" Style="{StaticResource BS36}" VerticalAlignment="Top" Width="38.236"/>
+            			<Button x:Name="President_CanvasButton" Content="" HorizontalAlignment="Left" Height="23.417" Margin="926,741,-847,-664" Style="{StaticResource BS23}" VerticalAlignment="Top" Width="20.542"/>
+            			<Button x:Name="Johnston_CanvasButton" Content="" HorizontalAlignment="Left" Height="61" Margin="814,322,-774,-283" Style="{StaticResource BS43}" VerticalAlignment="Top" Width="59.5"/>
+            			<Button x:Name="Robinson_CanvasButton" Content="" HorizontalAlignment="Left" Height="38" Margin="714,298,-698,-236" Style="{StaticResource BS42}" VerticalAlignment="Top" Width="83.833"/>
+            			<Button x:Name="Westminster_CanvasButton" Content="" HorizontalAlignment="Left" Height="37.334" Margin="494,204,-467,-141" Style="{StaticResource BS35}" VerticalAlignment="Top" Width="72.833"/>
+            			<Button x:Name="Facilities_CanvasButton" Content="" HorizontalAlignment="Left" Height="41.667" Margin="696,197,-685,-139" Style="{StaticResource BS39}" VerticalAlignment="Top" Width="89.166"/>
+            			<Button x:Name="Lied_CanvasButton" Content="" HorizontalAlignment="Left" Height="45.75" Margin="584,193,-554,-139" Style="{StaticResource BS37}" VerticalAlignment="Top" Width="69.562"/>
             			<Button x:Name="Cornerstone_CanvasButton" Content="" HorizontalAlignment="Left" Height="26" Margin="197,710,0,0" Style="{StaticResource BS50}" VerticalAlignment="Top" Width="71"/>
             		</Grid>
             		<Canvas x:Name="LocationLayer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1366" Height="768" d:IsHidden="True">
@@ -3130,7 +3144,7 @@
             				<LineBreak/>
             				<Run Text="(HUB)"/>
             			</TextBlock>
-            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Music Buildign" VerticalAlignment="Top" Margin="539,678,0,0"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Music Building" VerticalAlignment="Top" Margin="530,670,0,0"/>
             			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="807,357,0,0" TextAlignment="Center">
             				<Run Text="Johnston "/>
             				<LineBreak/>
