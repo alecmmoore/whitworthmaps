@@ -61,11 +61,6 @@ namespace WhitworthMap
             ViewBuildings.Begin();
         }
 
-        private void Title_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
-        {
-            ViewEvents.Begin();
-        }
-
         public void WindowResize()
         {
             // Gets the scroll containers margin property
@@ -142,15 +137,19 @@ namespace WhitworthMap
             if (query.Count() > 0)
             {
                 EventList.ItemsSource = query;
+                EventCount.Text = query.Count().ToString();
                 NoEvents.Visibility = Visibility.Collapsed;
             }
             else
             {
                 EventList.ItemsSource = null;
+                EventCount.Text = "0";
                 NoEvents.Visibility = Visibility.Visible;
             }
 
-            if (Convert.ToInt32((BuildingListContainer as Grid).RenderTransform) != 350)
+            var translateX = (BuildingEventsContainer.RenderTransform as CompositeTransform).TranslateX;
+            
+            if (translateX == 350)
             {
                 ViewEvents.Begin();
             }

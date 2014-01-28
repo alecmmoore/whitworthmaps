@@ -1950,7 +1950,7 @@
                 <Grid.RenderTransform>
                     <CompositeTransform/>
                 </Grid.RenderTransform>
-                <TextBlock x:Name="Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Whitworth University" VerticalAlignment="Top" FontSize="35" Margin="0,10,0,0" Tapped="Title_Tapped" Grid.ColumnSpan="2"/>
+                <TextBlock x:Name="Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Whitworth University" VerticalAlignment="Top" FontSize="35" Margin="0,10,0,0" Grid.ColumnSpan="2"/>
                 <xtk:WatermarkTextBox WatermarkText="Search"  x:Name="Search" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,60,20,0" InputScope="Search" Padding="9,3,10,5" Grid.ColumnSpan="2" TextChanged="Search_TextChanged"/>
                 <Grid Grid.ColumnSpan="2" Margin="0,103,0,0">
                     <ScrollViewer Margin="0">
@@ -3003,8 +3003,8 @@
                 <Button x:Name="BackButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="52" Margin="10,4,0,0" Width="48" Style="{StaticResource BackButtonStyle}" Tapped="BackButton_Tapped"/>
                 <Grid x:Name="EventHeader" HorizontalAlignment="Left" VerticalAlignment="Top" Height="128" Canvas.ZIndex="2" Margin="0,50,0,0">
                     <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Background="Gray" Margin="10">
-
-                    </Grid>
+						<TextBlock x:Name="EventCount" HorizontalAlignment="Center" Text="" VerticalAlignment="Center" FontSize="50"/>
+					</Grid>
                     <TextBlock x:Name="BuildingTitle" Text="" Margin="125,6,0,4" FontSize="35" TextWrapping="Wrap"/>
                 </Grid>
                 <ScrollViewer Margin="0,183,0,0" Background="{x:Null}">
@@ -3015,10 +3015,21 @@
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
-                                    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Background="Gray" Margin="5"></Grid>
-                                    <TextBlock Text="{Binding Title}" Margin="60,0,82,57" FontSize="14"/>
-                                    <TextBlock Text="{Binding Date}" Margin="60,20,82,37" FontSize="14"/>
-                                    <TextBlock Text="{Binding Time}" Margin="60,40,82,19" FontSize="14"/>
+                                    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Background="Gray" Margin="5">
+										<Path Data="F1M-518.726,-3163.6L-533.078,-3173.63 -537.251,-3156.62 -542.97,-3173.17 -556.341,-3161.86 -551.24,-3178.61 -568.709,-3177.32 -554.729,-3187.88 -569.629,-3197.1 -552.108,-3197.43 -558.734,-3213.64 -544.38,-3203.61 -540.204,-3220.62 -534.49,-3204.06 -521.113,-3215.38 -526.224,-3198.62 -508.75,-3199.91 -522.735,-3189.35 -507.835,-3180.14 -525.346,-3179.81 -518.726,-3163.6z" Stretch="Uniform" Fill="#FFFFFFFF" Width="25" Height="25" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+										  <Path.RenderTransform>
+											<TransformGroup>
+											  <TransformGroup.Children>
+												<RotateTransform Angle="0" />
+												<ScaleTransform ScaleX="1" ScaleY="1" />
+											  </TransformGroup.Children>
+											</TransformGroup>
+										  </Path.RenderTransform>
+										</Path>
+									</Grid>
+                                    <TextBlock Text="{Binding Title}" Margin="60,0,82,0" FontSize="14" TextTrimming="CharacterEllipsis"/>
+                                    <TextBlock Text="{Binding Date}" Margin="60,20,82,0" FontSize="14" TextTrimming="CharacterEllipsis"/>
+                                    <TextBlock Text="{Binding Time}" Margin="60,40,82,0" FontSize="14" TextTrimming="CharacterEllipsis"/>
                                     <TextBlock Text="{Binding Description}" Margin="5,58,5,0" FontSize="14" TextWrapping="Wrap"/>
                                 </Grid>
                             </DataTemplate>
