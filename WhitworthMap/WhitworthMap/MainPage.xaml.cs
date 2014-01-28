@@ -103,11 +103,14 @@ namespace WhitworthMap
         private async void Building_Tapped(object sender, RoutedEventArgs e)
         {
             //AM
+            // Casts the object sender as a Framework Element
             FrameworkElement Building = (sender as FrameworkElement);
 
+            // Uses the button name to get the type and key name of the button
             var type = Regex.Match(Building.Name, @"(?<=_)\w*").ToString();
             var key = Regex.Match(Building.Name, @"^.*?(?=_)").ToString();
 
+            // Checks the type of button and gets and sets the title of the building accordingly
             if (type == "ListButton")
             {
                 TextBlock BuildingText = (VisualTreeHelper.GetChild(Building, 1) as TextBlock);
@@ -131,11 +134,14 @@ namespace WhitworthMap
                 BuildingTitle.Text = "No Building Title";
             }
 
+            // Queries the IMobileServiceTable based on the key name from the button name
             var query = await eventsTable
                 .Where(o => o.Locations.Contains(key))
                 .Select(o => o)
                 .ToCollectionAsync();
 
+            // If there are results from the query then set the event list in the XAML
+            // to that query If not then set everything to null and show the no events text
             if (query.Count() > 0)
             {
                 EventList.ItemsSource = query;
@@ -149,6 +155,7 @@ namespace WhitworthMap
                 NoEvents.Visibility = Visibility.Visible;
             }
 
+            // Check whether the BuildingEventsCoontainer is already in view, if not then fire the animation
             var translateX = (BuildingEventsContainer.RenderTransform as CompositeTransform).TranslateX;
 
             if (translateX == 350)
@@ -160,10 +167,13 @@ namespace WhitworthMap
         private void Search_TextChanged(object sender, TextChangedEventArgs e)
         {
             //AM
+            // Casts the sender as a TextBox
             TextBox SearchBox = (sender as TextBox);
 
+            // If the search ox is not empty
             if (SearchBox.Text != "")
             {
+                // Loop through the list items and set the to invisible if they do not match the textbox
                 for (var i = 0; i < VisualTreeHelper.GetChildrenCount(this.BuildingsList); i++)
                 {
                     FrameworkElement ListItem = (VisualTreeHelper.GetChild(this.BuildingsList, i) as FrameworkElement);
@@ -179,6 +189,7 @@ namespace WhitworthMap
                     }
                 }
             }
+            // If it is visible set all list items to visible
             else
             {
                 for (var i = 0; i < VisualTreeHelper.GetChildrenCount(this.BuildingsList); i++)
