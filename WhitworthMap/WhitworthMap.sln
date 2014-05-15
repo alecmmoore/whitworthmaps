@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitworthMap", "WhitworthMap\WhitworthMap.csproj", "{1FD4E66D-2AD8-4182-B7BD-6612DB70D6C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitworthMapWP8", "WhitworthMapWP8\WhitworthMapWP8.csproj", "{E2C7B429-799E-4B0F-B548-61F3F788105C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,26 @@ Global
 		{1FD4E66D-2AD8-4182-B7BD-6612DB70D6C1}.Release|x86.ActiveCfg = Release|x86
 		{1FD4E66D-2AD8-4182-B7BD-6612DB70D6C1}.Release|x86.Build.0 = Release|x86
 		{1FD4E66D-2AD8-4182-B7BD-6612DB70D6C1}.Release|x86.Deploy.0 = Release|x86
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Debug|ARM.ActiveCfg = Debug|ARM
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Debug|ARM.Build.0 = Debug|ARM
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Debug|ARM.Deploy.0 = Debug|ARM
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Debug|x86.ActiveCfg = Debug|x86
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Debug|x86.Build.0 = Debug|x86
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Debug|x86.Deploy.0 = Debug|x86
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Release|ARM.ActiveCfg = Release|ARM
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Release|ARM.Build.0 = Release|ARM
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Release|ARM.Deploy.0 = Release|ARM
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Release|x64.ActiveCfg = Release|Any CPU
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Release|x86.ActiveCfg = Release|x86
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Release|x86.Build.0 = Release|x86
+		{E2C7B429-799E-4B0F-B548-61F3F788105C}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

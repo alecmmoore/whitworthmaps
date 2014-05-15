@@ -1,8 +1,8 @@
 ﻿<Page
-    x:Class="WhitworthMap.MainPage"
+    x:Class="WhitworthMapWP8.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:WhitworthMap"
+    xmlns:local="using:WhitworthMapWP8"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:xtk="using:WinRTXamlToolkit.Controls"
@@ -130,46 +130,6 @@
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
-
-        <Style x:Key="BS1" TargetType="Button">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup x:Name="CommonStates">
-                                    <VisualState x:Name="Pressed"/>
-                                    <VisualState x:Name="Disabled"/>
-                                    <VisualState x:Name="PointerOver"/>
-                                </VisualStateGroup>
-                                <VisualStateGroup x:Name="FocusStates">
-                                    <VisualState x:Name="Focused">
-                                        <Storyboard>
-                                            <ColorAnimation Duration="0" To="#FF0B4678" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="OmacheField" d:IsOptimized="True"/>
-                                            <ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="OmacheField" d:IsOptimized="True"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="Unfocused">
-                                        <Storyboard>
-                                            <ColorAnimation Duration="0" To="#FF780B10" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="OmacheField" d:IsOptimized="True"/>
-                                            <ColorAnimation Duration="0" To="#FF000000" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="OmacheField" d:IsOptimized="True"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="PointerFocused">
-                                        <Storyboard>
-                                            <ColorAnimation Duration="0" To="#FF0B4678" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="OmacheField" d:IsOptimized="True"/>
-                                            <ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="OmacheField" d:IsOptimized="True"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-                            <Path x:Name="OmacheField" Data="M143.333,535 L142.667,606 L303.996,606 L303.663,534.667 z" Fill="#FF780B10" Stretch="Fill" Stroke="Black" StrokeThickness="3" UseLayoutRounding="False"/>
-                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
         <Style x:Key="ChangingColor" TargetType="Button">
             <Setter Property="Template">
                 <Setter.Value>
@@ -207,6 +167,46 @@
                                     <CompositeTransform Rotation="1.696" TranslateX="-0.1575477836149588" TranslateY="0.0110634099471838"/>
                                 </Path.RenderTransform>
                             </Path>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style x:Key="BS1" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                    <VisualState x:Name="PointerOver"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused">
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0" To="#FF0B4678" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="OmacheField" d:IsOptimized="True"/>
+                                            <ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="OmacheField" d:IsOptimized="True"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unfocused">
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0" To="#FF780B10" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="OmacheField" d:IsOptimized="True"/>
+                                            <ColorAnimation Duration="0" To="#FF000000" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="OmacheField" d:IsOptimized="True"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="PointerFocused">
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0" To="#FF0B4678" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="OmacheField" d:IsOptimized="True"/>
+                                            <ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="OmacheField" d:IsOptimized="True"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Path x:Name="OmacheField" Data="M143.333,535 L142.667,606 L303.996,606 L303.663,534.667 z" Fill="#FF780B10" Stretch="Fill" Stroke="Black" StrokeThickness="3" UseLayoutRounding="False"/>
                             <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </Grid>
                     </ControlTemplate>
@@ -1938,6 +1938,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        
         <Style x:Key="TextEdit" TargetType="Button">
         	<Setter Property="Foreground" Value="{StaticResource AppBarItemForegroundThemeBrush}"/>
         	<Setter Property="VerticalAlignment" Value="Stretch"/>

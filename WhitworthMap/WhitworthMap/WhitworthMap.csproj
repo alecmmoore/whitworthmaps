@@ -7,7 +7,7 @@
     <ProjectGuid>{1FD4E66D-2AD8-4182-B7BD-6612DB70D6C1}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WhitworthMap</RootNamespace>
+    <RootNamespace>WhitworthMapWP8</RootNamespace>
     <AssemblyName>WhitworthMap</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>

@@ -1,8 +1,8 @@
 ﻿<Application
-    x:Class="WhitworthMap.App"
+    x:Class="WhitworthMapWP8.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:WhitworthMap">
+    xmlns:local="using:WhitworthMapWP8">
 
     <Application.Resources>
         <ResourceDictionary>

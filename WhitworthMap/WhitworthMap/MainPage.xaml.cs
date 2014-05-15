@@ -20,7 +20,7 @@ using System.Threading.Tasks;
 using Windows.Graphics.Display;
 using System.Globalization;
 
-namespace WhitworthMap
+namespace WhitworthMapWP8
 {
 
     public sealed partial class MainPage : Page
