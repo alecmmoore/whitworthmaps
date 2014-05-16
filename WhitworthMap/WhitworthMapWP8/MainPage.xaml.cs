@@ -88,35 +88,6 @@ namespace WhitworthMapWP8
             BuildingList.DataContext = Buildings;
         }
 
-        public async void GetCoord()
-        {
-            try
-            {
-                //creates object of geolocator type
-                Geolocator geolocator = new Geolocator();
-                //creates geopostion object, makes requests every 10 seconds for 5 minutes
-                Geoposition geopostion = await geolocator.GetGeopositionAsync(maximumAge: TimeSpan.FromMinutes(5), timeout: TimeSpan.FromSeconds(10));
-                double LatIt = geopostion.Coordinate.Latitude;
-                double LongIt = geopostion.Coordinate.Longitude;
-                locationPing.Visibility = Visibility.Visible;
-                locationPingShadow.Visibility = Visibility.Visible;
-                //calculates the location according to the screen.
-                double calc1 = (47.757025 - LatIt) * (111545.9883);
-                double calc2 = (117.426186 + LongIt) * (83612.52731);
-                int Calc1 = Convert.ToInt32(Math.Round(calc1));
-                int Calc2 = Convert.ToInt32(Math.Round(calc2));
-                Canvas.SetLeft(locationPing, Calc2 - 15);
-                Canvas.SetTop(locationPing, Calc1 - 30);
-                Canvas.SetLeft(locationPingShadow, Calc2 - 24);
-                Canvas.SetTop(locationPingShadow, Calc1 - 14);
-                MapPanel.ScrollToHorizontalOffset(Calc2 - 230);
-                MapPanel.ScrollToVerticalOffset(Calc1 - 125);
-            }
-            catch (Exception e)
-            {
-
-            }
-        }
         private void Building_Tap(object sender, RoutedEventArgs e)
         {
             Button Building = sender as Button;
@@ -138,7 +109,11 @@ namespace WhitworthMapWP8
             BuildingSelected(item.Key);
             MapPanel.ScrollToHorizontalOffset(item.Hor - 230);
             MapPanel.ScrollToVerticalOffset(item.Ver - 125);
-            
+        }
+
+        private void BuildingTitle_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+
         }
 
         private async void BuildingSelected(string Key)
@@ -221,7 +196,8 @@ namespace WhitworthMapWP8
                 LayoutRoot.RowDefinitions[3].Height = new GridLength(0);
 
                 SearchGrid.Visibility = Visibility.Collapsed;
-                ListGrid.Visibility = Visibility.Collapsed;
+                BuildingListGrid.Visibility = Visibility.Collapsed;
+                EventListGrid.Visibility = Visibility.Collapsed;
             }
             else
             {
@@ -231,9 +207,39 @@ namespace WhitworthMapWP8
                 LayoutRoot.RowDefinitions[3].Height = new GridLength(1, GridUnitType.Star);
 
                 SearchGrid.Visibility = Visibility.Visible;
-                ListGrid.Visibility = Visibility.Visible;
+                BuildingListGrid.Visibility = Visibility.Visible;
+                EventListGrid.Visibility = Visibility.Visible;
             }
             IsExpandMap = !IsExpandMap;
+        }
+        public async void GetCoord()
+        {
+            try
+            {
+                //creates object of geolocator type
+                Geolocator geolocator = new Geolocator();
+                //creates geopostion object, makes requests every 10 seconds for 5 minutes
+                Geoposition geopostion = await geolocator.GetGeopositionAsync(maximumAge: TimeSpan.FromMinutes(5), timeout: TimeSpan.FromSeconds(10));
+                double LatIt = geopostion.Coordinate.Latitude;
+                double LongIt = geopostion.Coordinate.Longitude;
+                locationPing.Visibility = Visibility.Visible;
+                locationPingShadow.Visibility = Visibility.Visible;
+                //calculates the location according to the screen.
+                double calc1 = (47.757025 - LatIt) * (111545.9883);
+                double calc2 = (117.426186 + LongIt) * (83612.52731);
+                int Calc1 = Convert.ToInt32(Math.Round(calc1));
+                int Calc2 = Convert.ToInt32(Math.Round(calc2));
+                Canvas.SetLeft(locationPing, Calc2 - 15);
+                Canvas.SetTop(locationPing, Calc1 - 30);
+                Canvas.SetLeft(locationPingShadow, Calc2 - 24);
+                Canvas.SetTop(locationPingShadow, Calc1 - 14);
+                MapPanel.ScrollToHorizontalOffset(Calc2 - 230);
+                MapPanel.ScrollToVerticalOffset(Calc1 - 125);
+            }
+            catch (Exception e)
+            {
+
+            }
         }
 
         private void BackButton_Tap(object sender, System.Windows.Input.GestureEventArgs e)

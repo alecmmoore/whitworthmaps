@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{e2c7b429-799e-4b0f-b548-61f3f788105c}" Title="WhitworthMapWP8" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="WhitworthMapWP8 author" Description="Sample description" Publisher="WhitworthMapWP8" PublisherID="{ea93ee7f-8ee4-4f64-b576-b64bd75c9371}">
-    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+  <App xmlns="" ProductID="{e2c7b429-799e-4b0f-b548-61f3f788105c}" Title="Whitworth Maps" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Alec Moore and Elias Nichols" Description="Whitworth Maps allows you to see Whitworth's campus and the events that are going on around campus." Publisher="Alec Moore" PublisherID="{ea93ee7f-8ee4-4f64-b576-b64bd75c9371}">
+    <IconPath IsRelative="true" IsResource="false">Assets\Tiles\WhitMaps_200.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
@@ -17,9 +17,9 @@
     <Tokens>
       <PrimaryToken TokenID="WhitworthMapWP8Token" TaskName="_default">
         <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
+          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\WhitMaps_173.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\WhitMaps_200.png</BackgroundImageURI>
           <Title>WhitworthMapWP8</Title>
           <BackContent>
           </BackContent>

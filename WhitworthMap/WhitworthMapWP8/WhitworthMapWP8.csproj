@@ -140,6 +140,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Back.png" />
+    <Content Include="Assets\BackPressed.png" />
     <Content Include="Assets\Fullscreen.png" />
     <Content Include="Assets\Location.png" />
     <Content Include="Assets\Smallscreen.png" />
@@ -158,6 +159,9 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Tiles\WhitMaps_173.png" />
+    <Content Include="Assets\Tiles\WhitMaps_200.png" />
+    <Content Include="Assets\Tiles\WhitMaps_99.png" />
     <Content Include="README_FIRST.txt" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />

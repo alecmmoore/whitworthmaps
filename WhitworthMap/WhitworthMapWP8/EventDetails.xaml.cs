@@ -21,15 +21,43 @@ namespace WhitworthMapWP8
         {
             base.OnNavigatedTo(e);
 
-            Date.Text = NavigationContext.QueryString["Date"];
-            Title.Text = NavigationContext.QueryString["Title"];
-            Time.Text = NavigationContext.QueryString["Time"];
-            Location.Text = NavigationContext.QueryString["LocationsString"];
-            Description.Text = NavigationContext.QueryString["Description"];
-            Contact.Text = NavigationContext.QueryString["Contact"];
-            ContactEmail.Text = NavigationContext.QueryString["ContactEmail"];
-            ContactPhone.Text = NavigationContext.QueryString["ContactPhone"];
-            Link.Text = NavigationContext.QueryString["Link"];
+            string EmptyString = String.Empty;
+            if (NavigationContext.QueryString.TryGetValue("Date", out EmptyString))
+            {
+                Date.Text = NavigationContext.QueryString["Date"];
+            }
+            if (NavigationContext.QueryString.TryGetValue("Title", out EmptyString))
+            {
+                Title.Text = NavigationContext.QueryString["Title"];
+            }
+            if (NavigationContext.QueryString.TryGetValue("Time", out EmptyString))
+            {
+                Time.Text = NavigationContext.QueryString["Time"];
+            }
+            if (NavigationContext.QueryString.TryGetValue("LocationsString", out EmptyString))
+            {
+                Location.Text = NavigationContext.QueryString["LocationsString"];
+            }
+            if (NavigationContext.QueryString.TryGetValue("Description", out EmptyString))
+            {
+                Description.Text = NavigationContext.QueryString["Description"];
+            }
+            if (NavigationContext.QueryString.TryGetValue("Contact", out EmptyString))
+            {
+                Contact.Text = NavigationContext.QueryString["Contact"];
+            }
+            if (NavigationContext.QueryString.TryGetValue("ContactEmail", out EmptyString))
+            {
+                ContactEmail.Text = NavigationContext.QueryString["ContactEmail"];
+            }
+            if (NavigationContext.QueryString.TryGetValue("ContactPhone", out EmptyString))
+            {
+                ContactPhone.Text = NavigationContext.QueryString["ContactPhone"];
+            }
+            if (NavigationContext.QueryString.TryGetValue("Link", out EmptyString))
+            {
+                Link.Text = NavigationContext.QueryString["Link"];
+            }
         }
     }
 }
