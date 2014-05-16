@@ -21,7 +21,7 @@ namespace WhitworthMapWP8
 {
     public partial class MainPage : PhoneApplicationPage
     {
-         // List of events that is queried from the Azure Mobile Service
+        // List of events that is queried from the Azure Mobile Service
         private IMobileServiceTable<Event> EventsTable = App.MobileService.GetTable<Event>();
 
         // Collections for UI Lists
@@ -35,57 +35,58 @@ namespace WhitworthMapWP8
         public MainPage()
         {
             InitializeComponent();
-            
-            Buildings.Add(new Building() { Title = "McEachran Hall", Key = "McEachran" });
-            Buildings.Add(new Building() { Title = "MacKay Hall", Key = "MacKay" });
-            Buildings.Add(new Building() { Title = "Cowles Auditorium", Key = "Cowles" });
-            Buildings.Add(new Building() { Title = "Music Building", Key = "Music" });
-            Buildings.Add(new Building() { Title = "Auld House", Key = "Auld" });
-            Buildings.Add(new Building() { Title = "Dixon Hall", Key = "Dixon" });
-            Buildings.Add(new Building() { Title = "Warren Hall", Key = "Warren" });
-            Buildings.Add(new Building() { Title = "Seeley G. Mudd Chapel", Key = "Seeley" });
-            Buildings.Add(new Building() { Title = "Ballard Hall", Key = "Ballard" });
-            Buildings.Add(new Building() { Title = "McMillan Hall", Key = "McMillan" });
-            Buildings.Add(new Building() { Title = "Graves Gym", Key = "Graves" });
-            Buildings.Add(new Building() { Title = "The Fieldhouse", Key = "Fieldhouse" });
-            Buildings.Add(new Building() { Title = "Aquatics Center", Key = "Aquatics" });
-            Buildings.Add(new Building() { Title = "Scotford Conditioning Center", Key = "Conditioning" });
-            Buildings.Add(new Building() { Title = "University Recreation Center", Key = "Recreation" });
-            //Buildings.Add(new Building() { Title = "", Key = "Westside" });
-            Buildings.Add(new Building() { Title = "Westminister Hall", Key = "Westminster" });
-            Buildings.Add(new Building() { Title = "Weyerhaeuser Hall", Key = "Weyerhaeuser" });
-            Buildings.Add(new Building() { Title = "Lied Center For Visual Arts", Key = "Lied" });
-            Buildings.Add(new Building() { Title = "Schumacher Hall", Key = "Schumacher" });
-            Buildings.Add(new Building() { Title = "Robinson Science Hall", Key = "Robinson" });
-            Buildings.Add(new Building() { Title = "Lindaman Center", Key = "Lindaman" });
-            Buildings.Add(new Building() { Title = "Harriet Cheney Cowles Memorial Library", Key = "Library" });
-            Buildings.Add(new Building() { Title = "Eric Johnston Science Center", Key = "Johnston" });
-            Buildings.Add(new Building() { Title = "Baldwin Jenkins Hall", Key = "Baldwin-Jenkins" });
-            Buildings.Add(new Building() { Title = "Eileen Hendrick Hall", Key = "Hendrick" });
-            Buildings.Add(new Building() { Title = "Stewart Hall", Key = "Stewart" });
-            Buildings.Add(new Building() { Title = "The Village", Key = "Village" });
-            Buildings.Add(new Building() { Title = "Arend Hall", Key = "Arend" });
-            Buildings.Add(new Building() { Title = "Boppell", Key = "Boppell" });
-            Buildings.Add(new Building() { Title = "Cornerstone", Key = "Cornerstone" });
-            Buildings.Add(new Building() { Title = "Hixon Union Building", Key = "HUB" });
-            Buildings.Add(new Building() { Title = "Hardwick Hall", Key = "Hardwick" });
-            Buildings.Add(new Building() { Title = "Hawthorne Hall", Key = "Hawthorne" });
-            Buildings.Add(new Building() { Title = "Facilities Services Building", Key = "Facilities" });
-            Buildings.Add(new Building() { Title = "Pirate's Cove", Key = "Cove" });
-            Buildings.Add(new Building() { Title = "Duvall Hall", Key = "Duvall" });
-            Buildings.Add(new Building() { Title = "Scotford Tennis Center/Cutter Tennis Courts", Key = "Tennis" });
-            Buildings.Add(new Building() { Title = "The Pine Bowl", Key = "Pine" });
-            Buildings.Add(new Building() { Title = "Omache Field", Key = "Omache" });
-            Buildings.Add(new Building() { Title = "Merkel Field", Key = "Merkel" });
-            Buildings.Add(new Building() { Title = "Soccer Field", Key = "Soccer" });
-            Buildings.Add(new Building() { Title = "Marks Field", Key = "Marks" });
-            Buildings.Add(new Building() { Title = "East Hall", Key = "East" });
-            Buildings.Add(new Building() { Title = "The Loop", Key = "Loop" });
-            Buildings.Add(new Building() { Title = "Hill Hall", Key = "Hill" });
-            Buildings.Add(new Building() { Title = "Whit-Pres Quall Hall", Key = "Quall" });
-            Buildings.Add(new Building() { Title = "The President's House", Key = "President's" });
 
-     
+            Buildings.Add(new Building() { Title = "McEachran Hall", Key = "McEachran", Hor = 712, Ver = 626});
+            Buildings.Add(new Building() { Title = "MacKay Hall", Key = "MacKay", Hor = 725, Ver = 719});
+            Buildings.Add(new Building() { Title = "Cowles Auditorium", Key = "Cowles", Hor = 623, Ver = 611 });
+            Buildings.Add(new Building() { Title = "Music Building", Key = "Music", Hor = 535, Ver = 642 });
+            Buildings.Add(new Building() { Title = "Auld House", Key = "Auld", Hor = 516, Ver = 714 });
+            Buildings.Add(new Building() { Title = "Dixon Hall", Key = "Dixon", Hor = 617, Ver = 547 });
+            Buildings.Add(new Building() { Title = "Warren Hall", Key = "Warren", Hor = 542, Ver = 497 });
+            Buildings.Add(new Building() { Title = "Seeley G. Mudd Chapel", Key = "Seeley", Hor = 509, Ver = 424 });
+            Buildings.Add(new Building() { Title = "Ballard Hall", Key = "Ballard", Hor = 470, Ver = 406 });
+            Buildings.Add(new Building() { Title = "McMillan Hall", Key = "McMillan", Hor = 481, Ver = 333 });
+            Buildings.Add(new Building() { Title = "Graves Gym", Key = "Graves", Hor = 388, Ver = 365 });
+            Buildings.Add(new Building() { Title = "The Fieldhouse", Key = "Fieldhouse", Hor = 240, Ver = 165 });
+            Buildings.Add(new Building() { Title = "Aquatics Center", Key = "Aquatics", Hor = 363, Ver = 166 });
+            Buildings.Add(new Building() { Title = "Scotford Conditioning Center", Key = "Conditioning", Hor = 334, Ver = 181 });
+           // Buildings.Add(new Building() { Title = "University Recreation Center", Key = "Recreation", Hor = 725, Ver = 719 });
+            //Buildings.Add(new Building() { Title = "", Key = "Westside" });
+            Buildings.Add(new Building() { Title = "Westminister Hall", Key = "Westminster", Hor = 494, Ver = 204 });
+            Buildings.Add(new Building() { Title = "Weyerhaeuser Hall", Key = "Weyerhaeuser", Hor = 573, Ver = 309 });
+            Buildings.Add(new Building() { Title = "Lied Center For Visual Arts", Key = "Lied", Hor = 584, Ver = 193});
+            Buildings.Add(new Building() { Title = "Schumacher Hall", Key = "Schumacher", Hor = 648, Ver = 276 });
+            Buildings.Add(new Building() { Title = "Robinson Science Hall", Key = "Robinson", Hor = 714, Ver = 298 });
+            Buildings.Add(new Building() { Title = "Lindaman Center", Key = "Lindaman", Hor = 644, Ver = 396 });
+            Buildings.Add(new Building() { Title = "Harriet Cheney Cowles Memorial Library", Key = "Library", Hor = 719, Ver = 397 });
+            Buildings.Add(new Building() { Title = "Eric Johnston Science Center", Key = "Johnston", Hor = 814, Ver = 322 });
+            Buildings.Add(new Building() { Title = "Baldwin Jenkins Hall", Key = "BJ", Hor = 900, Ver = 246 });
+            Buildings.Add(new Building() { Title = "Eileen Hendrick Hall", Key = "Hendrick", Hor = 901, Ver = 363 });
+            Buildings.Add(new Building() { Title = "Stewart Hall", Key = "Stewart", Hor = 943, Ver = 326 });
+            Buildings.Add(new Building() { Title = "The Village", Key = "Village", Hor = 997, Ver = 284 });
+            Buildings.Add(new Building() { Title = "Arend Hall", Key = "Arend", Hor = 854, Ver = 415 });
+            Buildings.Add(new Building() { Title = "Boppell", Key = "Boppell", Hor = 1072, Ver = 443 });
+            Buildings.Add(new Building() { Title = "Cornerstone", Key = "Cornerstone", Hor = 197, Ver = 710 });
+            Buildings.Add(new Building() { Title = "Hixon Union Building", Key = "HUB", Hor = 837, Ver = 470 });
+            //Buildings.Add(new Building() { Title = "Hardwick Hall", Key = "Hardwick", Hor = 725, Ver = 719 });
+            Buildings.Add(new Building() { Title = "Hawthorne Hall", Key = "Hawthorne", Hor = 1190, Ver = 580 });
+            Buildings.Add(new Building() { Title = "Facilities Services Building", Key = "Facilities", Hor = 696, Ver = 197 });
+            Buildings.Add(new Building() { Title = "Pirate's Cove", Key = "Cove", Hor = 1082, Ver = 168 });
+            Buildings.Add(new Building() { Title = "Duvall Hall", Key = "Duvall", Hor = 1141, Ver = 351 });
+            Buildings.Add(new Building() { Title = "Scotford Tennis Center/Cutter Tennis Courts", Key = "Center", Hor = 369, Ver = 114 });
+            Buildings.Add(new Building() { Title = "The Pine Bowl", Key = "Pine", Hor = 342, Ver = 465 });
+            Buildings.Add(new Building() { Title = "Omache Field", Key = "Omache", Hor = 154, Ver = 589 });
+            Buildings.Add(new Building() { Title = "Merkel Field", Key = "Merkel", Hor = 65, Ver = 47 });
+            Buildings.Add(new Building() { Title = "Soccer Field", Key = "Soccer", Hor = 136, Ver = 431 });
+            Buildings.Add(new Building() { Title = "Marks Field", Key = "Marks", Hor = 242, Ver = 497 });
+            Buildings.Add(new Building() { Title = "East Hall", Key = "East", Hor = 1081, Ver = 257 });
+          //  Buildings.Add(new Building() { Title = "The Loop", Key = "Loop", Hor = 725, Ver = 719 });
+            Buildings.Add(new Building() { Title = "Hill Hall", Key = "Hill", Hor = 555, Ver = 750 });
+            Buildings.Add(new Building() { Title = "Whit-Pres Quall Hall", Key = "Quall", Hor = 849, Ver = 594 });
+            Buildings.Add(new Building() { Title = "The President's House", Key = "President's", Hor = 926, Ver = 741 });
+            BuildingList.DataContext = Buildings;
+
+
         }
 
         public async void GetCoord()
@@ -109,10 +110,14 @@ namespace WhitworthMapWP8
                 Canvas.SetTop(locationPing, Calc1 - 30);
                 Canvas.SetLeft(locationPingShadow, Calc2 - 24);
                 Canvas.SetTop(locationPingShadow, Calc1 - 14);
+                MapPanel.ScrollToHorizontalOffset(Calc2 - 230);
+                MapPanel.ScrollToVerticalOffset(Calc1 - 125);
+                
+
             }
             catch (Exception e)
             {
-                
+
             }
         }
         private void Building_Tap(object sender, RoutedEventArgs e)
@@ -134,6 +139,9 @@ namespace WhitworthMapWP8
 
             Building item = (BuildingList.SelectedItem as Building);
             BuildingSelected(item.Key);
+            MapPanel.ScrollToHorizontalOffset(item.Hor - 230);
+            MapPanel.ScrollToVerticalOffset(item.Ver - 125);
+            
         }
 
         private async void BuildingSelected(string Key)
@@ -171,7 +179,7 @@ namespace WhitworthMapWP8
             DateTime ParsedDate = new DateTime();
             foreach (Event e in Events)
             {
-                if (DateTime.TryParse(e.Date, out ParsedDate)) 
+                if (DateTime.TryParse(e.Date, out ParsedDate))
                 {
                     var date = ParsedDate.ToString("d").Split(new string[] { "/" }, StringSplitOptions.None);
                     if (date.Length >= 2)
@@ -210,7 +218,7 @@ namespace WhitworthMapWP8
                 LayoutRoot.RowDefinitions[1].Height = new GridLength(1, GridUnitType.Star);
                 LayoutRoot.RowDefinitions[2].Height = new GridLength(0);
                 LayoutRoot.RowDefinitions[3].Height = new GridLength(0);
-                
+
                 SearchGrid.Visibility = Visibility.Collapsed;
                 ListGrid.Visibility = Visibility.Collapsed;
             }
@@ -252,6 +260,11 @@ namespace WhitworthMapWP8
             string URL = String.Format("/EventDetails.xaml?Title={0}&Date={1}&Time={2}&Description={3}&LocationsString={4}&Contact={5}&ContactPhone={6}&ContactEmail={7}&Link={8}",
                 item.Title, item.Date, item.Time, item.Description, item.LocationsString, item.Contact, item.ContactPhone, item.ContactEmail, item.Link);
             NavigationService.Navigate(new Uri(URL, UriKind.Relative));
+        }
+
+        private void Location_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            GetCoord();
         }
 
     }
