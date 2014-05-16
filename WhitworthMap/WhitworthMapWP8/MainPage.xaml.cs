@@ -85,8 +85,7 @@ namespace WhitworthMapWP8
             Buildings.Add(new Building() { Title = "Whit-Pres Quall Hall", Key = "Quall" });
             Buildings.Add(new Building() { Title = "The President's House", Key = "President's" });
 
-            BuildingList.DataContext = Buildings;
-            GetCoord();
+     
         }
 
         public async void GetCoord()
