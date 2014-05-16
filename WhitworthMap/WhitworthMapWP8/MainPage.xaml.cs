@@ -85,6 +85,7 @@ namespace WhitworthMapWP8
             Buildings.Add(new Building() { Title = "Whit-Pres Quall Hall", Key = "Quall" });
             Buildings.Add(new Building() { Title = "The President's House", Key = "President's" });
 
+            BuildingList.DataContext = Buildings;
      
         }
 
@@ -165,7 +166,10 @@ namespace WhitworthMapWP8
             }
             catch (Exception e)
             {
-                NoNetwork.Visibility = Visibility.Visible;
+                if (IsShowEvents)
+                {
+                    NoNetwork.Visibility = Visibility.Visible;
+                }
                 return;
             }
             // Remove events that have already happened
@@ -260,34 +264,48 @@ namespace WhitworthMapWP8
             // Casts the sender as a TextBox
             TextBox SearchBox = (sender as TextBox);
 
-            // If the search ox is not empty
-            if (SearchBox.Text != "")
+            if (IsShowEvents)
             {
-                // Loop through the list items and set the to invisible if they do not match the textbox
-                for (var i = 0; i < VisualTreeHelper.GetChildrenCount(this.BuildingList); i++)
+                // If the search ox is not empty
+                if (SearchBox.Text != "")
                 {
-                    FrameworkElement ListItem = (VisualTreeHelper.GetChild(this.BuildingList, i) as FrameworkElement);
-                    string ListItemTitle = (VisualTreeHelper.GetChild(ListItem, 1) as TextBlock).Text;
-
-                    if (ListItemTitle.IndexOf(SearchBox.Text, StringComparison.OrdinalIgnoreCase) >= 0)
-                    {
-                        ListItem.Visibility = Visibility.Visible;
-                    }
-                    else
-                    {
-                        ListItem.Visibility = Visibility.Collapsed;
-                    }
+                    EventList.DataContext = new ObservableCollection<Event>(Events.Where(o => o.Title.IndexOf(SearchBox.Text, StringComparison.OrdinalIgnoreCase) != -1));
                 }
+                // If it is visible set all list items to visible
+                else
+                {
+                    EventList.DataContext = Events;
+                }  
             }
-            // If it is visible set all list items to visible
             else
             {
-                for (var i = 0; i < VisualTreeHelper.GetChildrenCount(this.BuildingList); i++)
+                // If the search ox is not empty
+                if (SearchBox.Text != "")
                 {
-                    FrameworkElement ListItem = (VisualTreeHelper.GetChild(this.BuildingList, i) as FrameworkElement);
-                    ListItem.Visibility = Visibility.Visible;
+                    BuildingList.DataContext = new ObservableCollection<Building>(Buildings.Where(o => o.Title.IndexOf(SearchBox.Text, StringComparison.OrdinalIgnoreCase) != -1));
                 }
+                // If it is visible set all list items to visible
+                else
+                {
+                    BuildingList.DataContext = Buildings;
+                }  
             }
+        }
+
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            LayoutRoot.RowDefinitions[1].Height = new GridLength(0);
+            LayoutRoot.RowDefinitions[3].Height = new GridLength(1, GridUnitType.Star);
+
+            MapPanel.Visibility = Visibility.Collapsed;
+        }
+
+        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            LayoutRoot.RowDefinitions[1].Height = new GridLength(250);
+            LayoutRoot.RowDefinitions[3].Height = new GridLength(1, GridUnitType.Star);
+            
+            MapPanel.Visibility = Visibility.Visible;
         }
 
     }

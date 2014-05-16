@@ -2624,7 +2624,7 @@
                                 </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Hardwick House" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-							 <Grid x:Name="Hawthorne_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+							<Grid x:Name="Hawthorne_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
@@ -2712,7 +2712,7 @@
                                 </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="The HUB" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-							 <Grid x:Name="Johnston_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+							<Grid x:Name="Johnston_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
@@ -2800,7 +2800,7 @@
                                 </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="MacKay Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-							 <Grid x:Name="Marks_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+							<Grid x:Name="Marks_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
@@ -2910,7 +2910,7 @@
                                 </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Music Building" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-							 <Grid x:Name="Omache_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+							<Grid x:Name="Omache_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>
@@ -3152,7 +3152,7 @@
                                 </Grid>
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Stewart Hall" Height="25" Margin="75,15,0,0"/>
                             </Grid>
-							 <Grid x:Name="Courts_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
+							<Grid x:Name="Courts_ListButton" Height="50" Margin="0,0,10,5" Tapped="Building_Tapped">
                                 <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="#FF780B10">
                                     <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         <Grid>

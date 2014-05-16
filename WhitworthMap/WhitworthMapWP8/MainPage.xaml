@@ -2166,14 +2166,11 @@
             <Image x:Name="ExpandMap_Icon" Source="/Assets/Fullscreen.png" Margin="7"></Image>
         </Button>
 
-<<<<<<< HEAD
         <Button Grid.Row="1" Width="60" Height="60" Padding="0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,43,0" BorderThickness="1" Background="#FF222222" Tap="ExpandMap_Tap">
-            <Image x:Name="LocationPing" Source="/Assets/Fullscreen.png" Margin="7"></Image>
+            <Image x:Name="LocationPing" Source="/Assets/Location.png" Margin="7"></Image>
         </Button>
-        <Grid Grid.Row="2">
-=======
+        
         <Grid x:Name="SearchGrid" Grid.Row="2">
->>>>>>> 35cbc646810a801eb790cb058fd56a0da3586b73
             <Button x:Name="button" Width="75" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" Tap="BackButton_Tap" BorderThickness="0">
                 <Button.Background>
                     <ImageBrush Stretch="Fill" ImageSource="/Assets/Back.png"/>
@@ -2182,10 +2179,11 @@
                     <CompositeTransform TranslateX="-64"/>
                 </Button.RenderTransform>
             </Button>
-            <TextBox x:Name="TextBox" Text="Search" RenderTransformOrigin="0.5,0.5" TextChanged="TextBox_TextChanged">
+            <TextBox x:Name="TextBox" Text="Search" RenderTransformOrigin="0.5,0.5" TextChanged="TextBox_TextChanged" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus">
             	<TextBox.RenderTransform>
             		<CompositeTransform/>
-            	</TextBox.RenderTransform></TextBox>
+            	</TextBox.RenderTransform>
+            </TextBox>
         </Grid>
 
         <Grid x:Name="ListGrid" Grid.Row="3" Margin="12,0,12,0">
