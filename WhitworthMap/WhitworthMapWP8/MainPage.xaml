@@ -1899,6 +1899,14 @@
         			</EasingDoubleKeyFrame.EasingFunction>
         		</EasingDoubleKeyFrame>
         	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="textBox">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="60"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="button">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="-64"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Name="ShowBuildings">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="BuildingList">
@@ -1924,6 +1932,14 @@
         				<ExponentialEase EasingMode="EaseInOut"/>
         			</EasingDoubleKeyFrame.EasingFunction>
         		</EasingDoubleKeyFrame>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="textBox">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="59.9609"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="button">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-64"/>
         	</DoubleAnimationUsingKeyFrames>
         </Storyboard>
     </phone:PhoneApplicationPage.Resources>
@@ -2105,17 +2121,32 @@
             </Grid>
         </ScrollViewer>
 
+        <Button Grid.Row="1" Width="60" Height="60" Padding="0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0" BorderThickness="1" Background="#FF222222" Tap="ExpandMap_Tap">
+            <Image x:Name="ExpandMap_Icon" Source="/Assets/Fullscreen.png" Margin="7"></Image>
+        </Button>
+
         <Grid Grid.Row="2">
-            <TextBox Text="Search"></TextBox>
+            <Button x:Name="button" Width="75" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" Tap="BackButton_Tap" BorderThickness="0">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="/Assets/Back.png"/>
+                </Button.Background>
+                <Button.RenderTransform>
+                    <CompositeTransform TranslateX="-64"/>
+                </Button.RenderTransform>
+            </Button>
+            <TextBox x:Name="textBox" Text="Search" RenderTransformOrigin="0.5,0.5">
+            	<TextBox.RenderTransform>
+            		<CompositeTransform/>
+            	</TextBox.RenderTransform></TextBox>
         </Grid>
 
         <Grid Grid.Row="3" Margin="12,0,12,0">
             <ListBox x:Name="BuildingList" ItemsSource="{Binding}" RenderTransformOrigin="0.5,0.5">
-            	<ListBox.RenderTransform>
-            		<CompositeTransform/>
-            	</ListBox.RenderTransform>
+                <ListBox.RenderTransform>
+                    <CompositeTransform/>
+                </ListBox.RenderTransform>
                 <ListBoxItem Tap="ListBoxItem_Tap" Margin="0,0,0,1">
-                    <!--<Button Padding="0" Margin="-12" BorderThickness="0" BorderBrush="{x:Null}" Style="{StaticResource ListItemButton}">-->
+                    <Button Padding="0" Margin="-12" BorderThickness="0" BorderBrush="{x:Null}" Style="{StaticResource ListItemButton}">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="100"></ColumnDefinition>
@@ -2127,7 +2158,7 @@
                         <TextBlock Grid.Column="1" Text="Binding Title" VerticalAlignment="Center" FontSize="22" Margin="10,0,0,0"></TextBlock>
                         <Path Grid.Column="2" Data="M 16.3999 14.1826 L 2.7014 0.3857 L -0.3999 3.509 L 10.2056 14.1901 L -0.3999 24.8712 L 2.7014 27.9944 L 16.3999 14.1987 L 16.3918 14.1901 L 16.3999 14.1826 Z" Fill="#FFB6B6B6" HorizontalAlignment="Right" Height="26.812" Stretch="Fill" UseLayoutRounding="False" VerticalAlignment="Center" Width="16.438" Margin="17,18.188,16.562,19"/>
                     </Grid>
-                    <!--</Button>-->
+                    </Button>
                 </ListBoxItem>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -2152,10 +2183,28 @@
         </Grid>
         <Grid Grid.Row="3" Margin="12,0,12,0">
             <ProgressBar x:Name="EventsLoading" IsIndeterminate="True" Foreground="#FFFF7373" Visibility="Collapsed" />
+            <TextBlock x:Name="NoEvents" Text="There are no upcoming events" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFFF7373" Visibility="Collapsed"></TextBlock>
             <ListBox x:Name="EventList" ItemsSource="{Binding}" RenderTransformOrigin="0.5,0.5">
                 <ListBox.RenderTransform>
                     <CompositeTransform TranslateX="470"/>
                 </ListBox.RenderTransform>
+                <ListBoxItem Margin="0,0,0,1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                            <ColumnDefinition Width="306"></ColumnDefinition>
+                            <ColumnDefinition Width="50"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Rectangle Grid.Column="0"  Fill="#FFFF7373"></Rectangle>
+                        <TextBlock Grid.Column="0" Text="4/16" TextAlignment="Center" FontSize="41" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="Binding Title" FontSize="22" Margin="10,0,0,0" Foreground="#FFFF7373" FontFamily="Segoe WP Semibold"></TextBlock>
+                            <TextBlock Text="Binding Time" FontSize="16" Margin="10,0,0,0" Foreground="#FF999999" TextTrimming="WordEllipsis"></TextBlock>
+                            <TextBlock Text="Binding Description" FontSize="16" Margin="10,0,0,0" TextTrimming="WordEllipsis"></TextBlock>
+                        </StackPanel>
+                        <Path Grid.Column="2" Data="M 16.3999 14.1826 L 2.7014 0.3857 L -0.3999 3.509 L 10.2056 14.1901 L -0.3999 24.8712 L 2.7014 27.9944 L 16.3999 14.1987 L 16.3918 14.1901 L 16.3999 14.1826 Z" Fill="#FFB6B6B6" HorizontalAlignment="Right" Height="26.812" Stretch="Fill" UseLayoutRounding="False" VerticalAlignment="Center" Width="16.438" Margin="17,18.188,16.562,19"/>
+                    </Grid>
+                </ListBoxItem>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <ListBoxItem Margin="0,0,0,1">
@@ -2169,7 +2218,7 @@
                                 <TextBlock Grid.Column="0" Text="{Binding Date}" TextAlignment="Center" FontSize="41" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                                 <StackPanel Grid.Column="1">
                                     <TextBlock Text="{Binding Title}" FontSize="22" Margin="10,0,0,0" Foreground="#FFFF7373" FontFamily="Segoe WP Semibold"></TextBlock>
-                                    <TextBlock Text="{Binding Time}" FontSize="16" Margin="10,0,0,0" Foreground="#00000000"></TextBlock>
+                                    <TextBlock Text="{Binding Time}" FontSize="16" Margin="10,0,0,0" Foreground="#FF999999" TextTrimming="WordEllipsis"></TextBlock>
                                     <TextBlock Text="{Binding Description}" FontSize="16" Margin="10,0,0,0" TextTrimming="WordEllipsis"></TextBlock>
                                 </StackPanel>
                                 <Path Grid.Column="2" Data="M 16.3999 14.1826 L 2.7014 0.3857 L -0.3999 3.509 L 10.2056 14.1901 L -0.3999 24.8712 L 2.7014 27.9944 L 16.3999 14.1987 L 16.3918 14.1901 L 16.3999 14.1826 Z" Fill="#FFB6B6B6" HorizontalAlignment="Right" Height="26.812" Stretch="Fill" UseLayoutRounding="False" VerticalAlignment="Center" Width="16.438" Margin="17,18.188,16.562,19"/>

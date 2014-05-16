@@ -12,6 +12,7 @@ using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
 using System.Windows.Media.Animation;
 using Microsoft.WindowsAzure.MobileServices;
+using System.Windows.Media.Imaging;
 
 namespace WhitworthMapWP8
 {
@@ -25,6 +26,7 @@ namespace WhitworthMapWP8
         ObservableCollection<Event> Events = new ObservableCollection<Event>();
 
         bool IsShowEvents = false;
+        bool IsExpandMap = false;
 
         // Constructor
         public MainPage()
@@ -113,8 +115,13 @@ namespace WhitworthMapWP8
                 IsShowEvents = true;
             }
 
+            if (IsExpandMap)
+            {
+                ExpandMap();
+            }
+
             // Reset the Events Collection
-            Events = new ObservableCollection<Event>();
+            Events.Clear();
             // Display loading bar
             EventsLoading.Visibility = Visibility.Visible;
             // Query for those events based on the key
@@ -139,6 +146,45 @@ namespace WhitworthMapWP8
             // Hide loading bar
             EventsLoading.Visibility = Visibility.Collapsed;
 
+            if (Events.Count <= 0)
+            {
+                NoEvents.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                NoEvents.Visibility = Visibility.Collapsed;
+            }
+
+        }
+
+        private void ExpandMap_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            ExpandMap();
+        }
+
+        private void ExpandMap()
+        {
+            if (!IsExpandMap)
+            {
+                ExpandMap_Icon.Source = new BitmapImage(new Uri("/Assets/Smallscreen.png", UriKind.Relative));
+                LayoutRoot.RowDefinitions[1].Height = new GridLength(1, GridUnitType.Star);
+                LayoutRoot.RowDefinitions[2].Height = new GridLength(0);
+                LayoutRoot.RowDefinitions[3].Height = new GridLength(0);
+            }
+            else
+            {
+                ExpandMap_Icon.Source = new BitmapImage(new Uri("/Assets/Fullscreen.png", UriKind.Relative));
+                LayoutRoot.RowDefinitions[1].Height = new GridLength(250);
+                LayoutRoot.RowDefinitions[2].Height = new GridLength(75);
+                LayoutRoot.RowDefinitions[3].Height = new GridLength(1, GridUnitType.Star);
+            }
+            IsExpandMap = !IsExpandMap;
+        }
+
+        private void BackButton_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            ShowBuildings.Begin();
+            IsShowEvents = false;
         }
 
     }
