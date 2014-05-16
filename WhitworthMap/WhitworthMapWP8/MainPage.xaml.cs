@@ -91,24 +91,30 @@ namespace WhitworthMapWP8
 
         public async void GetCoord()
         {
-            //EN
-            //creates object of geolocator type
-            Geolocator geolocator = new Geolocator();
-            //creates geopostion object, makes requests every 10 seconds for 5 minutes
-            Geoposition geopostion = await geolocator.GetGeopositionAsync(maximumAge: TimeSpan.FromMinutes(5), timeout: TimeSpan.FromSeconds(10));
-            double LatIt = geopostion.Coordinate.Latitude;
-            double LongIt = geopostion.Coordinate.Longitude;
-            locationPing.Visibility = Visibility.Visible;
-            locationPingShadow.Visibility = Visibility.Visible;
-            //calculates the location according to the screen.
-            double calc1 = (47.757025 - LatIt) * (111545.9883);
-            double calc2 = (117.426186 + LongIt) * (83612.52731);
-            int Calc1 = Convert.ToInt32(Math.Round(calc1));
-            int Calc2 = Convert.ToInt32(Math.Round(calc2));
-            Canvas.SetLeft(locationPing, Calc2 - 15);
-            Canvas.SetTop(locationPing, Calc1 - 30);
-            Canvas.SetLeft(locationPingShadow, Calc2 - 24);
-            Canvas.SetTop(locationPingShadow, Calc1 - 14);
+            try
+            {
+                //creates object of geolocator type
+                Geolocator geolocator = new Geolocator();
+                //creates geopostion object, makes requests every 10 seconds for 5 minutes
+                Geoposition geopostion = await geolocator.GetGeopositionAsync(maximumAge: TimeSpan.FromMinutes(5), timeout: TimeSpan.FromSeconds(10));
+                double LatIt = geopostion.Coordinate.Latitude;
+                double LongIt = geopostion.Coordinate.Longitude;
+                locationPing.Visibility = Visibility.Visible;
+                locationPingShadow.Visibility = Visibility.Visible;
+                //calculates the location according to the screen.
+                double calc1 = (47.757025 - LatIt) * (111545.9883);
+                double calc2 = (117.426186 + LongIt) * (83612.52731);
+                int Calc1 = Convert.ToInt32(Math.Round(calc1));
+                int Calc2 = Convert.ToInt32(Math.Round(calc2));
+                Canvas.SetLeft(locationPing, Calc2 - 15);
+                Canvas.SetTop(locationPing, Calc1 - 30);
+                Canvas.SetLeft(locationPingShadow, Calc2 - 24);
+                Canvas.SetTop(locationPingShadow, Calc1 - 14);
+            }
+            catch (Exception e)
+            {
+                
+            }
         }
         private void Building_Tap(object sender, RoutedEventArgs e)
         {
@@ -121,7 +127,7 @@ namespace WhitworthMapWP8
             }
         }
 
-        private void ListBoxItem_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        private void BuildingListBoxItem_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             // If selected index is -1 (no selection) do nothing
             if (BuildingList.SelectedIndex == -1)
@@ -149,9 +155,19 @@ namespace WhitworthMapWP8
             Events.Clear();
             // Display loading bar
             EventsLoading.Visibility = Visibility.Visible;
-            // Query for those events based on the key
-            Events = new ObservableCollection<Event>(await App.MobileService.GetTable<Event>().Where(o => o.Locations.Contains(Key)).Select(o => o).ToListAsync());
 
+            try
+            {
+                // Always set newtork issue text to collapsed
+                NoNetwork.Visibility = Visibility.Collapsed;
+                // Query for those events based on the key
+                Events = new ObservableCollection<Event>(await App.MobileService.GetTable<Event>().Where(o => o.Locations.Contains(Key)).Select(o => o).ToListAsync());
+            }
+            catch (Exception e)
+            {
+                NoNetwork.Visibility = Visibility.Visible;
+                return;
+            }
             // Remove events that have already happened
             DateTime ParsedDate = new DateTime();
             foreach (Event e in Events)
@@ -195,6 +211,9 @@ namespace WhitworthMapWP8
                 LayoutRoot.RowDefinitions[1].Height = new GridLength(1, GridUnitType.Star);
                 LayoutRoot.RowDefinitions[2].Height = new GridLength(0);
                 LayoutRoot.RowDefinitions[3].Height = new GridLength(0);
+                
+                SearchGrid.Visibility = Visibility.Collapsed;
+                ListGrid.Visibility = Visibility.Collapsed;
             }
             else
             {
@@ -202,17 +221,39 @@ namespace WhitworthMapWP8
                 LayoutRoot.RowDefinitions[1].Height = new GridLength(250);
                 LayoutRoot.RowDefinitions[2].Height = new GridLength(75);
                 LayoutRoot.RowDefinitions[3].Height = new GridLength(1, GridUnitType.Star);
+
+                SearchGrid.Visibility = Visibility.Visible;
+                ListGrid.Visibility = Visibility.Visible;
             }
             IsExpandMap = !IsExpandMap;
         }
 
         private void BackButton_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            // Animate back to building list
             ShowBuildings.Begin();
+            // Clear events list
+            Events.Clear();
+            // Set IsShowEvents flag to false
             IsShowEvents = false;
+            // Collapse the Events loading bar and the No Events text block
+            NoEvents.Visibility = Visibility.Collapsed;
+            EventsLoading.Visibility = Visibility.Collapsed;
+            NoNetwork.Visibility = Visibility.Collapsed;
+
         }
 
-       
+        private void EventListBoxItem_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            // If selected index is -1 (no selection) do nothing
+            if (EventList.SelectedIndex == -1)
+                return;
+
+            Event item = (EventList.SelectedItem as Event);
+            string URL = String.Format("/EventDetails.xaml?Title={0}&Date={1}&Time={2}&Description={3}&LocationsString={4}&Contact={5}&ContactPhone={6}&ContactEmail={7}&Link={8}",
+                item.Title, item.Date, item.Time, item.Description, item.LocationsString, item.Contact, item.ContactPhone, item.ContactEmail, item.Link);
+            NavigationService.Navigate(new Uri(URL, UriKind.Relative));
+        }
 
     }
 }
