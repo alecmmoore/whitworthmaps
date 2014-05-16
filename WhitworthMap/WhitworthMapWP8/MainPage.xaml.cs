@@ -11,8 +11,11 @@ using WhitworthMapWP8.Resources;
 using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
 using System.Windows.Media.Animation;
+using System.Windows.Media;
 using Microsoft.WindowsAzure.MobileServices;
 using System.Windows.Media.Imaging;
+using System.Threading.Tasks;
+using Windows.Devices.Geolocation;
 
 namespace WhitworthMapWP8
 {
@@ -83,8 +86,30 @@ namespace WhitworthMapWP8
             Buildings.Add(new Building() { Title = "The President's House", Key = "President's" });
 
             BuildingList.DataContext = Buildings;
+            GetCoord();
         }
 
+        public async void GetCoord()
+        {
+            //EN
+            //creates object of geolocator type
+            Geolocator geolocator = new Geolocator();
+            //creates geopostion object, makes requests every 10 seconds for 5 minutes
+            Geoposition geopostion = await geolocator.GetGeopositionAsync(maximumAge: TimeSpan.FromMinutes(5), timeout: TimeSpan.FromSeconds(10));
+            double LatIt = geopostion.Coordinate.Latitude;
+            double LongIt = geopostion.Coordinate.Longitude;
+            locationPing.Visibility = Visibility.Visible;
+            locationPingShadow.Visibility = Visibility.Visible;
+            //calculates the location according to the screen.
+            double calc1 = (47.757025 - LatIt) * (111545.9883);
+            double calc2 = (117.426186 + LongIt) * (83612.52731);
+            int Calc1 = Convert.ToInt32(Math.Round(calc1));
+            int Calc2 = Convert.ToInt32(Math.Round(calc2));
+            Canvas.SetLeft(locationPing, Calc2 - 15);
+            Canvas.SetTop(locationPing, Calc1 - 30);
+            Canvas.SetLeft(locationPingShadow, Calc2 - 24);
+            Canvas.SetTop(locationPingShadow, Calc1 - 14);
+        }
         private void Building_Tap(object sender, RoutedEventArgs e)
         {
             Button Building = sender as Button;
@@ -186,6 +211,8 @@ namespace WhitworthMapWP8
             ShowBuildings.Begin();
             IsShowEvents = false;
         }
+
+       
 
     }
 }
