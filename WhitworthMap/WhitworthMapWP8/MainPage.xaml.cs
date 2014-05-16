@@ -146,6 +146,7 @@ namespace WhitworthMapWP8
 
         private async void BuildingSelected(string Key)
         {
+
             // If show events animation has not been played, fire it
             if (!IsShowEvents)
             {
@@ -262,9 +263,45 @@ namespace WhitworthMapWP8
             NavigationService.Navigate(new Uri(URL, UriKind.Relative));
         }
 
+
         private void Location_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             GetCoord();
+        }
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            // Casts the sender as a TextBox
+            TextBox SearchBox = (sender as TextBox);
+
+            // If the search ox is not empty
+            if (SearchBox.Text != "")
+            {
+                // Loop through the list items and set the to invisible if they do not match the textbox
+                for (var i = 0; i < VisualTreeHelper.GetChildrenCount(this.BuildingList); i++)
+                {
+                    FrameworkElement ListItem = (VisualTreeHelper.GetChild(this.BuildingList, i) as FrameworkElement);
+                    string ListItemTitle = (VisualTreeHelper.GetChild(ListItem, 1) as TextBlock).Text;
+
+                    if (ListItemTitle.IndexOf(SearchBox.Text, StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        ListItem.Visibility = Visibility.Visible;
+                    }
+                    else
+                    {
+                        ListItem.Visibility = Visibility.Collapsed;
+                    }
+                }
+            }
+            // If it is visible set all list items to visible
+            else
+            {
+                for (var i = 0; i < VisualTreeHelper.GetChildrenCount(this.BuildingList); i++)
+                {
+                    FrameworkElement ListItem = (VisualTreeHelper.GetChild(this.BuildingList, i) as FrameworkElement);
+                    ListItem.Visibility = Visibility.Visible;
+                }
+            }
+
         }
 
     }

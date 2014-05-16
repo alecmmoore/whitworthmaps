@@ -1899,7 +1899,7 @@
         			</EasingDoubleKeyFrame.EasingFunction>
         		</EasingDoubleKeyFrame>
         	</DoubleAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="textBox">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="TextBox">
         		<EasingDoubleKeyFrame KeyTime="0" Value="0">
         			<EasingDoubleKeyFrame.EasingFunction>
         				<ExponentialEase EasingMode="EaseInOut"/>
@@ -1949,7 +1949,7 @@
         			</EasingDoubleKeyFrame.EasingFunction>
         		</EasingDoubleKeyFrame>
         	</DoubleAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="textBox">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="TextBox">
         		<EasingDoubleKeyFrame KeyTime="0" Value="59.9609">
         			<EasingDoubleKeyFrame.EasingFunction>
         				<ExponentialEase EasingMode="EaseInOut"/>
@@ -2179,7 +2179,7 @@
                     <CompositeTransform TranslateX="-64"/>
                 </Button.RenderTransform>
             </Button>
-            <TextBox x:Name="textBox" Text="Search" RenderTransformOrigin="0.5,0.5">
+            <TextBox x:Name="TextBox" Text="Search" RenderTransformOrigin="0.5,0.5" TextChanged="TextBox_TextChanged">
             	<TextBox.RenderTransform>
             		<CompositeTransform/>
             	</TextBox.RenderTransform></TextBox>
