@@ -11,5 +11,8 @@ namespace WhitworthMapWP8
         public int EventCount { get; set; }
         public string Title { get; set; }
         public string Key { get; set; }
+        public double Hor { get; set; }
+        public double Ver { get; set; }
+
     }
 }
