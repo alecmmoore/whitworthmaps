@@ -35,7 +35,7 @@ namespace WhitworthMapWP8
         public MainPage()
         {
             InitializeComponent();
-            
+
             Buildings.Add(new Building() { Title = "McEachran Hall", Key = "McEachran" });
             Buildings.Add(new Building() { Title = "MacKay Hall", Key = "MacKay" });
             Buildings.Add(new Building() { Title = "Cowles Auditorium", Key = "Cowles" });
@@ -139,6 +139,7 @@ namespace WhitworthMapWP8
 
         private async void BuildingSelected(string Key)
         {
+
             // If show events animation has not been played, fire it
             if (!IsShowEvents)
             {
@@ -253,6 +254,41 @@ namespace WhitworthMapWP8
             string URL = String.Format("/EventDetails.xaml?Title={0}&Date={1}&Time={2}&Description={3}&LocationsString={4}&Contact={5}&ContactPhone={6}&ContactEmail={7}&Link={8}",
                 item.Title, item.Date, item.Time, item.Description, item.LocationsString, item.Contact, item.ContactPhone, item.ContactEmail, item.Link);
             NavigationService.Navigate(new Uri(URL, UriKind.Relative));
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            // Casts the sender as a TextBox
+            TextBox SearchBox = (sender as TextBox);
+
+            // If the search ox is not empty
+            if (SearchBox.Text != "")
+            {
+                // Loop through the list items and set the to invisible if they do not match the textbox
+                for (var i = 0; i < VisualTreeHelper.GetChildrenCount(this.BuildingList); i++)
+                {
+                    FrameworkElement ListItem = (VisualTreeHelper.GetChild(this.BuildingList, i) as FrameworkElement);
+                    string ListItemTitle = (VisualTreeHelper.GetChild(ListItem, 1) as TextBlock).Text;
+
+                    if (ListItemTitle.IndexOf(SearchBox.Text, StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        ListItem.Visibility = Visibility.Visible;
+                    }
+                    else
+                    {
+                        ListItem.Visibility = Visibility.Collapsed;
+                    }
+                }
+            }
+            // If it is visible set all list items to visible
+            else
+            {
+                for (var i = 0; i < VisualTreeHelper.GetChildrenCount(this.BuildingList); i++)
+                {
+                    FrameworkElement ListItem = (VisualTreeHelper.GetChild(this.BuildingList, i) as FrameworkElement);
+                    ListItem.Visibility = Visibility.Visible;
+                }
+            }
         }
 
     }
